@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MYSQL第二章总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第二章数据库和表的设计1，为什么需要数据完整性？数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MYSQL第二章总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;22&#x2F;MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第二章数据库和表的设计1，为什么需要数据完整性？数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-30T11:54:26.851Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MySQL第二章总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-22T03:27:09.000Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MYSQL第二章总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第二章数据库和表的设计"><a href="#第二章数据库和表的设计" class="headerlink" title="第二章数据库和表的设计"></a>第二章数据库和表的设计</h2><h3 id="1，为什么需要数据完整性？"><a href="#1，为什么需要数据完整性？" class="headerlink" title="1，为什么需要数据完整性？"></a>1，为什么需要数据完整性？</h3><h4 id="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："><a href="#数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：" class="headerlink" title="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："></a>数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：</h4><h4 id="1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。"><a href="#1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。" class="headerlink" title="1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。"></a>1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。</h4><h4 id="2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。"><a href="#2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。" class="headerlink" title="2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。"></a>2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。</h4><h4 id="3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"><a href="#3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。" class="headerlink" title="3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"></a>3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。</h4><h4 id="4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"><a href="#4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。" class="headerlink" title="4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"></a>4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。</h4><h3 id="2，数据完整性在MySQL中的体现"><a href="#2，数据完整性在MySQL中的体现" class="headerlink" title="2，数据完整性在MySQL中的体现"></a>2，数据完整性在MySQL中的体现</h3><h4 id="数据约束：主键，主键自增，外键，非空，默认，唯一。"><a href="#数据约束：主键，主键自增，外键，非空，默认，唯一。" class="headerlink" title="数据约束：主键，主键自增，外键，非空，默认，唯一。"></a>数据约束：主键，主键自增，外键，非空，默认，唯一。</h4><h4 id="1，主键：primary-key-特性：非空且唯一，写在字段类型后面。"><a href="#1，主键：primary-key-特性：非空且唯一，写在字段类型后面。" class="headerlink" title="1，主键：primary  key  特性：非空且唯一，写在字段类型后面。"></a>1，主键：primary  key  特性：非空且唯一，写在字段类型后面。</h4><h5 id="在MySQL中设置字段做主键时，分两种情况。"><a href="#在MySQL中设置字段做主键时，分两种情况。" class="headerlink" title="在MySQL中设置字段做主键时，分两种情况。"></a>在MySQL中设置字段做主键时，分两种情况。</h5><h6 id="（1）定义列的同时设置主键"><a href="#（1）定义列的同时设置主键" class="headerlink" title="（1）定义列的同时设置主键"></a>（1）定义列的同时设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h6 id="（2）完成所有列之后设置主键"><a href="#（2）完成所有列之后设置主键" class="headerlink" title="（2）完成所有列之后设置主键"></a>（2）完成所有列之后设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，主键自增：auto-increment-写在字段类型后面，主键前面。"><a href="#2，主键自增：auto-increment-写在字段类型后面，主键前面。" class="headerlink" title="2，主键自增：auto_increment   写在字段类型后面，主键前面。"></a>2，主键自增：auto_increment   写在字段类型后面，主键前面。</h4><h5 id="在设置auto-increment-时需要遵守以下几点规则："><a href="#在设置auto-increment-时需要遵守以下几点规则：" class="headerlink" title="在设置auto_increment 时需要遵守以下几点规则："></a>在设置auto_increment 时需要遵守以下几点规则：</h5><h6 id="（1）一个表中只能有一个字段使用auto-increment。"><a href="#（1）一个表中只能有一个字段使用auto-increment。" class="headerlink" title="（1）一个表中只能有一个字段使用auto_increment。"></a>（1）一个表中只能有一个字段使用auto_increment。</h6><h6 id="（2）auto-increment-必须作为主键的一个部分，不得单独使用。"><a href="#（2）auto-increment-必须作为主键的一个部分，不得单独使用。" class="headerlink" title="（2）auto_increment 必须作为主键的一个部分，不得单独使用。"></a>（2）auto_increment 必须作为主键的一个部分，不得单独使用。</h6><h6 id="（3）-auto-increment-字段的数据类必须为整数类型。"><a href="#（3）-auto-increment-字段的数据类必须为整数类型。" class="headerlink" title="（3） auto_increment 字段的数据类必须为整数类型。"></a>（3） auto_increment 字段的数据类必须为整数类型。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">列名  数据类型 auto_increment primary key</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"><a href="#3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。" class="headerlink" title="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"></a>3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。</h4><h5 id="外键约束中有两个名词，需要注意："><a href="#外键约束中有两个名词，需要注意：" class="headerlink" title="外键约束中有两个名词，需要注意："></a>外键约束中有两个名词，需要注意：</h5><h6 id="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"><a href="#主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。" class="headerlink" title="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"></a>主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。</h6><h6 id="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"><a href="#从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。" class="headerlink" title="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"></a>从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。</h6><h5 id="在从表中创建外键的语法如下："><a href="#在从表中创建外键的语法如下：" class="headerlink" title="在从表中创建外键的语法如下："></a>在从表中创建外键的语法如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[constraint 外键名] foreign  字段名1[,字段名2,......]</span><br><span class="line">refereces 主表名 主键列1[,主键列2,......]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，非空：not-null-写在字段类型的后面。"><a href="#4，非空：not-null-写在字段类型的后面。" class="headerlink" title="4，非空：not  null  写在字段类型的后面。"></a>4，非空：not  null  写在字段类型的后面。</h4><h5 id="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"><a href="#非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。" class="headerlink" title="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"></a>非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。</h5><h6 id="建表时设置非空约束的语法："><a href="#建表时设置非空约束的语法：" class="headerlink" title="建表时设置非空约束的语法："></a>建表时设置非空约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型 not null</span><br></pre></td></tr></table></figure>
+
+<h4 id="5，默认：default-默认值-如果默认值为字符，则将字符加单引号。"><a href="#5，默认：default-默认值-如果默认值为字符，则将字符加单引号。" class="headerlink" title="5，默认：default  默认值     如果默认值为字符，则将字符加单引号。"></a>5，默认：default  默认值     如果默认值为字符，则将字符加单引号。</h4><h5 id="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"><a href="#默认约束指定某列的默认值下，系统会自动为这个字段赋值。" class="headerlink" title="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"></a>默认约束指定某列的默认值下，系统会自动为这个字段赋值。</h5><h6 id="建表时设置默认约束的语法："><a href="#建表时设置默认约束的语法：" class="headerlink" title="建表时设置默认约束的语法："></a>建表时设置默认约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型  default 默认值</span><br></pre></td></tr></table></figure>
+
+<h4 id="6，唯一：unique-写在字段类型后面。"><a href="#6，唯一：unique-写在字段类型后面。" class="headerlink" title="6，唯一：unique 写在字段类型后面。"></a>6，唯一：unique 写在字段类型后面。</h4><h5 id="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"><a href="#唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。" class="headerlink" title="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"></a>唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。</h5><h6 id="唯一约束的语法规则如下："><a href="#唯一约束的语法规则如下：" class="headerlink" title="唯一约束的语法规则如下："></a>唯一约束的语法规则如下：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型  unique</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-数据库设计规范"><a href="#3-数据库设计规范" class="headerlink" title="3,数据库设计规范"></a>3,数据库设计规范</h3><h4 id="1NF-一范式-数据字段要具有原子性，不可再分。"><a href="#1NF-一范式-数据字段要具有原子性，不可再分。" class="headerlink" title="1NF  一范式  数据字段要具有原子性，不可再分。"></a>1NF  一范式  数据字段要具有原子性，不可再分。</h4><h4 id="2NF-二范式-所有字段要和主键相关。（要有主键）"><a href="#2NF-二范式-所有字段要和主键相关。（要有主键）" class="headerlink" title="2NF  二范式  所有字段要和主键相关。（要有主键）"></a>2NF  二范式  所有字段要和主键相关。（要有主键）</h4><h4 id="3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）"><a href="#3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）" class="headerlink" title="3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）"></a>3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" data-id="ck2d84gc40001cgvw1je09bs9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MySQL第三章总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MySQL第1章总结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面对对象总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第三章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/">MYSQL第二章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第1章总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

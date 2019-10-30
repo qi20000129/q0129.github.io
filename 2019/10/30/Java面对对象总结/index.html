@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java面对对象总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="java面向对象程序设计总结第二章 类和对象1、面向对象的概念：面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。2、类的创建1public class 类名&amp;#123;&amp;#125;  FILE——&amp;gt;NEW –&amp;gt;CLASS –&amp;gt;类名3、创建对象1类名 对象名=new 类名();  对象名.方法名(); 对象名.属性4.构造方法：方法名和类名相同,没有返回值1publ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面对对象总结">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;30&#x2F;Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java面向对象程序设计总结第二章 类和对象1、面向对象的概念：面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。2、类的创建1public class 类名&amp;#123;&amp;#125;  FILE——&amp;gt;NEW –&amp;gt;CLASS –&amp;gt;类名3、创建对象1类名 对象名=new 类名();  对象名.方法名(); 对象名.属性4.构造方法：方法名和类名相同,没有返回值1publ">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-30T11:51:47.658Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java面对对象总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-30T11:50:00.151Z" itemprop="datePublished">2019-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java面对对象总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java面向对象程序设计总结"><a href="#java面向对象程序设计总结" class="headerlink" title="java面向对象程序设计总结"></a>java面向对象程序设计总结</h1><h1 id="第二章-类和对象"><a href="#第二章-类和对象" class="headerlink" title="第二章 类和对象"></a>第二章 类和对象</h1><h4 id="1、面向对象的概念："><a href="#1、面向对象的概念：" class="headerlink" title="1、面向对象的概念："></a>1、面向对象的概念：</h4><h5 id="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"><a href="#面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。" class="headerlink" title="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"></a>面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。</h5><h4 id="2、类的创建"><a href="#2、类的创建" class="headerlink" title="2、类的创建"></a>2、类的创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="FILE——-gt-NEW-–-gt-CLASS-–-gt-类名"><a href="#FILE——-gt-NEW-–-gt-CLASS-–-gt-类名" class="headerlink" title="FILE——&gt;NEW –&gt;CLASS –&gt;类名"></a>FILE——&gt;NEW –&gt;CLASS –&gt;类名</h5><h4 id="3、创建对象"><a href="#3、创建对象" class="headerlink" title="3、创建对象"></a>3、创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名=new 类名();</span><br></pre></td></tr></table></figure>
+
+<h5 id="对象名-方法名-对象名-属性"><a href="#对象名-方法名-对象名-属性" class="headerlink" title="对象名.方法名(); 对象名.属性"></a>对象名.方法名(); 对象名.属性</h5><h4 id="4-构造方法：方法名和类名相同-没有返回值"><a href="#4-构造方法：方法名和类名相同-没有返回值" class="headerlink" title="4.构造方法：方法名和类名相同,没有返回值"></a>4.构造方法：方法名和类名相同,没有返回值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;		public 类名()&#123;&#125;//主要的做用是初始化操作&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-构造方法重载"><a href="#5-构造方法重载" class="headerlink" title="5.构造方法重载"></a>5.构造方法重载</h4><h5 id="在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法"><a href="#在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法" class="headerlink" title="在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法"></a>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123; 		public 类名()&#123;&#125;		public 类名(String name,int age)&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-构造方法的执行"><a href="#6-构造方法的执行" class="headerlink" title="6.构造方法的执行"></a>6.构造方法的执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 类名();---&gt;执行构造方法super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-static静态修饰符"><a href="#7-static静态修饰符" class="headerlink" title="7.static静态修饰符"></a>7.static静态修饰符</h4><h5 id="静态修饰符可以修饰属性，方法，代码块"><a href="#静态修饰符可以修饰属性，方法，代码块" class="headerlink" title="静态修饰符可以修饰属性，方法，代码块"></a>静态修饰符可以修饰属性，方法，代码块</h5><h5 id="类名-属性-类名-方法名"><a href="#类名-属性-类名-方法名" class="headerlink" title="类名.属性 类名.方法名"></a>类名.属性 类名.方法名</h5><h4 id="8-java内存（栈和堆，static，方法区，gc（垃圾回收机制））"><a href="#8-java内存（栈和堆，static，方法区，gc（垃圾回收机制））" class="headerlink" title="8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））"></a>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</h4><h1 id="第三章-面向对象三大特征—封装"><a href="#第三章-面向对象三大特征—封装" class="headerlink" title="第三章 面向对象三大特征—封装"></a>第三章 面向对象三大特征—封装</h1><h4 id="1-封装的概念"><a href="#1-封装的概念" class="headerlink" title="1.封装的概念"></a>1.封装的概念</h4><h5 id="封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。"><a href="#封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。" class="headerlink" title="封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。"></a>封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。</h5><h4 id="2-封装的步骤"><a href="#2-封装的步骤" class="headerlink" title="2.封装的步骤"></a>2.封装的步骤</h4><h5 id="1-把属性私有化（PRIVATE）"><a href="#1-把属性私有化（PRIVATE）" class="headerlink" title="(1).把属性私有化（PRIVATE）"></a>(1).把属性私有化（PRIVATE）</h5><h5 id="2-对这些属性设置GET和SET方法"><a href="#2-对这些属性设置GET和SET方法" class="headerlink" title="(2).对这些属性设置GET和SET方法"></a>(2).对这些属性设置GET和SET方法</h5><h5 id="3-调用处理这些方法"><a href="#3-调用处理这些方法" class="headerlink" title="(3).调用处理这些方法"></a>(3).调用处理这些方法</h5><h4 id="3-封装的作用"><a href="#3-封装的作用" class="headerlink" title="3.封装的作用"></a>3.封装的作用</h4><h5 id="避免一些用一些不合乎常理的操作。"><a href="#避免一些用一些不合乎常理的操作。" class="headerlink" title="避免一些用一些不合乎常理的操作。"></a>避免一些用一些不合乎常理的操作。</h5><h4 id="4-修饰符"><a href="#4-修饰符" class="headerlink" title="4.修饰符"></a>4.修饰符</h4><h5 id="PUBLIC—-gt-公共的：在一个项目中都可以访问，权限最高"><a href="#PUBLIC—-gt-公共的：在一个项目中都可以访问，权限最高" class="headerlink" title="PUBLIC—&gt;公共的：在一个项目中都可以访问，权限最高"></a>PUBLIC—&gt;公共的：在一个项目中都可以访问，权限最高</h5><h5 id="PRIVATE—-gt-私有的：只能在本类中进行访问，权限最低"><a href="#PRIVATE—-gt-私有的：只能在本类中进行访问，权限最低" class="headerlink" title="PRIVATE—&gt;私有的：只能在本类中进行访问，权限最低"></a>PRIVATE—&gt;私有的：只能在本类中进行访问，权限最低</h5><h5 id="PROTECTED—-gt-安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类"><a href="#PROTECTED—-gt-安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类" class="headerlink" title="PROTECTED—&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类"></a>PROTECTED—&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</h5><h5 id="DEFAULT—-gt-默认的：同一个包能访问"><a href="#DEFAULT—-gt-默认的：同一个包能访问" class="headerlink" title="DEFAULT—&gt;默认的：同一个包能访问"></a>DEFAULT—&gt;默认的：同一个包能访问</h5><h1 id="第四章-面向对象三大特征—继承"><a href="#第四章-面向对象三大特征—继承" class="headerlink" title="第四章 面向对象三大特征—继承"></a>第四章 面向对象三大特征—继承</h1><h4 id="1-继承的概念"><a href="#1-继承的概念" class="headerlink" title="1.继承的概念"></a>1.继承的概念</h4><h5 id="父亲儿子的继承关系。"><a href="#父亲儿子的继承关系。" class="headerlink" title="父亲儿子的继承关系。"></a>父亲儿子的继承关系。</h5><h4 id="2-继承的好处"><a href="#2-继承的好处" class="headerlink" title="2.继承的好处"></a>2.继承的好处</h4><h5 id="1-提高了代码的重用性"><a href="#1-提高了代码的重用性" class="headerlink" title="(1)提高了代码的重用性"></a>(1)提高了代码的重用性</h5><h5 id="2-提高代码的可扩展性"><a href="#2-提高代码的可扩展性" class="headerlink" title="(2)提高代码的可扩展性"></a>(2)提高代码的可扩展性</h5><h4 id="3-继承的关键字：extends"><a href="#3-继承的关键字：extends" class="headerlink" title="3.继承的关键字：extends"></a>3.继承的关键字：extends</h4><h4 id="4-继承的语法："><a href="#4-继承的语法：" class="headerlink" title="4.继承的语法："></a>4.继承的语法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-继承的使用，在子类中："><a href="#5-继承的使用，在子类中：" class="headerlink" title="5.继承的使用，在子类中："></a>5.继承的使用，在子类中：</h4><h5 id="可以直接调用父类的非私有属性和方法"><a href="#可以直接调用父类的非私有属性和方法" class="headerlink" title="可以直接调用父类的非私有属性和方法"></a>可以直接调用父类的非私有属性和方法</h5><h5 id="可以用SUPER-方法-SUPER-属性"><a href="#可以用SUPER-方法-SUPER-属性" class="headerlink" title="可以用SUPER.方法 SUPER.属性"></a>可以用SUPER.方法 SUPER.属性</h5><h4 id="6-父类构造方法调用：super"><a href="#6-父类构造方法调用：super" class="headerlink" title="6.父类构造方法调用：super();"></a>6.父类构造方法调用：super();</h4><h5 id="调用父类的构造方法必须在之类中调用"><a href="#调用父类的构造方法必须在之类中调用" class="headerlink" title="调用父类的构造方法必须在之类中调用"></a>调用父类的构造方法必须在之类中调用</h5><h5 id="必须实在之类构造方法的第一行代码"><a href="#必须实在之类构造方法的第一行代码" class="headerlink" title="必须实在之类构造方法的第一行代码"></a>必须实在之类构造方法的第一行代码</h5><h4 id="7-重写-Override"><a href="#7-重写-Override" class="headerlink" title="7.重写@Override"></a>7.重写@Override</h4><h5 id="必须继承"><a href="#必须继承" class="headerlink" title="必须继承"></a>必须继承</h5><h5 id="方法名一致，参数个数，顺序，类型全部一致"><a href="#方法名一致，参数个数，顺序，类型全部一致" class="headerlink" title="方法名一致，参数个数，顺序，类型全部一致"></a>方法名一致，参数个数，顺序，类型全部一致</h5><h1 id="第五章-面向对象（多态）"><a href="#第五章-面向对象（多态）" class="headerlink" title="第五章 面向对象（多态）"></a>第五章 面向对象（多态）</h1><h4 id="1-多态的概念"><a href="#1-多态的概念" class="headerlink" title="1.多态的概念"></a>1.多态的概念</h4><h5 id="指允许不同类的对象对同一消息做出不同的响应。"><a href="#指允许不同类的对象对同一消息做出不同的响应。" class="headerlink" title="指允许不同类的对象对同一消息做出不同的响应。"></a>指允许不同类的对象对同一消息做出不同的响应。</h5><h4 id="2-多态的必要条件"><a href="#2-多态的必要条件" class="headerlink" title="2.多态的必要条件"></a>2.多态的必要条件</h4><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><h5 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h5><h5 id="父类引用指向子类对象（向上转型）"><a href="#父类引用指向子类对象（向上转型）" class="headerlink" title="父类引用指向子类对象（向上转型）"></a>父类引用指向子类对象（向上转型）</h5><h4 id="3-多态的使用"><a href="#3-多态的使用" class="headerlink" title="3.多态的使用"></a>3.多态的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Father&#123; 			public void cooking()&#123; 				System.out.println(&quot;米饭&quot;);			&#125; 		&#125;</span><br><span class="line">public class Son extends Father&#123;  			@OVERRIDE 			public void cooking()&#123;				System.out.println(&quot;熬粥&quot;);  			&#125; 		&#125;</span><br><span class="line">public class Test &#123;			public static void main(String[] args) &#123;				Father son=new Son();				son.cooking();			&#125;		&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-向下转型"><a href="#4-向下转型" class="headerlink" title="4.向下转型"></a>4.向下转型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Son son=(Son)father;</span><br></pre></td></tr></table></figure>
+
+<h1 id="第六章-抽象"><a href="#第六章-抽象" class="headerlink" title="第六章 抽象"></a>第六章 抽象</h1><h4 id="1-抽象的概念"><a href="#1-抽象的概念" class="headerlink" title="1.抽象的概念"></a>1.抽象的概念</h4><h5 id="如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。"><a href="#如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。" class="headerlink" title="如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。"></a>如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。</h5><h4 id="2-抽象的关键字"><a href="#2-抽象的关键字" class="headerlink" title="2.抽象的关键字"></a>2.抽象的关键字</h4><h5 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a>ABSTRACT</h5><h5 id="可以修饰类，可以修饰方法"><a href="#可以修饰类，可以修饰方法" class="headerlink" title="可以修饰类，可以修饰方法"></a>可以修饰类，可以修饰方法</h5><h4 id="3-抽象的用法"><a href="#3-抽象的用法" class="headerlink" title="3.抽象的用法"></a>3.抽象的用法</h4><h5 id="抽象类"><a href="#抽象类" class="headerlink" title="//抽象类"></a>//抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public abstract class 类名&#123;</span><br></pre></td></tr></table></figure>
+
+<h5 id="抽象方法没有方法体"><a href="#抽象方法没有方法体" class="headerlink" title="//抽象方法没有方法体"></a>//抽象方法没有方法体</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public abstract void 方法名();			&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="当父类是抽象类的时候，子类必须重写父类里面的抽象方法"><a href="#当父类是抽象类的时候，子类必须重写父类里面的抽象方法" class="headerlink" title="//当父类是抽象类的时候，子类必须重写父类里面的抽象方法"></a>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</h5><h4 id="4-final修饰符：最终的"><a href="#4-final修饰符：最终的" class="headerlink" title="4.final修饰符：最终的"></a>4.final修饰符：最终的</h4><h5 id="修饰变量，修饰方法，修饰类"><a href="#修饰变量，修饰方法，修饰类" class="headerlink" title="修饰变量，修饰方法，修饰类"></a>修饰变量，修饰方法，修饰类</h5><h5 id="1-当修饰变量时，变量转换成常量，常量的值不能改变"><a href="#1-当修饰变量时，变量转换成常量，常量的值不能改变" class="headerlink" title="(1).当修饰变量时，变量转换成常量，常量的值不能改变"></a>(1).当修饰变量时，变量转换成常量，常量的值不能改变</h5><h5 id="FINAL-INT-A-18-A-18-不能改变-必须给一个初始值"><a href="#FINAL-INT-A-18-A-18-不能改变-必须给一个初始值" class="headerlink" title="FINAL INT A=18;//A=18;不能改变,必须给一个初始值"></a>FINAL INT A=18;//A=18;不能改变,必须给一个初始值</h5><h5 id="2-当修饰方法时，该方法不能被重写"><a href="#2-当修饰方法时，该方法不能被重写" class="headerlink" title="(2).当修饰方法时，该方法不能被重写"></a>(2).当修饰方法时，该方法不能被重写</h5><h5 id="3-当修饰类时，该类不能被继承"><a href="#3-当修饰类时，该类不能被继承" class="headerlink" title="(3).当修饰类时，该类不能被继承"></a>(3).当修饰类时，该类不能被继承</h5><h1 id="第七章-接口"><a href="#第七章-接口" class="headerlink" title="第七章 接口"></a>第七章 接口</h1><h4 id="1-接口的概念"><a href="#1-接口的概念" class="headerlink" title="1.接口的概念"></a>1.接口的概念</h4><h5 id="接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。"><a href="#接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。" class="headerlink" title="接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。"></a>接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。</h5><h4 id="2-接口的关键字"><a href="#2-接口的关键字" class="headerlink" title="2.接口的关键字"></a>2.接口的关键字</h4><h5 id="INTERFACE"><a href="#INTERFACE" class="headerlink" title="INTERFACE"></a>INTERFACE</h5><h4 id="3-接口的语法"><a href="#3-接口的语法" class="headerlink" title="3.接口的语法"></a>3.接口的语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="FILE—-gt-NEW—-gt-INTERFACE-创建接口"><a href="#FILE—-gt-NEW—-gt-INTERFACE-创建接口" class="headerlink" title="FILE—&gt;NEW—&gt;INTERFACE//创建接口"></a>FILE—&gt;NEW—&gt;INTERFACE//创建接口</h5><h4 id="4-接口的用法"><a href="#4-接口的用法" class="headerlink" title="4.接口的用法"></a>4.接口的用法</h4><h5 id="实现接口的关键字-IMPLEMENTS"><a href="#实现接口的关键字-IMPLEMENTS" class="headerlink" title="实现接口的关键字 IMPLEMENTS"></a>实现接口的关键字 IMPLEMENTS</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123; 			//接口是纯抽象类  			//接口里面的方法都是抽象方法  			void setData();  		&#125;  		public class Play implements 接口名&#123;  			@OVERRIDE  			void setData()&#123;  			&#125; 		&#125;  		public class Test &#123;  			public static void main(String[] args) &#123;  				Play play=new Play();  				play.setData();  			&#125;  		&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="注意接口可以进行多继承"><a href="#注意接口可以进行多继承" class="headerlink" title="注意接口可以进行多继承"></a>注意接口可以进行多继承</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="一般用法"><a href="#一般用法" class="headerlink" title="一般用法"></a>一般用法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="第八章-集合框架"><a href="#第八章-集合框架" class="headerlink" title="第八章 集合框架"></a>第八章 集合框架</h1><h3 id="1-集合框架的概念"><a href="#1-集合框架的概念" class="headerlink" title="1.集合框架的概念"></a>1.集合框架的概念</h3><h5 id="集合框架是为表示和操作而规定的一种统一的标准体系结构。"><a href="#集合框架是为表示和操作而规定的一种统一的标准体系结构。" class="headerlink" title="集合框架是为表示和操作而规定的一种统一的标准体系结构。"></a>集合框架是为表示和操作而规定的一种统一的标准体系结构。</h5><h3 id="2-List接口，Set接口，Map接口的区别"><a href="#2-List接口，Set接口，Map接口的区别" class="headerlink" title="2.List接口，Set接口，Map接口的区别"></a>2.List接口，Set接口，Map接口的区别</h3><h5 id="SET接口继承COLLECTION接口，存储一组唯一-不允许重复-，无序的对象。"><a href="#SET接口继承COLLECTION接口，存储一组唯一-不允许重复-，无序的对象。" class="headerlink" title="SET接口继承COLLECTION接口，存储一组唯一(不允许重复)，无序的对象。"></a>SET接口继承COLLECTION接口，存储一组唯一(不允许重复)，无序的对象。</h5><h5 id="LIST接口继承COLLECTION接口，存储一组不唯一-允许重复-，有序的对象。"><a href="#LIST接口继承COLLECTION接口，存储一组不唯一-允许重复-，有序的对象。" class="headerlink" title="LIST接口继承COLLECTION接口，存储一组不唯一(允许重复)，有序的对象。"></a>LIST接口继承COLLECTION接口，存储一组不唯一(允许重复)，有序的对象。</h5><h5 id="MAP接口存储一组成对的键-值对象，提供KEY-键-到VALUE-键-的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。"><a href="#MAP接口存储一组成对的键-值对象，提供KEY-键-到VALUE-键-的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。" class="headerlink" title="MAP接口存储一组成对的键-值对象，提供KEY(键)到VALUE(键)的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。"></a>MAP接口存储一组成对的键-值对象，提供KEY(键)到VALUE(键)的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。</h5><h3 id="3-ArrayList"><a href="#3-ArrayList" class="headerlink" title="3.ArrayList"></a>3.ArrayList</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList list=new ArrayList();  		list.add();//添加数据  		list.get();//获取数据</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Map"><a href="#4-Map" class="headerlink" title="4.Map"></a>4.Map</h3><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map map=new HasMap();map.put(key,value);//key不能重复map.get(key);//获取key对象的value</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5.泛型"></a>5.泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();		Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();	ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
+
+<h1 id="第九章-高级功能—–文件操作"><a href="#第九章-高级功能—–文件操作" class="headerlink" title="第九章 高级功能—–文件操作"></a>第九章 高级功能—–文件操作</h1><h4 id="1-文件概述"><a href="#1-文件概述" class="headerlink" title="1.文件概述"></a>1.文件概述</h4><h5 id="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"><a href="#文件是具有内容和用途的，而文件夹是用来放置这些文件的。" class="headerlink" title="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"></a>文件是具有内容和用途的，而文件夹是用来放置这些文件的。</h5><h4 id="2-什么是流"><a href="#2-什么是流" class="headerlink" title="2.什么是流"></a>2.什么是流</h4><h5 id="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"><a href="#JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。" class="headerlink" title="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"></a>JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。</h5><h3 id="3-写文件"><a href="#3-写文件" class="headerlink" title="3.写文件"></a>3.写文件</h3><h5 id="1-字节输出流写文件"><a href="#1-字节输出流写文件" class="headerlink" title="(1)字节输出流写文件"></a>(1)字节输出流写文件</h5><h5 id="INT-WRITE-INT-C-—–写入一个字节数据"><a href="#INT-WRITE-INT-C-—–写入一个字节数据" class="headerlink" title="INT WRITE(INT C)—–写入一个字节数据"></a>INT WRITE(INT C)—–写入一个字节数据</h5><h5 id="INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节"><a href="#INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节" class="headerlink" title="INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节"></a>INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节</h5><h5 id="INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"><a href="#INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中" class="headerlink" title="INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"></a>INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流"><a href="#VOID-CLOSE-—–关闭输出流" class="headerlink" title="VOID CLOSE( )—–关闭输出流"></a>VOID CLOSE( )—–关闭输出流</h5><h5 id="2-字符输出流写文件"><a href="#2-字符输出流写文件" class="headerlink" title="(2)字符输出流写文件"></a>(2)字符输出流写文件</h5><h5 id="WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中"><a href="#WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中" class="headerlink" title="WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中"></a>WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中</h5><h5 id="WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"><a href="#WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中" class="headerlink" title="WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"></a>WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流-1"><a href="#VOID-CLOSE-—–关闭输出流-1" class="headerlink" title="VOID CLOSE()—–关闭输出流"></a>VOID CLOSE()—–关闭输出流</h5><h5 id="VOID-FLUSH-—–刷新输出流"><a href="#VOID-FLUSH-—–刷新输出流" class="headerlink" title="VOID FLUSH()—–刷新输出流"></a>VOID FLUSH()—–刷新输出流</h5><h4 id="4-读文件"><a href="#4-读文件" class="headerlink" title="4.读文件"></a>4.读文件</h4><h5 id="1-字节输入流读文件"><a href="#1-字节输入流读文件" class="headerlink" title="(1)字节输入流读文件"></a>(1)字节输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符"><a href="#INT-READ-—–从输入流中读取单个字符" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–将数据读取到字节数组中"><a href="#INT-READ-BYTE-B-—–将数据读取到字节数组中" class="headerlink" title="INT READ(BYTE[ ] B)—–将数据读取到字节数组中"></a>INT READ(BYTE[ ] B)—–将数据读取到字节数组中</h5><h5 id="INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"><a href="#INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始" class="headerlink" title="INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"></a>INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始</h5><h5 id="VOID-CLOSE-—–关闭输入流"><a href="#VOID-CLOSE-—–关闭输入流" class="headerlink" title="VOID CLOSE( )—–关闭输入流"></a>VOID CLOSE( )—–关闭输入流</h5><h5 id="INT-AVAILABLE-—–返回输入流读取的估计字节数"><a href="#INT-AVAILABLE-—–返回输入流读取的估计字节数" class="headerlink" title="INT AVAILABLE()—–返回输入流读取的估计字节数"></a>INT AVAILABLE()—–返回输入流读取的估计字节数</h5><h5 id="2-字符输入流读文件"><a href="#2-字符输入流读文件" class="headerlink" title="(2)字符输入流读文件"></a>(2)字符输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符-1"><a href="#INT-READ-—–从输入流中读取单个字符-1" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"><a href="#INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数" class="headerlink" title="INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"></a>INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数</h5><h5 id="READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"><a href="#READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数" class="headerlink" title="READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"></a>READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数</h5><h5 id="VOID-CLOSE-—–关闭流"><a href="#VOID-CLOSE-—–关闭流" class="headerlink" title="VOID CLOSE()—–关闭流"></a>VOID CLOSE()—–关闭流</h5><h1 id="第十章-高级功能—–多线程"><a href="#第十章-高级功能—–多线程" class="headerlink" title="第十章 高级功能—–多线程"></a>第十章 高级功能—–多线程</h1><h3 id="1-线程的创建"><a href="#1-线程的创建" class="headerlink" title="1.线程的创建"></a>1.线程的创建</h3><h4 id="1-实现Runnable接口"><a href="#1-实现Runnable接口" class="headerlink" title="(1)实现Runnable接口"></a>(1)实现Runnable接口</h4><h5 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="定义一个类实现RUNABLE接口"><a href="#定义一个类实现RUNABLE接口" class="headerlink" title="定义一个类实现RUNABLE接口"></a>定义一个类实现RUNABLE接口</h5><h5 id="实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的"><a href="#实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的" class="headerlink" title="实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的"></a>实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的</h5><h5 id="在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象"><a href="#在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象" class="headerlink" title="在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象"></a>在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程"><a href="#调用MYTHREAD-START-方法启动新创建的线程" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5><h4 id="2-继承Thread创建线程"><a href="#2-继承Thread创建线程" class="headerlink" title="(2)继承Thread创建线程"></a>(2)继承Thread创建线程</h4><h5 id="步骤：-1"><a href="#步骤：-1" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="创建类MYTHREAD并继承THREAD类"><a href="#创建类MYTHREAD并继承THREAD类" class="headerlink" title="创建类MYTHREAD并继承THREAD类"></a>创建类MYTHREAD并继承THREAD类</h5><h5 id="实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载"><a href="#实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载" class="headerlink" title="实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载"></a>实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载</h5><h5 id="生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD"><a href="#生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD" class="headerlink" title="生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();"></a>生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程-1"><a href="#调用MYTHREAD-START-方法启动新创建的线程-1" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" data-id="ck2d84gcy0004cgvw1ksog43i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/30/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面对对象总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第三章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/">MYSQL第二章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第1章总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

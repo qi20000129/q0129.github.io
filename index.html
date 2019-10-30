@@ -61,6 +61,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Java面对对象总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-30T11:50:00.151Z" itemprop="datePublished">2019-10-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面对对象总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="java面向对象程序设计总结"><a href="#java面向对象程序设计总结" class="headerlink" title="java面向对象程序设计总结"></a>java面向对象程序设计总结</h1><h1 id="第二章-类和对象"><a href="#第二章-类和对象" class="headerlink" title="第二章 类和对象"></a>第二章 类和对象</h1><h4 id="1、面向对象的概念："><a href="#1、面向对象的概念：" class="headerlink" title="1、面向对象的概念："></a>1、面向对象的概念：</h4><h5 id="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"><a href="#面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。" class="headerlink" title="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"></a>面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。</h5><h4 id="2、类的创建"><a href="#2、类的创建" class="headerlink" title="2、类的创建"></a>2、类的创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="FILE——-gt-NEW-–-gt-CLASS-–-gt-类名"><a href="#FILE——-gt-NEW-–-gt-CLASS-–-gt-类名" class="headerlink" title="FILE——&gt;NEW –&gt;CLASS –&gt;类名"></a>FILE——&gt;NEW –&gt;CLASS –&gt;类名</h5><h4 id="3、创建对象"><a href="#3、创建对象" class="headerlink" title="3、创建对象"></a>3、创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名=new 类名();</span><br></pre></td></tr></table></figure>
+
+<h5 id="对象名-方法名-对象名-属性"><a href="#对象名-方法名-对象名-属性" class="headerlink" title="对象名.方法名(); 对象名.属性"></a>对象名.方法名(); 对象名.属性</h5><h4 id="4-构造方法：方法名和类名相同-没有返回值"><a href="#4-构造方法：方法名和类名相同-没有返回值" class="headerlink" title="4.构造方法：方法名和类名相同,没有返回值"></a>4.构造方法：方法名和类名相同,没有返回值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;		public 类名()&#123;&#125;//主要的做用是初始化操作&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-构造方法重载"><a href="#5-构造方法重载" class="headerlink" title="5.构造方法重载"></a>5.构造方法重载</h4><h5 id="在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法"><a href="#在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法" class="headerlink" title="在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法"></a>在同一个类中，方法名相同，参数个数，顺序，类型不相同的构造方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123; 		public 类名()&#123;&#125;		public 类名(String name,int age)&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-构造方法的执行"><a href="#6-构造方法的执行" class="headerlink" title="6.构造方法的执行"></a>6.构造方法的执行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 类名();---&gt;执行构造方法super();---&gt;执行了父类的构造方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-static静态修饰符"><a href="#7-static静态修饰符" class="headerlink" title="7.static静态修饰符"></a>7.static静态修饰符</h4><h5 id="静态修饰符可以修饰属性，方法，代码块"><a href="#静态修饰符可以修饰属性，方法，代码块" class="headerlink" title="静态修饰符可以修饰属性，方法，代码块"></a>静态修饰符可以修饰属性，方法，代码块</h5><h5 id="类名-属性-类名-方法名"><a href="#类名-属性-类名-方法名" class="headerlink" title="类名.属性 类名.方法名"></a>类名.属性 类名.方法名</h5><h4 id="8-java内存（栈和堆，static，方法区，gc（垃圾回收机制））"><a href="#8-java内存（栈和堆，static，方法区，gc（垃圾回收机制））" class="headerlink" title="8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））"></a>8.java内存（栈和堆，static，方法区，gc（垃圾回收机制））</h4><h1 id="第三章-面向对象三大特征—封装"><a href="#第三章-面向对象三大特征—封装" class="headerlink" title="第三章 面向对象三大特征—封装"></a>第三章 面向对象三大特征—封装</h1><h4 id="1-封装的概念"><a href="#1-封装的概念" class="headerlink" title="1.封装的概念"></a>1.封装的概念</h4><h5 id="封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。"><a href="#封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。" class="headerlink" title="封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。"></a>封装是指将对象的状态信息隐藏在对象内部，不允许外部程序直接访问对象内部信息，而是通过该类所提供的方法来实现内部信息的操做访问。</h5><h4 id="2-封装的步骤"><a href="#2-封装的步骤" class="headerlink" title="2.封装的步骤"></a>2.封装的步骤</h4><h5 id="1-把属性私有化（PRIVATE）"><a href="#1-把属性私有化（PRIVATE）" class="headerlink" title="(1).把属性私有化（PRIVATE）"></a>(1).把属性私有化（PRIVATE）</h5><h5 id="2-对这些属性设置GET和SET方法"><a href="#2-对这些属性设置GET和SET方法" class="headerlink" title="(2).对这些属性设置GET和SET方法"></a>(2).对这些属性设置GET和SET方法</h5><h5 id="3-调用处理这些方法"><a href="#3-调用处理这些方法" class="headerlink" title="(3).调用处理这些方法"></a>(3).调用处理这些方法</h5><h4 id="3-封装的作用"><a href="#3-封装的作用" class="headerlink" title="3.封装的作用"></a>3.封装的作用</h4><h5 id="避免一些用一些不合乎常理的操作。"><a href="#避免一些用一些不合乎常理的操作。" class="headerlink" title="避免一些用一些不合乎常理的操作。"></a>避免一些用一些不合乎常理的操作。</h5><h4 id="4-修饰符"><a href="#4-修饰符" class="headerlink" title="4.修饰符"></a>4.修饰符</h4><h5 id="PUBLIC—-gt-公共的：在一个项目中都可以访问，权限最高"><a href="#PUBLIC—-gt-公共的：在一个项目中都可以访问，权限最高" class="headerlink" title="PUBLIC—&gt;公共的：在一个项目中都可以访问，权限最高"></a>PUBLIC—&gt;公共的：在一个项目中都可以访问，权限最高</h5><h5 id="PRIVATE—-gt-私有的：只能在本类中进行访问，权限最低"><a href="#PRIVATE—-gt-私有的：只能在本类中进行访问，权限最低" class="headerlink" title="PRIVATE—&gt;私有的：只能在本类中进行访问，权限最低"></a>PRIVATE—&gt;私有的：只能在本类中进行访问，权限最低</h5><h5 id="PROTECTED—-gt-安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类"><a href="#PROTECTED—-gt-安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类" class="headerlink" title="PROTECTED—&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类"></a>PROTECTED—&gt;安全的，受保护的：同一个包能进行访问，继承中之类可以访问父类</h5><h5 id="DEFAULT—-gt-默认的：同一个包能访问"><a href="#DEFAULT—-gt-默认的：同一个包能访问" class="headerlink" title="DEFAULT—&gt;默认的：同一个包能访问"></a>DEFAULT—&gt;默认的：同一个包能访问</h5><h1 id="第四章-面向对象三大特征—继承"><a href="#第四章-面向对象三大特征—继承" class="headerlink" title="第四章 面向对象三大特征—继承"></a>第四章 面向对象三大特征—继承</h1><h4 id="1-继承的概念"><a href="#1-继承的概念" class="headerlink" title="1.继承的概念"></a>1.继承的概念</h4><h5 id="父亲儿子的继承关系。"><a href="#父亲儿子的继承关系。" class="headerlink" title="父亲儿子的继承关系。"></a>父亲儿子的继承关系。</h5><h4 id="2-继承的好处"><a href="#2-继承的好处" class="headerlink" title="2.继承的好处"></a>2.继承的好处</h4><h5 id="1-提高了代码的重用性"><a href="#1-提高了代码的重用性" class="headerlink" title="(1)提高了代码的重用性"></a>(1)提高了代码的重用性</h5><h5 id="2-提高代码的可扩展性"><a href="#2-提高代码的可扩展性" class="headerlink" title="(2)提高代码的可扩展性"></a>(2)提高代码的可扩展性</h5><h4 id="3-继承的关键字：extends"><a href="#3-继承的关键字：extends" class="headerlink" title="3.继承的关键字：extends"></a>3.继承的关键字：extends</h4><h4 id="4-继承的语法："><a href="#4-继承的语法：" class="headerlink" title="4.继承的语法："></a>4.继承的语法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名  extends 父类&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-继承的使用，在子类中："><a href="#5-继承的使用，在子类中：" class="headerlink" title="5.继承的使用，在子类中："></a>5.继承的使用，在子类中：</h4><h5 id="可以直接调用父类的非私有属性和方法"><a href="#可以直接调用父类的非私有属性和方法" class="headerlink" title="可以直接调用父类的非私有属性和方法"></a>可以直接调用父类的非私有属性和方法</h5><h5 id="可以用SUPER-方法-SUPER-属性"><a href="#可以用SUPER-方法-SUPER-属性" class="headerlink" title="可以用SUPER.方法 SUPER.属性"></a>可以用SUPER.方法 SUPER.属性</h5><h4 id="6-父类构造方法调用：super"><a href="#6-父类构造方法调用：super" class="headerlink" title="6.父类构造方法调用：super();"></a>6.父类构造方法调用：super();</h4><h5 id="调用父类的构造方法必须在之类中调用"><a href="#调用父类的构造方法必须在之类中调用" class="headerlink" title="调用父类的构造方法必须在之类中调用"></a>调用父类的构造方法必须在之类中调用</h5><h5 id="必须实在之类构造方法的第一行代码"><a href="#必须实在之类构造方法的第一行代码" class="headerlink" title="必须实在之类构造方法的第一行代码"></a>必须实在之类构造方法的第一行代码</h5><h4 id="7-重写-Override"><a href="#7-重写-Override" class="headerlink" title="7.重写@Override"></a>7.重写@Override</h4><h5 id="必须继承"><a href="#必须继承" class="headerlink" title="必须继承"></a>必须继承</h5><h5 id="方法名一致，参数个数，顺序，类型全部一致"><a href="#方法名一致，参数个数，顺序，类型全部一致" class="headerlink" title="方法名一致，参数个数，顺序，类型全部一致"></a>方法名一致，参数个数，顺序，类型全部一致</h5><h1 id="第五章-面向对象（多态）"><a href="#第五章-面向对象（多态）" class="headerlink" title="第五章 面向对象（多态）"></a>第五章 面向对象（多态）</h1><h4 id="1-多态的概念"><a href="#1-多态的概念" class="headerlink" title="1.多态的概念"></a>1.多态的概念</h4><h5 id="指允许不同类的对象对同一消息做出不同的响应。"><a href="#指允许不同类的对象对同一消息做出不同的响应。" class="headerlink" title="指允许不同类的对象对同一消息做出不同的响应。"></a>指允许不同类的对象对同一消息做出不同的响应。</h5><h4 id="2-多态的必要条件"><a href="#2-多态的必要条件" class="headerlink" title="2.多态的必要条件"></a>2.多态的必要条件</h4><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><h5 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h5><h5 id="父类引用指向子类对象（向上转型）"><a href="#父类引用指向子类对象（向上转型）" class="headerlink" title="父类引用指向子类对象（向上转型）"></a>父类引用指向子类对象（向上转型）</h5><h4 id="3-多态的使用"><a href="#3-多态的使用" class="headerlink" title="3.多态的使用"></a>3.多态的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public class Father&#123; 			public void cooking()&#123; 				System.out.println(&quot;米饭&quot;);			&#125; 		&#125;</span><br><span class="line">public class Son extends Father&#123;  			@OVERRIDE 			public void cooking()&#123;				System.out.println(&quot;熬粥&quot;);  			&#125; 		&#125;</span><br><span class="line">public class Test &#123;			public static void main(String[] args) &#123;				Father son=new Son();				son.cooking();			&#125;		&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-向下转型"><a href="#4-向下转型" class="headerlink" title="4.向下转型"></a>4.向下转型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Son son=(Son)father;</span><br></pre></td></tr></table></figure>
+
+<h1 id="第六章-抽象"><a href="#第六章-抽象" class="headerlink" title="第六章 抽象"></a>第六章 抽象</h1><h4 id="1-抽象的概念"><a href="#1-抽象的概念" class="headerlink" title="1.抽象的概念"></a>1.抽象的概念</h4><h5 id="如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。"><a href="#如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。" class="headerlink" title="如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。"></a>如果一个类没有足够的信息去描述一个具体的对象，就称之为抽象类。</h5><h4 id="2-抽象的关键字"><a href="#2-抽象的关键字" class="headerlink" title="2.抽象的关键字"></a>2.抽象的关键字</h4><h5 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a>ABSTRACT</h5><h5 id="可以修饰类，可以修饰方法"><a href="#可以修饰类，可以修饰方法" class="headerlink" title="可以修饰类，可以修饰方法"></a>可以修饰类，可以修饰方法</h5><h4 id="3-抽象的用法"><a href="#3-抽象的用法" class="headerlink" title="3.抽象的用法"></a>3.抽象的用法</h4><h5 id="抽象类"><a href="#抽象类" class="headerlink" title="//抽象类"></a>//抽象类</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public abstract class 类名&#123;</span><br></pre></td></tr></table></figure>
+
+<h5 id="抽象方法没有方法体"><a href="#抽象方法没有方法体" class="headerlink" title="//抽象方法没有方法体"></a>//抽象方法没有方法体</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public abstract void 方法名();			&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="当父类是抽象类的时候，子类必须重写父类里面的抽象方法"><a href="#当父类是抽象类的时候，子类必须重写父类里面的抽象方法" class="headerlink" title="//当父类是抽象类的时候，子类必须重写父类里面的抽象方法"></a>//当父类是抽象类的时候，子类必须重写父类里面的抽象方法</h5><h4 id="4-final修饰符：最终的"><a href="#4-final修饰符：最终的" class="headerlink" title="4.final修饰符：最终的"></a>4.final修饰符：最终的</h4><h5 id="修饰变量，修饰方法，修饰类"><a href="#修饰变量，修饰方法，修饰类" class="headerlink" title="修饰变量，修饰方法，修饰类"></a>修饰变量，修饰方法，修饰类</h5><h5 id="1-当修饰变量时，变量转换成常量，常量的值不能改变"><a href="#1-当修饰变量时，变量转换成常量，常量的值不能改变" class="headerlink" title="(1).当修饰变量时，变量转换成常量，常量的值不能改变"></a>(1).当修饰变量时，变量转换成常量，常量的值不能改变</h5><h5 id="FINAL-INT-A-18-A-18-不能改变-必须给一个初始值"><a href="#FINAL-INT-A-18-A-18-不能改变-必须给一个初始值" class="headerlink" title="FINAL INT A=18;//A=18;不能改变,必须给一个初始值"></a>FINAL INT A=18;//A=18;不能改变,必须给一个初始值</h5><h5 id="2-当修饰方法时，该方法不能被重写"><a href="#2-当修饰方法时，该方法不能被重写" class="headerlink" title="(2).当修饰方法时，该方法不能被重写"></a>(2).当修饰方法时，该方法不能被重写</h5><h5 id="3-当修饰类时，该类不能被继承"><a href="#3-当修饰类时，该类不能被继承" class="headerlink" title="(3).当修饰类时，该类不能被继承"></a>(3).当修饰类时，该类不能被继承</h5><h1 id="第七章-接口"><a href="#第七章-接口" class="headerlink" title="第七章 接口"></a>第七章 接口</h1><h4 id="1-接口的概念"><a href="#1-接口的概念" class="headerlink" title="1.接口的概念"></a>1.接口的概念</h4><h5 id="接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。"><a href="#接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。" class="headerlink" title="接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。"></a>接口可以约束类的行为，是一些方法特征的集合，但没有方法的实现。</h5><h4 id="2-接口的关键字"><a href="#2-接口的关键字" class="headerlink" title="2.接口的关键字"></a>2.接口的关键字</h4><h5 id="INTERFACE"><a href="#INTERFACE" class="headerlink" title="INTERFACE"></a>INTERFACE</h5><h4 id="3-接口的语法"><a href="#3-接口的语法" class="headerlink" title="3.接口的语法"></a>3.接口的语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="FILE—-gt-NEW—-gt-INTERFACE-创建接口"><a href="#FILE—-gt-NEW—-gt-INTERFACE-创建接口" class="headerlink" title="FILE—&gt;NEW—&gt;INTERFACE//创建接口"></a>FILE—&gt;NEW—&gt;INTERFACE//创建接口</h5><h4 id="4-接口的用法"><a href="#4-接口的用法" class="headerlink" title="4.接口的用法"></a>4.接口的用法</h4><h5 id="实现接口的关键字-IMPLEMENTS"><a href="#实现接口的关键字-IMPLEMENTS" class="headerlink" title="实现接口的关键字 IMPLEMENTS"></a>实现接口的关键字 IMPLEMENTS</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名&#123; 			//接口是纯抽象类  			//接口里面的方法都是抽象方法  			void setData();  		&#125;  		public class Play implements 接口名&#123;  			@OVERRIDE  			void setData()&#123;  			&#125; 		&#125;  		public class Test &#123;  			public static void main(String[] args) &#123;  				Play play=new Play();  				play.setData();  			&#125;  		&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="注意接口可以进行多继承"><a href="#注意接口可以进行多继承" class="headerlink" title="注意接口可以进行多继承"></a>注意接口可以进行多继承</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public interface 接口名 extends 接口名，接口名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="一般用法"><a href="#一般用法" class="headerlink" title="一般用法"></a>一般用法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名 extends 父类 implements 接口，接口&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="第八章-集合框架"><a href="#第八章-集合框架" class="headerlink" title="第八章 集合框架"></a>第八章 集合框架</h1><h3 id="1-集合框架的概念"><a href="#1-集合框架的概念" class="headerlink" title="1.集合框架的概念"></a>1.集合框架的概念</h3><h5 id="集合框架是为表示和操作而规定的一种统一的标准体系结构。"><a href="#集合框架是为表示和操作而规定的一种统一的标准体系结构。" class="headerlink" title="集合框架是为表示和操作而规定的一种统一的标准体系结构。"></a>集合框架是为表示和操作而规定的一种统一的标准体系结构。</h5><h3 id="2-List接口，Set接口，Map接口的区别"><a href="#2-List接口，Set接口，Map接口的区别" class="headerlink" title="2.List接口，Set接口，Map接口的区别"></a>2.List接口，Set接口，Map接口的区别</h3><h5 id="SET接口继承COLLECTION接口，存储一组唯一-不允许重复-，无序的对象。"><a href="#SET接口继承COLLECTION接口，存储一组唯一-不允许重复-，无序的对象。" class="headerlink" title="SET接口继承COLLECTION接口，存储一组唯一(不允许重复)，无序的对象。"></a>SET接口继承COLLECTION接口，存储一组唯一(不允许重复)，无序的对象。</h5><h5 id="LIST接口继承COLLECTION接口，存储一组不唯一-允许重复-，有序的对象。"><a href="#LIST接口继承COLLECTION接口，存储一组不唯一-允许重复-，有序的对象。" class="headerlink" title="LIST接口继承COLLECTION接口，存储一组不唯一(允许重复)，有序的对象。"></a>LIST接口继承COLLECTION接口，存储一组不唯一(允许重复)，有序的对象。</h5><h5 id="MAP接口存储一组成对的键-值对象，提供KEY-键-到VALUE-键-的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。"><a href="#MAP接口存储一组成对的键-值对象，提供KEY-键-到VALUE-键-的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。" class="headerlink" title="MAP接口存储一组成对的键-值对象，提供KEY(键)到VALUE(键)的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。"></a>MAP接口存储一组成对的键-值对象，提供KEY(键)到VALUE(键)的映射。MAP中的KEY不要求有序，不允许重复。VALUE同样不要求有序，但允许重复。</h5><h3 id="3-ArrayList"><a href="#3-ArrayList" class="headerlink" title="3.ArrayList"></a>3.ArrayList</h3><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList list=new ArrayList();  		list.add();//添加数据  		list.get();//获取数据</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-Map"><a href="#4-Map" class="headerlink" title="4.Map"></a>4.Map</h3><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map map=new HasMap();map.put(key,value);//key不能重复map.get(key);//获取key对象的value</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5.泛型"></a>5.泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();		Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();	ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
+
+<h1 id="第九章-高级功能—–文件操作"><a href="#第九章-高级功能—–文件操作" class="headerlink" title="第九章 高级功能—–文件操作"></a>第九章 高级功能—–文件操作</h1><h4 id="1-文件概述"><a href="#1-文件概述" class="headerlink" title="1.文件概述"></a>1.文件概述</h4><h5 id="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"><a href="#文件是具有内容和用途的，而文件夹是用来放置这些文件的。" class="headerlink" title="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"></a>文件是具有内容和用途的，而文件夹是用来放置这些文件的。</h5><h4 id="2-什么是流"><a href="#2-什么是流" class="headerlink" title="2.什么是流"></a>2.什么是流</h4><h5 id="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"><a href="#JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。" class="headerlink" title="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"></a>JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。</h5><h3 id="3-写文件"><a href="#3-写文件" class="headerlink" title="3.写文件"></a>3.写文件</h3><h5 id="1-字节输出流写文件"><a href="#1-字节输出流写文件" class="headerlink" title="(1)字节输出流写文件"></a>(1)字节输出流写文件</h5><h5 id="INT-WRITE-INT-C-—–写入一个字节数据"><a href="#INT-WRITE-INT-C-—–写入一个字节数据" class="headerlink" title="INT WRITE(INT C)—–写入一个字节数据"></a>INT WRITE(INT C)—–写入一个字节数据</h5><h5 id="INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节"><a href="#INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节" class="headerlink" title="INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节"></a>INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节</h5><h5 id="INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"><a href="#INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中" class="headerlink" title="INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"></a>INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流"><a href="#VOID-CLOSE-—–关闭输出流" class="headerlink" title="VOID CLOSE( )—–关闭输出流"></a>VOID CLOSE( )—–关闭输出流</h5><h5 id="2-字符输出流写文件"><a href="#2-字符输出流写文件" class="headerlink" title="(2)字符输出流写文件"></a>(2)字符输出流写文件</h5><h5 id="WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中"><a href="#WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中" class="headerlink" title="WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中"></a>WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中</h5><h5 id="WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"><a href="#WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中" class="headerlink" title="WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"></a>WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流-1"><a href="#VOID-CLOSE-—–关闭输出流-1" class="headerlink" title="VOID CLOSE()—–关闭输出流"></a>VOID CLOSE()—–关闭输出流</h5><h5 id="VOID-FLUSH-—–刷新输出流"><a href="#VOID-FLUSH-—–刷新输出流" class="headerlink" title="VOID FLUSH()—–刷新输出流"></a>VOID FLUSH()—–刷新输出流</h5><h4 id="4-读文件"><a href="#4-读文件" class="headerlink" title="4.读文件"></a>4.读文件</h4><h5 id="1-字节输入流读文件"><a href="#1-字节输入流读文件" class="headerlink" title="(1)字节输入流读文件"></a>(1)字节输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符"><a href="#INT-READ-—–从输入流中读取单个字符" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–将数据读取到字节数组中"><a href="#INT-READ-BYTE-B-—–将数据读取到字节数组中" class="headerlink" title="INT READ(BYTE[ ] B)—–将数据读取到字节数组中"></a>INT READ(BYTE[ ] B)—–将数据读取到字节数组中</h5><h5 id="INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"><a href="#INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始" class="headerlink" title="INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"></a>INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始</h5><h5 id="VOID-CLOSE-—–关闭输入流"><a href="#VOID-CLOSE-—–关闭输入流" class="headerlink" title="VOID CLOSE( )—–关闭输入流"></a>VOID CLOSE( )—–关闭输入流</h5><h5 id="INT-AVAILABLE-—–返回输入流读取的估计字节数"><a href="#INT-AVAILABLE-—–返回输入流读取的估计字节数" class="headerlink" title="INT AVAILABLE()—–返回输入流读取的估计字节数"></a>INT AVAILABLE()—–返回输入流读取的估计字节数</h5><h5 id="2-字符输入流读文件"><a href="#2-字符输入流读文件" class="headerlink" title="(2)字符输入流读文件"></a>(2)字符输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符-1"><a href="#INT-READ-—–从输入流中读取单个字符-1" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"><a href="#INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数" class="headerlink" title="INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"></a>INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数</h5><h5 id="READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"><a href="#READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数" class="headerlink" title="READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"></a>READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数</h5><h5 id="VOID-CLOSE-—–关闭流"><a href="#VOID-CLOSE-—–关闭流" class="headerlink" title="VOID CLOSE()—–关闭流"></a>VOID CLOSE()—–关闭流</h5><h1 id="第十章-高级功能—–多线程"><a href="#第十章-高级功能—–多线程" class="headerlink" title="第十章 高级功能—–多线程"></a>第十章 高级功能—–多线程</h1><h3 id="1-线程的创建"><a href="#1-线程的创建" class="headerlink" title="1.线程的创建"></a>1.线程的创建</h3><h4 id="1-实现Runnable接口"><a href="#1-实现Runnable接口" class="headerlink" title="(1)实现Runnable接口"></a>(1)实现Runnable接口</h4><h5 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="定义一个类实现RUNABLE接口"><a href="#定义一个类实现RUNABLE接口" class="headerlink" title="定义一个类实现RUNABLE接口"></a>定义一个类实现RUNABLE接口</h5><h5 id="实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的"><a href="#实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的" class="headerlink" title="实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的"></a>实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的</h5><h5 id="在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象"><a href="#在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象" class="headerlink" title="在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象"></a>在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程"><a href="#调用MYTHREAD-START-方法启动新创建的线程" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5><h4 id="2-继承Thread创建线程"><a href="#2-继承Thread创建线程" class="headerlink" title="(2)继承Thread创建线程"></a>(2)继承Thread创建线程</h4><h5 id="步骤：-1"><a href="#步骤：-1" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="创建类MYTHREAD并继承THREAD类"><a href="#创建类MYTHREAD并继承THREAD类" class="headerlink" title="创建类MYTHREAD并继承THREAD类"></a>创建类MYTHREAD并继承THREAD类</h5><h5 id="实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载"><a href="#实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载" class="headerlink" title="实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载"></a>实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载</h5><h5 id="生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD"><a href="#生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD" class="headerlink" title="生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();"></a>生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程-1"><a href="#调用MYTHREAD-START-方法启动新创建的线程-1" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" data-id="ck2d84gcy0004cgvw1ksog43i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/30/hello-world/" class="article-date">
@@ -100,7 +170,231 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/10/30/hello-world/" data-id="ck2d7pnt10000r0vw0i8w5wy9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/10/30/hello-world/" data-id="ck2d84gcw0003cgvwbxcohgsn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MySQL第三章总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-23T02:08:52.000Z" itemprop="datePublished">2019-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第三章总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第三章，操作表中数据"><a href="#第三章，操作表中数据" class="headerlink" title="第三章，操作表中数据"></a>第三章，操作表中数据</h2><h3 id="1，SQL命令中的表达式和逻辑运算符"><a href="#1，SQL命令中的表达式和逻辑运算符" class="headerlink" title="1，SQL命令中的表达式和逻辑运算符"></a>1，SQL命令中的表达式和逻辑运算符</h3><h4 id="1-1表达式"><a href="#1-1表达式" class="headerlink" title="1.1表达式"></a>1.1表达式</h4><h5 id="在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。"><a href="#在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。" class="headerlink" title="在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。"></a>在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。</h5><h5 id="SQL语言中包括三种表达反式："><a href="#SQL语言中包括三种表达反式：" class="headerlink" title="SQL语言中包括三种表达反式："></a>SQL语言中包括三种表达反式：</h5><h6 id="第一种：-lt-表名-gt-后跟-lt-字段名表达式-gt"><a href="#第一种：-lt-表名-gt-后跟-lt-字段名表达式-gt" class="headerlink" title="第一种：&lt;表名&gt; 后跟&lt;字段名表达式&gt;"></a>第一种：&lt;表名&gt; 后跟&lt;字段名表达式&gt;</h6><h6 id="第二种：select语句后的-lt-目标表达式-gt"><a href="#第二种：select语句后的-lt-目标表达式-gt" class="headerlink" title="第二种：select语句后的&lt;目标表达式&gt;"></a>第二种：select语句后的&lt;目标表达式&gt;</h6><h6 id="第三种：where语句后的-lt-条件表达式-gt"><a href="#第三种：where语句后的-lt-条件表达式-gt" class="headerlink" title="第三种：where语句后的&lt;条件表达式&gt;"></a>第三种：where语句后的&lt;条件表达式&gt;</h6><h4 id="1-2比较运算符"><a href="#1-2比较运算符" class="headerlink" title="1.2比较运算符"></a>1.2比较运算符</h4><h5 id="比较运算符用来比较两个数的大小，其结果是1，0或者null。"><a href="#比较运算符用来比较两个数的大小，其结果是1，0或者null。" class="headerlink" title="比较运算符用来比较两个数的大小，其结果是1，0或者null。"></a>比较运算符用来比较两个数的大小，其结果是1，0或者null。</h5><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&gt;</td>
+<td align="center">大于</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">大于等于</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">小于等于</td>
+</tr>
+<tr>
+<td align="center">=</td>
+<td align="center">等于</td>
+</tr>
+<tr>
+<td align="center">!=或&lt;&gt;</td>
+<td align="center">不等于</td>
+</tr>
+<tr>
+<td align="center">is  null</td>
+<td align="center">是否为空</td>
+</tr>
+<tr>
+<td align="center">is  not  null</td>
+<td align="center">是否不为空</td>
+</tr>
+<tr>
+<td align="center">in</td>
+<td align="center">判断一个值是in列表中的任意一个值</td>
+</tr>
+<tr>
+<td align="center">not  in</td>
+<td align="center">判断一个值不是in列表中的任意一个值</td>
+</tr>
+<tr>
+<td align="center">like</td>
+<td align="center">通配符匹配</td>
+</tr>
+<tr>
+<td align="center">between  and</td>
+<td align="center">判断一个值是否在两个值之间</td>
+</tr>
+</tbody></table>
+<h4 id="1-3逻辑运算符"><a href="#1-3逻辑运算符" class="headerlink" title="1.3逻辑运算符"></a>1.3逻辑运算符</h4><h5 id="SQL命令支持的运算符有And-或者-amp-amp-，Or-或者-，Not-或者-。-逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回-1。如果表达式是假，结果返回-0。"><a href="#SQL命令支持的运算符有And-或者-amp-amp-，Or-或者-，Not-或者-。-逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回-1。如果表达式是假，结果返回-0。" class="headerlink" title="SQL命令支持的运算符有And(或者&amp;&amp;)，Or(或者||)，Not(或者!)。 逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回 1。如果表达式是假，结果返回 0。"></a>SQL命令支持的运算符有And(或者&amp;&amp;)，Or(或者||)，Not(或者!)。 逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回 1。如果表达式是假，结果返回 0。</h5><h5 id="And-和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。"><a href="#And-和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。" class="headerlink" title="And 和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。"></a>And 和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。</h5><h5 id="当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。"><a href="#当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。" class="headerlink" title="当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。"></a>当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。</h5><h3 id="2，插入数据"><a href="#2，插入数据" class="headerlink" title="2，插入数据"></a>2，插入数据</h3><h4 id="2-1一次插入一行"><a href="#2-1一次插入一行" class="headerlink" title="2.1一次插入一行"></a>2.1一次插入一行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名1，字段名2，.....) values (值1，值2，.....);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2一次插入多行"><a href="#2-2一次插入多行" class="headerlink" title="2.2一次插入多行"></a>2.2一次插入多行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名1，字段名2，.....) values (值1，值2，.....)，(值1，值2，.....)，......;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-修改表中的数据"><a href="#3-修改表中的数据" class="headerlink" title="3,修改表中的数据"></a>3,修改表中的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update  表名</span><br><span class="line">set </span><br><span class="line">字段名=值，字段名=值，.....，字段名=值</span><br><span class="line">[where &lt;表达式&gt;]；</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-1修改表中的全部数据"><a href="#3-1修改表中的全部数据" class="headerlink" title="3.1修改表中的全部数据"></a>3.1修改表中的全部数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set  字段名=字段值变化（例age=age+1）;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2根据条件修改表中的数据"><a href="#3-2根据条件修改表中的数据" class="headerlink" title="3.2根据条件修改表中的数据"></a>3.2根据条件修改表中的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update  表名</span><br><span class="line">set </span><br><span class="line">字段名=值，字段名=值，.....，字段名=值</span><br><span class="line">where &lt;表达式&gt;；</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4，删除数据记录"><a href="#4，删除数据记录" class="headerlink" title="4，删除数据记录"></a>4，删除数据记录</h3><h4 id="4-1使用delete"><a href="#4-1使用delete" class="headerlink" title="4.1使用delete"></a>4.1使用delete</h4><h5 id="可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。"><a href="#可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。" class="headerlink" title="可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。"></a>可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 [where 条件]；</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2使用truncate"><a href="#4-2使用truncate" class="headerlink" title="4.2使用truncate"></a>4.2使用truncate</h4><h5 id="全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。"><a href="#全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。" class="headerlink" title="全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。"></a>全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名 ；</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意：truncate-table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。"><a href="#注意：truncate-table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。" class="headerlink" title="注意：truncate table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。"></a>注意：truncate table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" data-id="ck2d84gc70002cgvw8m750pgs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MySQL第二章总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-22T03:27:09.000Z" itemprop="datePublished">2019-10-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/">MYSQL第二章总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第二章数据库和表的设计"><a href="#第二章数据库和表的设计" class="headerlink" title="第二章数据库和表的设计"></a>第二章数据库和表的设计</h2><h3 id="1，为什么需要数据完整性？"><a href="#1，为什么需要数据完整性？" class="headerlink" title="1，为什么需要数据完整性？"></a>1，为什么需要数据完整性？</h3><h4 id="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："><a href="#数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：" class="headerlink" title="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："></a>数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：</h4><h4 id="1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。"><a href="#1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。" class="headerlink" title="1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。"></a>1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。</h4><h4 id="2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。"><a href="#2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。" class="headerlink" title="2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。"></a>2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。</h4><h4 id="3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"><a href="#3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。" class="headerlink" title="3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"></a>3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。</h4><h4 id="4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"><a href="#4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。" class="headerlink" title="4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"></a>4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。</h4><h3 id="2，数据完整性在MySQL中的体现"><a href="#2，数据完整性在MySQL中的体现" class="headerlink" title="2，数据完整性在MySQL中的体现"></a>2，数据完整性在MySQL中的体现</h3><h4 id="数据约束：主键，主键自增，外键，非空，默认，唯一。"><a href="#数据约束：主键，主键自增，外键，非空，默认，唯一。" class="headerlink" title="数据约束：主键，主键自增，外键，非空，默认，唯一。"></a>数据约束：主键，主键自增，外键，非空，默认，唯一。</h4><h4 id="1，主键：primary-key-特性：非空且唯一，写在字段类型后面。"><a href="#1，主键：primary-key-特性：非空且唯一，写在字段类型后面。" class="headerlink" title="1，主键：primary  key  特性：非空且唯一，写在字段类型后面。"></a>1，主键：primary  key  特性：非空且唯一，写在字段类型后面。</h4><h5 id="在MySQL中设置字段做主键时，分两种情况。"><a href="#在MySQL中设置字段做主键时，分两种情况。" class="headerlink" title="在MySQL中设置字段做主键时，分两种情况。"></a>在MySQL中设置字段做主键时，分两种情况。</h5><h6 id="（1）定义列的同时设置主键"><a href="#（1）定义列的同时设置主键" class="headerlink" title="（1）定义列的同时设置主键"></a>（1）定义列的同时设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h6 id="（2）完成所有列之后设置主键"><a href="#（2）完成所有列之后设置主键" class="headerlink" title="（2）完成所有列之后设置主键"></a>（2）完成所有列之后设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，主键自增：auto-increment-写在字段类型后面，主键前面。"><a href="#2，主键自增：auto-increment-写在字段类型后面，主键前面。" class="headerlink" title="2，主键自增：auto_increment   写在字段类型后面，主键前面。"></a>2，主键自增：auto_increment   写在字段类型后面，主键前面。</h4><h5 id="在设置auto-increment-时需要遵守以下几点规则："><a href="#在设置auto-increment-时需要遵守以下几点规则：" class="headerlink" title="在设置auto_increment 时需要遵守以下几点规则："></a>在设置auto_increment 时需要遵守以下几点规则：</h5><h6 id="（1）一个表中只能有一个字段使用auto-increment。"><a href="#（1）一个表中只能有一个字段使用auto-increment。" class="headerlink" title="（1）一个表中只能有一个字段使用auto_increment。"></a>（1）一个表中只能有一个字段使用auto_increment。</h6><h6 id="（2）auto-increment-必须作为主键的一个部分，不得单独使用。"><a href="#（2）auto-increment-必须作为主键的一个部分，不得单独使用。" class="headerlink" title="（2）auto_increment 必须作为主键的一个部分，不得单独使用。"></a>（2）auto_increment 必须作为主键的一个部分，不得单独使用。</h6><h6 id="（3）-auto-increment-字段的数据类必须为整数类型。"><a href="#（3）-auto-increment-字段的数据类必须为整数类型。" class="headerlink" title="（3） auto_increment 字段的数据类必须为整数类型。"></a>（3） auto_increment 字段的数据类必须为整数类型。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">列名  数据类型 auto_increment primary key</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"><a href="#3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。" class="headerlink" title="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"></a>3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。</h4><h5 id="外键约束中有两个名词，需要注意："><a href="#外键约束中有两个名词，需要注意：" class="headerlink" title="外键约束中有两个名词，需要注意："></a>外键约束中有两个名词，需要注意：</h5><h6 id="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"><a href="#主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。" class="headerlink" title="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"></a>主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。</h6><h6 id="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"><a href="#从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。" class="headerlink" title="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"></a>从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。</h6><h5 id="在从表中创建外键的语法如下："><a href="#在从表中创建外键的语法如下：" class="headerlink" title="在从表中创建外键的语法如下："></a>在从表中创建外键的语法如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[constraint 外键名] foreign  字段名1[,字段名2,......]</span><br><span class="line">refereces 主表名 主键列1[,主键列2,......]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，非空：not-null-写在字段类型的后面。"><a href="#4，非空：not-null-写在字段类型的后面。" class="headerlink" title="4，非空：not  null  写在字段类型的后面。"></a>4，非空：not  null  写在字段类型的后面。</h4><h5 id="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"><a href="#非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。" class="headerlink" title="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"></a>非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。</h5><h6 id="建表时设置非空约束的语法："><a href="#建表时设置非空约束的语法：" class="headerlink" title="建表时设置非空约束的语法："></a>建表时设置非空约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型 not null</span><br></pre></td></tr></table></figure>
+
+<h4 id="5，默认：default-默认值-如果默认值为字符，则将字符加单引号。"><a href="#5，默认：default-默认值-如果默认值为字符，则将字符加单引号。" class="headerlink" title="5，默认：default  默认值     如果默认值为字符，则将字符加单引号。"></a>5，默认：default  默认值     如果默认值为字符，则将字符加单引号。</h4><h5 id="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"><a href="#默认约束指定某列的默认值下，系统会自动为这个字段赋值。" class="headerlink" title="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"></a>默认约束指定某列的默认值下，系统会自动为这个字段赋值。</h5><h6 id="建表时设置默认约束的语法："><a href="#建表时设置默认约束的语法：" class="headerlink" title="建表时设置默认约束的语法："></a>建表时设置默认约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型  default 默认值</span><br></pre></td></tr></table></figure>
+
+<h4 id="6，唯一：unique-写在字段类型后面。"><a href="#6，唯一：unique-写在字段类型后面。" class="headerlink" title="6，唯一：unique 写在字段类型后面。"></a>6，唯一：unique 写在字段类型后面。</h4><h5 id="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"><a href="#唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。" class="headerlink" title="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"></a>唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。</h5><h6 id="唯一约束的语法规则如下："><a href="#唯一约束的语法规则如下：" class="headerlink" title="唯一约束的语法规则如下："></a>唯一约束的语法规则如下：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型  unique</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-数据库设计规范"><a href="#3-数据库设计规范" class="headerlink" title="3,数据库设计规范"></a>3,数据库设计规范</h3><h4 id="1NF-一范式-数据字段要具有原子性，不可再分。"><a href="#1NF-一范式-数据字段要具有原子性，不可再分。" class="headerlink" title="1NF  一范式  数据字段要具有原子性，不可再分。"></a>1NF  一范式  数据字段要具有原子性，不可再分。</h4><h4 id="2NF-二范式-所有字段要和主键相关。（要有主键）"><a href="#2NF-二范式-所有字段要和主键相关。（要有主键）" class="headerlink" title="2NF  二范式  所有字段要和主键相关。（要有主键）"></a>2NF  二范式  所有字段要和主键相关。（要有主键）</h4><h4 id="3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）"><a href="#3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）" class="headerlink" title="3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）"></a>3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" data-id="ck2d84gc40001cgvw1je09bs9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MySQL第一章总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-10-20T07:17:33.000Z" itemprop="datePublished">2019-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第1章总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一章MySQL基础"><a href="#第一章MySQL基础" class="headerlink" title="第一章MySQL基础"></a>第一章MySQL基础</h2><h3 id="1，MySQL的特点？"><a href="#1，MySQL的特点？" class="headerlink" title="1，MySQL的特点？"></a>1，MySQL的特点？</h3><h5 id="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"><a href="#①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。" class="headerlink" title="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"></a>①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。</h5><h5 id="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。"><a href="#②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。" class="headerlink" title="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。"></a>②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。</h5><h5 id="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"><a href="#③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。" class="headerlink" title="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"></a>③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。</h5><h5 id="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。"><a href="#④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。" class="headerlink" title="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。"></a>④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。</h5><h5 id="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"><a href="#⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。" class="headerlink" title="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"></a>⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。</h5><h5 id="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。"><a href="#⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。" class="headerlink" title="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。"></a>⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。</h5><h5 id="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"><a href="#⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。" class="headerlink" title="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"></a>⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。</h5><h5 id="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"><a href="#⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。" class="headerlink" title="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"></a>⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。</h5><h3 id="2，使用命令创建MySQL数据库"><a href="#2，使用命令创建MySQL数据库" class="headerlink" title="2，使用命令创建MySQL数据库"></a>2，使用命令创建MySQL数据库</h3><h4 id="1，创建数据库"><a href="#1，创建数据库" class="headerlink" title="1，创建数据库"></a>1，创建数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，删除数据库"><a href="#2，删除数据库" class="headerlink" title="2，删除数据库"></a>2，删除数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，进入数据库"><a href="#3，进入数据库" class="headerlink" title="3，进入数据库"></a>3，进入数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"><a href="#注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。" class="headerlink" title="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"></a>注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。</h4><h3 id="3，创建数据表"><a href="#3，创建数据表" class="headerlink" title="3，创建数据表"></a>3，创建数据表</h3><h4 id="1，创建数据表"><a href="#1，创建数据表" class="headerlink" title="1，创建数据表"></a>1，创建数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名(字段1 类型,字段2 类型,····);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，查询表的结构信息"><a href="#2，查询表的结构信息" class="headerlink" title="2，查询表的结构信息"></a>2，查询表的结构信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DESC 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，查询表的创建信息"><a href="#3，查询表的创建信息" class="headerlink" title="3，查询表的创建信息"></a>3，查询表的创建信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，删除数据表"><a href="#4，删除数据表" class="headerlink" title="4，删除数据表"></a>4，删除数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="5，常用的数据类型"><a href="#5，常用的数据类型" class="headerlink" title="5，常用的数据类型"></a>5，常用的数据类型</h4><h6 id="binary-取值1，0"><a href="#binary-取值1，0" class="headerlink" title="binary     取值1，0"></a>binary     取值1，0</h6><h6 id="int-6万"><a href="#int-6万" class="headerlink" title="int      6万"></a>int      6万</h6><h6 id="bigint-4亿"><a href="#bigint-4亿" class="headerlink" title="bigint      4亿"></a>bigint      4亿</h6><h6 id="char-定长字符串，最大长度255，优点：效率高"><a href="#char-定长字符串，最大长度255，优点：效率高" class="headerlink" title="char     定长字符串，最大长度255，优点：效率高"></a>char     定长字符串，最大长度255，优点：效率高</h6><h6 id="varchar-变长字符串，最大长度255，优点：省空间"><a href="#varchar-变长字符串，最大长度255，优点：省空间" class="headerlink" title="varchar     变长字符串，最大长度255，优点：省空间"></a>varchar     变长字符串，最大长度255，优点：省空间</h6><h6 id="text-64k"><a href="#text-64k" class="headerlink" title="text    64k"></a>text    64k</h6><h6 id="longtext-4GB"><a href="#longtext-4GB" class="headerlink" title="longtext      4GB"></a>longtext      4GB</h6><h6 id="float-同int"><a href="#float-同int" class="headerlink" title="float      同int"></a>float      同int</h6><h6 id="double-同bigint"><a href="#double-同bigint" class="headerlink" title="double    同bigint"></a>double    同bigint</h6><h4 id="6-专有名词"><a href="#6-专有名词" class="headerlink" title="6,专有名词"></a>6,专有名词</h4><h5 id="数据库，数据表，记录（一行数据-record），字段（一列-field）"><a href="#数据库，数据表，记录（一行数据-record），字段（一列-field）" class="headerlink" title="数据库，数据表，记录（一行数据 record），字段（一列 field）"></a>数据库，数据表，记录（一行数据 record），字段（一列 field）</h5><h4 id="7，修改表结构"><a href="#7，修改表结构" class="headerlink" title="7，修改表结构"></a>7，修改表结构</h4><h5 id="alter-table-表名-动作"><a href="#alter-table-表名-动作" class="headerlink" title="alter  table  表名+动作"></a>alter  table  表名+动作</h5><h6 id="①-动作—-修改表名：rename-新表名"><a href="#①-动作—-修改表名：rename-新表名" class="headerlink" title="① 动作—-修改表名：rename  新表名"></a>① 动作—-修改表名：rename  新表名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
+
+<h6 id="②动作—-修改字段类型：modify-字段名-新类型"><a href="#②动作—-修改字段类型：modify-字段名-新类型" class="headerlink" title="②动作—-修改字段类型：modify   字段名    新类型"></a>②动作—-修改字段类型：modify   字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
+
+<h6 id="③动作—-修改字段名字：change-老字段名-，新字段名-新类型"><a href="#③动作—-修改字段名字：change-老字段名-，新字段名-新类型" class="headerlink" title="③动作—-修改字段名字：change  老字段名 ，新字段名    新类型"></a>③动作—-修改字段名字：change  老字段名 ，新字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  change  老字段名 ，新字段名    新类型</span><br></pre></td></tr></table></figure>
+
+<h6 id="④动作—-添加字段：add-新字段名-新字段类型"><a href="#④动作—-添加字段：add-新字段名-新字段类型" class="headerlink" title="④动作—-添加字段：add   新字段名   新字段类型"></a>④动作—-添加字段：add   新字段名   新字段类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  add   新字段名   新字段类型</span><br></pre></td></tr></table></figure>
+
+<h6 id="⑤动作—-删除字段：drop-字段名"><a href="#⑤动作—-删除字段：drop-字段名" class="headerlink" title="⑤动作—-删除字段：drop   字段名"></a>⑤动作—-删除字段：drop   字段名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  drop   字段名</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" data-id="ck2d84gbt0000cgvw939cdpyx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +435,23 @@
       <ul>
         
           <li>
+            <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面对对象总结</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第三章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/">MYSQL第二章总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL第1章总结</a>
           </li>
         
       </ul>
