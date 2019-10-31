@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MySQL第1章总结 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="第一章MySQL基础1，MySQL的特点？①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相    ,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+</head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">MySQL第1章总结</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">MySQL第1章总结</h1>
+        <div class="stuff">
+            <span>十月 20, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="第一章MySQL基础"><a href="#第一章MySQL基础" class="headerlink" title="第一章MySQL基础"></a>第一章MySQL基础</h2><h3 id="1，MySQL的特点？"><a href="#1，MySQL的特点？" class="headerlink" title="1，MySQL的特点？"></a>1，MySQL的特点？</h3><h5 id="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"><a href="#①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。" class="headerlink" title="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"></a>①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。</h5><h5 id="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。"><a href="#②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。" class="headerlink" title="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。"></a>②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。</h5><h5 id="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"><a href="#③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。" class="headerlink" title="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"></a>③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。</h5><h5 id="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。"><a href="#④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。" class="headerlink" title="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。"></a>④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。</h5><h5 id="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"><a href="#⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。" class="headerlink" title="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"></a>⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。</h5><h5 id="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。"><a href="#⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。" class="headerlink" title="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。"></a>⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。</h5><h5 id="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"><a href="#⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。" class="headerlink" title="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"></a>⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。</h5><h5 id="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"><a href="#⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。" class="headerlink" title="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"></a>⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。</h5><h3 id="2，使用命令创建MySQL数据库"><a href="#2，使用命令创建MySQL数据库" class="headerlink" title="2，使用命令创建MySQL数据库"></a>2，使用命令创建MySQL数据库</h3><h4 id="1，创建数据库"><a href="#1，创建数据库" class="headerlink" title="1，创建数据库"></a>1，创建数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，删除数据库"><a href="#2，删除数据库" class="headerlink" title="2，删除数据库"></a>2，删除数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，进入数据库"><a href="#3，进入数据库" class="headerlink" title="3，进入数据库"></a>3，进入数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"><a href="#注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。" class="headerlink" title="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"></a>注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。</h4><h3 id="3，创建数据表"><a href="#3，创建数据表" class="headerlink" title="3，创建数据表"></a>3，创建数据表</h3><h4 id="1，创建数据表"><a href="#1，创建数据表" class="headerlink" title="1，创建数据表"></a>1，创建数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名(字段1 类型,字段2 类型,····);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，查询表的结构信息"><a href="#2，查询表的结构信息" class="headerlink" title="2，查询表的结构信息"></a>2，查询表的结构信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DESC 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，查询表的创建信息"><a href="#3，查询表的创建信息" class="headerlink" title="3，查询表的创建信息"></a>3，查询表的创建信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，删除数据表"><a href="#4，删除数据表" class="headerlink" title="4，删除数据表"></a>4，删除数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE 表名；</span><br></pre></td></tr></table></figure>
+
+<h4 id="5，常用的数据类型"><a href="#5，常用的数据类型" class="headerlink" title="5，常用的数据类型"></a>5，常用的数据类型</h4><h6 id="binary-取值1，0"><a href="#binary-取值1，0" class="headerlink" title="binary     取值1，0"></a>binary     取值1，0</h6><h6 id="int-6万"><a href="#int-6万" class="headerlink" title="int      6万"></a>int      6万</h6><h6 id="bigint-4亿"><a href="#bigint-4亿" class="headerlink" title="bigint      4亿"></a>bigint      4亿</h6><h6 id="char-定长字符串，最大长度255，优点：效率高"><a href="#char-定长字符串，最大长度255，优点：效率高" class="headerlink" title="char     定长字符串，最大长度255，优点：效率高"></a>char     定长字符串，最大长度255，优点：效率高</h6><h6 id="varchar-变长字符串，最大长度255，优点：省空间"><a href="#varchar-变长字符串，最大长度255，优点：省空间" class="headerlink" title="varchar     变长字符串，最大长度255，优点：省空间"></a>varchar     变长字符串，最大长度255，优点：省空间</h6><h6 id="text-64k"><a href="#text-64k" class="headerlink" title="text    64k"></a>text    64k</h6><h6 id="longtext-4GB"><a href="#longtext-4GB" class="headerlink" title="longtext      4GB"></a>longtext      4GB</h6><h6 id="float-同int"><a href="#float-同int" class="headerlink" title="float      同int"></a>float      同int</h6><h6 id="double-同bigint"><a href="#double-同bigint" class="headerlink" title="double    同bigint"></a>double    同bigint</h6><h4 id="6-专有名词"><a href="#6-专有名词" class="headerlink" title="6,专有名词"></a>6,专有名词</h4><h5 id="数据库，数据表，记录（一行数据-record），字段（一列-field）"><a href="#数据库，数据表，记录（一行数据-record），字段（一列-field）" class="headerlink" title="数据库，数据表，记录（一行数据 record），字段（一列 field）"></a>数据库，数据表，记录（一行数据 record），字段（一列 field）</h5><h4 id="7，修改表结构"><a href="#7，修改表结构" class="headerlink" title="7，修改表结构"></a>7，修改表结构</h4><h5 id="alter-table-表名-动作"><a href="#alter-table-表名-动作" class="headerlink" title="alter  table  表名+动作"></a>alter  table  表名+动作</h5><h6 id="①-动作—-修改表名：rename-新表名"><a href="#①-动作—-修改表名：rename-新表名" class="headerlink" title="① 动作—-修改表名：rename  新表名"></a>① 动作—-修改表名：rename  新表名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
+
+<h6 id="②动作—-修改字段类型：modify-字段名-新类型"><a href="#②动作—-修改字段类型：modify-字段名-新类型" class="headerlink" title="②动作—-修改字段类型：modify   字段名    新类型"></a>②动作—-修改字段类型：modify   字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
+
+<h6 id="③动作—-修改字段名字：change-老字段名-，新字段名-新类型"><a href="#③动作—-修改字段名字：change-老字段名-，新字段名-新类型" class="headerlink" title="③动作—-修改字段名字：change  老字段名 ，新字段名    新类型"></a>③动作—-修改字段名字：change  老字段名 ，新字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  change  老字段名 ，新字段名    新类型</span><br></pre></td></tr></table></figure>
+
+<h6 id="④动作—-添加字段：add-新字段名-新字段类型"><a href="#④动作—-添加字段：add-新字段名-新字段类型" class="headerlink" title="④动作—-添加字段：add   新字段名   新字段类型"></a>④动作—-添加字段：add   新字段名   新字段类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  add   新字段名   新字段类型</span><br></pre></td></tr></table></figure>
+
+<h6 id="⑤动作—-删除字段：drop-字段名"><a href="#⑤动作—-删除字段：drop-字段名" class="headerlink" title="⑤动作—-删除字段：drop   字段名"></a>⑤动作—-删除字段：drop   字段名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  drop   字段名</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                        
+                    
+                        
+                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
