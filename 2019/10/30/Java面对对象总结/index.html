@@ -1,68 +1,183 @@
-
 <!DOCTYPE html>
-<html lang="en" class="loading">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Java面对对象总结 - Hexo</title>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Fechin,"> 
-    <meta name="description" content="java面向对象程序设计总结第二章 类和对象1、面向对象的概念：面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。2、类的创建1public class 类名&amp;#123;&amp;#125;
-,"> 
-    <meta name="author" content="John Doe"> 
-    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <link rel="stylesheet" href="/css/diaspora.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-8691406134231910",
-              enable_page_level_ads: true
-         });
-    </script>
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="John Doe">
+    
+    
+    
+    
+    
+    
+    <title>Java面对对象总结 | Hexo</title>
+    <!-- inject:style -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <!-- endinject -->
+    <style>
+        .cube-loading {
+            top: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('/images/lg/loading.gif') no-repeat center center;
+            background-color: rgba(0,0,0,.7);
+        }
+
+        .cube-loading.out {
+            display: none;
+        }
+
+        .cube-loading:before {
+            display: block;
+            content: 'Loading';
+            position: relative;
+            width: 100%;
+            top: 50%;
+            right: -50%;
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            .cube-loading:before {
+                font-size: 1.2em;
+                transform: translate(-24px,20px);
+                -webkit-transform: translate(-24px,20px);
+                -o-transform: translate(-24px,20px);
+                -ms-transform: translate(-24px,20px);
+            }
+        }
+
+        @media(min-width: 768px) {
+            .cube-loading:before {
+
+            }
+        }
+    </style>
+    
 </head>
-
-<body class="loading">
-    <span id="config-title" style="display:none">Hexo</span>
-    <div id="loader"></div>
-    <div id="single">
-    <div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
-    <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">Java面对对象总结</h3>
-    <div class="social">
-        <!--<div class="like-icon">-->
-            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-        <!--</div>-->
-        <div>
-            <div class="share">
-                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
-            </div>
-            <div id="qr"></div>
-        </div>
+<body>
+<div class="cube-body">
+    <nav id="cube-top-memu" class="cube-menu">
+    <ul class="cube-menu-collapse">
+        
+        <li>
+            <i class="cube-icon cube-icon-home" aria-hidden="true"></i>
+            <a href="/">首页</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-archive" aria-hidden="true"></i>
+            <a href="/archives">归档</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-categories" aria-hidden="true"></i>
+            <a href="/categories">分类</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-tags" aria-hidden="true"></i>
+            <a href="/tags">标签</a>
+        </li>
+        
+        <li>
+            <i class="cube-icon cube-icon-about" aria-hidden="true"></i>
+            <a href="/about-me">关于我</a>
+        </li>
+        
+    </ul>
+</nav>
+<nav class="cube-side-menu" id="cube-side-menu">
+    <ul class="cube-menu-list">
+        
+        <li>
+            <a class="lrc-control">Open Lyrics</a>
+        </li>
+        
+        <li>
+            <a class="scroll-to-top">Top</a>
+        </li>
+    </ul>
+</nav>
+    <header class="cube-header" id="cube-header">
+    <img src=" http://cube-1252774894.cosgz.myqcloud.com/background.png " alt="头部背景图片">
+    
+    <div class="cube-type">
+        <span class="cube-typed-title">senrenbankaの部落格</span>
+        <span class="cube-typed-cursor">|</span>
     </div>
-    <div class="scrollbar"></div>
-</div>
+    
+</header>
 
-    <div class="section">
-        <div class="article">
-    <div class='main'>
-        <h1 class="title">Java面对对象总结</h1>
-        <div class="stuff">
-            <span>十月 30, 2019</span>
-            
+    <style>
+        nav.cube-menu:before {
+            content: '';
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 44px;
+        
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        
+            z-index: -1;
+            background-image: url('http://cube-1252774894.cosgz.myqcloud.com/background.png');
+            background-repeat: no-repeat;
+            background-position: center -356px;
+            background-size: cover;
+            background-color: transparent;
+        }
 
+        header.cube-background.cube-header-background {
+            visibility: hidden;
+            background-image: url('http://cube-1252774894.cosgz.myqcloud.com/background.png');
+            background-position: center -400px;
+        }
+    </style>
+    <header class="cube-background cube-header-background">
+        
+        <div class="cube-type">
+            <span class="cube-typed-title">senrenbankaの部落格</span>
+            <span class="cube-typed-cursor">|</span>
         </div>
-        <div class="content markdown">
-            <h1 id="java面向对象程序设计总结"><a href="#java面向对象程序设计总结" class="headerlink" title="java面向对象程序设计总结"></a>java面向对象程序设计总结</h1><h1 id="第二章-类和对象"><a href="#第二章-类和对象" class="headerlink" title="第二章 类和对象"></a>第二章 类和对象</h1><h4 id="1、面向对象的概念："><a href="#1、面向对象的概念：" class="headerlink" title="1、面向对象的概念："></a>1、面向对象的概念：</h4><h5 id="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"><a href="#面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。" class="headerlink" title="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"></a>面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。</h5><h4 id="2、类的创建"><a href="#2、类的创建" class="headerlink" title="2、类的创建"></a>2、类的创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;&#125;</span><br></pre></td></tr></table></figure>
+        
+    </header>
+    <div class="load-header-background"></div>
+    <script>
+        (function (window) {
+
+            window.headerModule = {}
+            window.headerModule.image = {
+                width: '2000',
+                height: '1414'
+            }
+
+        })(window)
+    </script>
+    
+    <div class="cube-content">
+        <div class="cube-left">
+            <div class="cube-article">
+    <h1 class="title">Java面对对象总结</h1>
+    
+    <div class="cube-article-header">
+        <div class="cube-article-date">
+            <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
+            <!-- moment.js对象 -->
+            2019-10-30
+        </div>
+        <div class="cube-article-tags">
+    <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
+    
+</div>
+    </div>
+    
+    <div class="cube-article-content cube-markdown">
+        
+        <h1 id="java面向对象程序设计总结"><a href="#java面向对象程序设计总结" class="headerlink" title="java面向对象程序设计总结"></a>java面向对象程序设计总结</h1><h1 id="第二章-类和对象"><a href="#第二章-类和对象" class="headerlink" title="第二章 类和对象"></a>第二章 类和对象</h1><h4 id="1、面向对象的概念："><a href="#1、面向对象的概念：" class="headerlink" title="1、面向对象的概念："></a>1、面向对象的概念：</h4><h5 id="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"><a href="#面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。" class="headerlink" title="面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。"></a>面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。</h5><h4 id="2、类的创建"><a href="#2、类的创建" class="headerlink" title="2、类的创建"></a>2、类的创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public class 类名&#123;&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="FILE——-gt-NEW-–-gt-CLASS-–-gt-类名"><a href="#FILE——-gt-NEW-–-gt-CLASS-–-gt-类名" class="headerlink" title="FILE——&gt;NEW –&gt;CLASS –&gt;类名"></a>FILE——&gt;NEW –&gt;CLASS –&gt;类名</h5><h4 id="3、创建对象"><a href="#3、创建对象" class="headerlink" title="3、创建对象"></a>3、创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名=new 类名();</span><br></pre></td></tr></table></figure>
 
@@ -97,102 +212,256 @@
 <h3 id="5-泛型"><a href="#5-泛型" class="headerlink" title="5.泛型"></a>5.泛型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;String&gt; list=new ArrayList&gt;&lt;String&gt;();		Map&lt;String,String&gt; map=new HasMap&lt;String,String&gt;();	ArrayList&lt;Map&lt;String,String&gt;&gt; list=new ArrayList&gt;&lt;Map&lt;String,String&gt;&gt;();</span><br></pre></td></tr></table></figure>
 
 <h1 id="第九章-高级功能—–文件操作"><a href="#第九章-高级功能—–文件操作" class="headerlink" title="第九章 高级功能—–文件操作"></a>第九章 高级功能—–文件操作</h1><h4 id="1-文件概述"><a href="#1-文件概述" class="headerlink" title="1.文件概述"></a>1.文件概述</h4><h5 id="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"><a href="#文件是具有内容和用途的，而文件夹是用来放置这些文件的。" class="headerlink" title="文件是具有内容和用途的，而文件夹是用来放置这些文件的。"></a>文件是具有内容和用途的，而文件夹是用来放置这些文件的。</h5><h4 id="2-什么是流"><a href="#2-什么是流" class="headerlink" title="2.什么是流"></a>2.什么是流</h4><h5 id="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"><a href="#JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。" class="headerlink" title="JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。"></a>JAVA流，是指一串流动的字符，是以先进先出的方式发送和接收数据的通道。</h5><h3 id="3-写文件"><a href="#3-写文件" class="headerlink" title="3.写文件"></a>3.写文件</h3><h5 id="1-字节输出流写文件"><a href="#1-字节输出流写文件" class="headerlink" title="(1)字节输出流写文件"></a>(1)字节输出流写文件</h5><h5 id="INT-WRITE-INT-C-—–写入一个字节数据"><a href="#INT-WRITE-INT-C-—–写入一个字节数据" class="headerlink" title="INT WRITE(INT C)—–写入一个字节数据"></a>INT WRITE(INT C)—–写入一个字节数据</h5><h5 id="INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节"><a href="#INT-WRITE-BYTE-BUF-—–写入数组BUF的所有字节" class="headerlink" title="INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节"></a>INT WRITE(BYTE[ ] BUF)—–写入数组BUF的所有字节</h5><h5 id="INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"><a href="#INT-WRITE-BYTE-B-INT-OFF-INT-LEN-—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中" class="headerlink" title="INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中"></a>INT WRITE(BYTE[ ] B,INT OFF,INT LEN)—–将字节数组从OFF位置开始，长度为LEN的字节数据输出大宋输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流"><a href="#VOID-CLOSE-—–关闭输出流" class="headerlink" title="VOID CLOSE( )—–关闭输出流"></a>VOID CLOSE( )—–关闭输出流</h5><h5 id="2-字符输出流写文件"><a href="#2-字符输出流写文件" class="headerlink" title="(2)字符输出流写文件"></a>(2)字符输出流写文件</h5><h5 id="WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中"><a href="#WRITE-STRING-STR-—–将STR字符串里包含的字符输出到指定的输出流中" class="headerlink" title="WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中"></a>WRITE(STRING STR)—–将STR字符串里包含的字符输出到指定的输出流中</h5><h5 id="WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"><a href="#WRITE-STRING-STR-INT-OFF-INT-LEN-—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中" class="headerlink" title="WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中"></a>WRITE(STRING STR,INT OFF,INT LEN)—–将STR字符串里从OFF位置开始长度为LEN的字符输出到输出流中</h5><h5 id="VOID-CLOSE-—–关闭输出流-1"><a href="#VOID-CLOSE-—–关闭输出流-1" class="headerlink" title="VOID CLOSE()—–关闭输出流"></a>VOID CLOSE()—–关闭输出流</h5><h5 id="VOID-FLUSH-—–刷新输出流"><a href="#VOID-FLUSH-—–刷新输出流" class="headerlink" title="VOID FLUSH()—–刷新输出流"></a>VOID FLUSH()—–刷新输出流</h5><h4 id="4-读文件"><a href="#4-读文件" class="headerlink" title="4.读文件"></a>4.读文件</h4><h5 id="1-字节输入流读文件"><a href="#1-字节输入流读文件" class="headerlink" title="(1)字节输入流读文件"></a>(1)字节输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符"><a href="#INT-READ-—–从输入流中读取单个字符" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–将数据读取到字节数组中"><a href="#INT-READ-BYTE-B-—–将数据读取到字节数组中" class="headerlink" title="INT READ(BYTE[ ] B)—–将数据读取到字节数组中"></a>INT READ(BYTE[ ] B)—–将数据读取到字节数组中</h5><h5 id="INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"><a href="#INT-READ-BYTE-B-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始" class="headerlink" title="INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始"></a>INT READ(BYTE[ ] B,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组B中，保存的位置从OFF位置开始</h5><h5 id="VOID-CLOSE-—–关闭输入流"><a href="#VOID-CLOSE-—–关闭输入流" class="headerlink" title="VOID CLOSE( )—–关闭输入流"></a>VOID CLOSE( )—–关闭输入流</h5><h5 id="INT-AVAILABLE-—–返回输入流读取的估计字节数"><a href="#INT-AVAILABLE-—–返回输入流读取的估计字节数" class="headerlink" title="INT AVAILABLE()—–返回输入流读取的估计字节数"></a>INT AVAILABLE()—–返回输入流读取的估计字节数</h5><h5 id="2-字符输入流读文件"><a href="#2-字符输入流读文件" class="headerlink" title="(2)字符输入流读文件"></a>(2)字符输入流读文件</h5><h5 id="INT-READ-—–从输入流中读取单个字符-1"><a href="#INT-READ-—–从输入流中读取单个字符-1" class="headerlink" title="INT READ()—–从输入流中读取单个字符"></a>INT READ()—–从输入流中读取单个字符</h5><h5 id="INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"><a href="#INT-READ-BYTE-B-—–从输入流中读取C-LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数" class="headerlink" title="INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数"></a>INT READ(BYTE[ ] B)—–从输入流中读取C.LENGTH长度的字符，保存到字符数组C中，返回实际读取的字符数</h5><h5 id="READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"><a href="#READ-BYTE-C-INT-OFF-INT-LEN-—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数" class="headerlink" title="READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数"></a>READ(BYTE[ ] C,INT OFF,INT LEN)—–从输入流中读取最多LEN长度的字符，保存到字符数组C中，保存的位置从OFF位置开始，返回实际读取的字符数</h5><h5 id="VOID-CLOSE-—–关闭流"><a href="#VOID-CLOSE-—–关闭流" class="headerlink" title="VOID CLOSE()—–关闭流"></a>VOID CLOSE()—–关闭流</h5><h1 id="第十章-高级功能—–多线程"><a href="#第十章-高级功能—–多线程" class="headerlink" title="第十章 高级功能—–多线程"></a>第十章 高级功能—–多线程</h1><h3 id="1-线程的创建"><a href="#1-线程的创建" class="headerlink" title="1.线程的创建"></a>1.线程的创建</h3><h4 id="1-实现Runnable接口"><a href="#1-实现Runnable接口" class="headerlink" title="(1)实现Runnable接口"></a>(1)实现Runnable接口</h4><h5 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="定义一个类实现RUNABLE接口"><a href="#定义一个类实现RUNABLE接口" class="headerlink" title="定义一个类实现RUNABLE接口"></a>定义一个类实现RUNABLE接口</h5><h5 id="实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的"><a href="#实现接口中唯一的RUN-方法，该方法是线程线程开启时要执行的" class="headerlink" title="实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的"></a>实现接口中唯一的RUN()方法，该方法是线程线程开启时要执行的</h5><h5 id="在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象"><a href="#在代码中声明一个线程实体THREAD-MYTHREAD-NEW-THREAD-DOWNLOAD-DOWNLOAD-为实现RUNABLE接口的类的实体对象" class="headerlink" title="在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象"></a>在代码中声明一个线程实体THREAD MYTHREAD=NEW THREAD(DOWNLOAD);//DOWNLOAD 为实现RUNABLE接口的类的实体对象</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程"><a href="#调用MYTHREAD-START-方法启动新创建的线程" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5><h4 id="2-继承Thread创建线程"><a href="#2-继承Thread创建线程" class="headerlink" title="(2)继承Thread创建线程"></a>(2)继承Thread创建线程</h4><h5 id="步骤：-1"><a href="#步骤：-1" class="headerlink" title="步骤："></a>步骤：</h5><h5 id="创建类MYTHREAD并继承THREAD类"><a href="#创建类MYTHREAD并继承THREAD类" class="headerlink" title="创建类MYTHREAD并继承THREAD类"></a>创建类MYTHREAD并继承THREAD类</h5><h5 id="实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载"><a href="#实现类MYTHREAD的RUN-方法，该方法是线程开启时要执行的下载" class="headerlink" title="实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载"></a>实现类MYTHREAD的RUN()方法，该方法是线程开启时要执行的下载</h5><h5 id="生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD"><a href="#生成MYTHREAD类的对象，MYTHREAD-MYTHREAD-NEW-MYTHREAD" class="headerlink" title="生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();"></a>生成MYTHREAD类的对象，MYTHREAD MYTHREAD=NEW MYTHREAD();</h5><h5 id="调用MYTHREAD-START-方法启动新创建的线程-1"><a href="#调用MYTHREAD-START-方法启动新创建的线程-1" class="headerlink" title="调用MYTHREAD.START()方法启动新创建的线程"></a>调用MYTHREAD.START()方法启动新创建的线程</h5>
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-                <ul id="audio-list" style="display:none">
-                    
-                        
-                            <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
-                        
-                    
-                        
-                            <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
-                        
-                    
-                </ul>
-            
-        </div>
+    </div>
+</div>
+
+<div class="cube-article-nav">
+    <ul>
         
-    <div id='gitalk-container' class="comment link"
-        data-ae='false'
-        data-ci=''
-        data-cs=''
-        data-r=''
-        data-o=''
-        data-a=''
-        data-d='false'
-    >查看评论</div>
+        
+        <li class="next">
+            <a href="/2019/10/30/hello-world/">
+                Hello World
+                <i class="cube-icon cube-next" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+    </ul>
+</div>
 
 
+<!-- TODO 根据theme.comment的内容进行入口选择 -->
+
+
+
+        </div>
+        <div class="cube-right">
+            
+
+<div class="cube-search cube-sidebar" id="cube-search">
+    <div class="search-container">
+        <input type="text" placeholder="Search" class="cube-search-input" id="cube-search-input">
+        <i class="cube-icon cube-icon-search cube-search-submit" aria-hidden="true"></i>
     </div>
+    <!-- TODO 通过给window赋一个全局变量，通过脚本赋值 -->
+</div>
+<script>
+    (function (window) {
+        'use strict';
+        window.searchModule = {}
+        window.searchModule.JSONUrl = '/content.json'
+        window.searchModule.rootUrl = '/'
+    })(window)
+</script>
+<div class="cube-search-form">
+    <div class="cube-search-control">
+        <input type="text" placeholder="Search" class="search-input">
+        <a class="close-button">
+            <i class="cube-icon cube-close" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="cube-search-result"></div>
+</div>
+
+
+<div class="cube-author cube-sidebar" id="cube-author">
     
-</div>
-
-
+    
+    <span>John Doe</span>
+    
+    
+    <div class="count">
+        <a class="count articles"><span>5</span>Article</a>
+        <a class="count tags"><span>0</span>Tags</a>
+        <a class="count categories"><span>0</span>Categories</a>
     </div>
 </div>
+
+
+
+<div class="cube-music cube-sidebar" id="cube-music">
+    <div class="cube-player aplayer" id="cube-player"></div>
+</div>
+<script>
+    (function (window) {
+        window.musicModule = {}
+        window.musicModule.musicConfig = '{"narrow":false,"autoplay":false,"showlrc":3,"theme":"#b7daff","mutex":true,"mode":"circulation","preload":"auto","listmaxheight":"513px","music":[{"title":"Dear friends","author":"TRIPLANE","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/TRIPLANE - Dear friends.mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/Dear friends - TRIPLANE.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/TRIPLANE - Dear friends.jpg"},{"title":"Butter-Fly","author":"和田光司","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/和田光司 - Butter-Fly (ピアノヴァージョン).mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/Butter-Fly (ピアノヴァージョン) - 和田光司.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/和田光司 - Butter-Fly (ピアノヴァージョン).jpg"},{"title":"宵闇花火","author":"葉月ゆら","url":"http://cube-1252774894.cosgz.myqcloud.com/music/source/葉月ゆら - 宵闇花火.mp3","lrc":"http://cube-1252774894.cosgz.myqcloud.com/music/lrc/宵闇花火 - 葉月ゆら.lrc","pic":"http://cube-1252774894.cosgz.myqcloud.com/music/image/葉月ゆら - 宵闇花火.jpg"}]}'
+        window.musicModule.lrcConfig = {
+            open: 'Open Lyrics',
+            close: 'Close Lyrics'
+        }
+    })(window)
+</script>
+
+
+
+<div class="cube-recent-posts cube-sidebar" id="cube-recent-posts">
+    <div class="title">
+        <a>Recent Posts</a>
+    </div>
+    <ul class="list">
+        
+        
+        <li>
+            <!-- TODO 如果文章要显示图片，那么在front-matter上添加preview属性(url or path) -->
+            
+            <div class="normal">
+                <p class="index first">
+                    <span>1</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="Java面对对象总结">Java面对对象总结</a>
+                </p>
+            </div>
+            
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>2</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/30/hello-world/" title="Hello World">Hello World</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>3</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结">MySQL第三章总结</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>4</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MYSQL第二章总结">MYSQL第二章总结</a>
+                </p>
+            </div>
+        </li>
+        
+        
+        
+        <li>
+            <div class="normal">
+                <p class="index">
+                    <span>5</span>
+                </p>
+                <p class="title">
+                    <a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结">MySQL第1章总结</a>
+                </p>
+            </div>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+<div class="cube-links cube-sidebar" id="cube-links">
+    <div class="title">
+        <a>Links</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/GitHub.png">
+            
+            <a href="https://github.com/ZEROKISEKI" target="_blank">GitHub</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/Coding.png">
+            
+            <a href="https://coding.net/u/SORA1" target="_blank">Coding</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/SF.png">
+            
+            <a href="https://segmentfault.com/u/aonosora" target="_blank">SF社区</a>
+        </li>
+        
+        <li>
+            
+            
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/links/开发者头条.png">
+            
+            <a href="https://toutiao.io/u/148070" target="_blank">开发者头条</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+<div class="cube-friend-links cube-sidebar" id="cube-friend-links">
+    <div class="title">
+        <a>Friend Links</a>
+    </div>
+    <ul class="list">
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/micblo.png">
+            <a href="https://blog.micblo.com/" target="_blank">罗大佬</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="http://cube-1252774894.cosgz.myqcloud.com/friend_links/DIYgod.jpg">
+            <a href="https://www.anotherhome.net/" target="_blank">DIYgod</a>
+        </li>
+        
+        <li>
+            <!-- TODO change avatar.png to friend.png-->
+            <img src="/images/friend_links.jpg ">
+            <a href="https://aonosora.com/" target="_blank">咪西西の部落格</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<footer class="cube-footer">
+    
+© 2017 John Doe
+
+<br>
+Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/ZEROKISEKI" target="_blank">AONOSORA</a>
+</footer>
+<!-- inject:script -->
+<script src="/js/script.js"></script>
+<!-- endinject -->
+<div class="cube-loading out"></div>
 </body>
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/diaspora.js"></script>
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
 </html>
