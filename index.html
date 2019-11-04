@@ -54,6 +54,336 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-MySQL第四至六章总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL数据库总结4-6</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/" class="article-date">
+  <time datetime="2019-11-04T07:54:17.787Z" itemprop="datePublished">2019-11-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <hr>
+<h3 id="第四章数据查询入门"><a href="#第四章数据查询入门" class="headerlink" title="第四章数据查询入门"></a>第四章数据查询入门</h3><h4 id="1-什么是数据查询"><a href="#1-什么是数据查询" class="headerlink" title="1.什么是数据查询"></a>1.什么是数据查询</h4><h5 id="数据库的查询是对数据表中现有的数据进行逐行筛选的工作，它按照要求从符合查询条件的记录中把指定的字段值提取出来，形成一个结果呈现给用户。"><a href="#数据库的查询是对数据表中现有的数据进行逐行筛选的工作，它按照要求从符合查询条件的记录中把指定的字段值提取出来，形成一个结果呈现给用户。" class="headerlink" title="数据库的查询是对数据表中现有的数据进行逐行筛选的工作，它按照要求从符合查询条件的记录中把指定的字段值提取出来，形成一个结果呈现给用户。"></a>数据库的查询是对数据表中现有的数据进行逐行筛选的工作，它按照要求从符合查询条件的记录中把指定的字段值提取出来，形成一个结果呈现给用户。</h5><h4 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2.基本语法"></a>2.基本语法</h4><h5 id="select-list-用户要查询的字段列表，”-”代表所有字段。"><a href="#select-list-用户要查询的字段列表，”-”代表所有字段。" class="headerlink" title="select_list:用户要查询的字段列表，”*”代表所有字段。"></a>select_list:用户要查询的字段列表，”*”代表所有字段。</h5><h5 id="table-name-用户要查询信息的表（表或视图）。"><a href="#table-name-用户要查询信息的表（表或视图）。" class="headerlink" title="table_name:用户要查询信息的表（表或视图）。"></a>table_name:用户要查询信息的表（表或视图）。</h5><h5 id="where-查询的筛选条件开始关键字。"><a href="#where-查询的筛选条件开始关键字。" class="headerlink" title="where:查询的筛选条件开始关键字。"></a>where:查询的筛选条件开始关键字。</h5><h5 id="search-condition-查询条件的内容。"><a href="#search-condition-查询条件的内容。" class="headerlink" title="search_condition:查询条件的内容。"></a>search_condition:查询条件的内容。</h5><h5 id="orderby-关键字，标明查询结果的排列顺序。"><a href="#orderby-关键字，标明查询结果的排列顺序。" class="headerlink" title="orderby:关键字，标明查询结果的排列顺序。"></a>orderby:关键字，标明查询结果的排列顺序。</h5><h5 id="order-expression-按着哪些字段进行排序。"><a href="#order-expression-按着哪些字段进行排序。" class="headerlink" title="order_expression:按着哪些字段进行排序。"></a>order_expression:按着哪些字段进行排序。</h5><h5 id="asc-标明是升序顺序。"><a href="#asc-标明是升序顺序。" class="headerlink" title="asc:标明是升序顺序。"></a>asc:标明是升序顺序。</h5><h5 id="desc-将结果集按照降序排序。"><a href="#desc-将结果集按照降序排序。" class="headerlink" title="desc:将结果集按照降序排序。"></a>desc:将结果集按照降序排序。</h5><h5 id="LIMIT-限制每次查询出来的数据条数。"><a href="#LIMIT-限制每次查询出来的数据条数。" class="headerlink" title="LIMIT:限制每次查询出来的数据条数。"></a>LIMIT:限制每次查询出来的数据条数。</h5><h4 id="3-基本应用"><a href="#3-基本应用" class="headerlink" title="3.基本应用"></a>3.基本应用</h4><h5 id="1-select全表查询"><a href="#1-select全表查询" class="headerlink" title="(1)select全表查询"></a>(1)select全表查询</h5><h5 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select*from StudentInfo;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="2-select选择列查询"><a href="#2-select选择列查询" class="headerlink" title="(2)select选择列查询"></a>(2)select选择列查询</h5><h5 id="例：-1"><a href="#例：-1" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age from StudentInfo;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="3-查询中的别名"><a href="#3-查询中的别名" class="headerlink" title="(3)查询中的别名"></a>(3)查询中的别名</h5><ul>
+<li><h5 id="使用AS关键字为字段定义别名"><a href="#使用AS关键字为字段定义别名" class="headerlink" title="使用AS关键字为字段定义别名"></a>使用AS关键字为字段定义别名</h5></li>
+</ul>
+<h5 id="例：-2"><a href="#例：-2" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名1 AS 别名,字段名2 AS 别名,... FROM 表名;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h5 id="使用空格为字段定义别名"><a href="#使用空格为字段定义别名" class="headerlink" title="使用空格为字段定义别名"></a>使用空格为字段定义别名</h5></li>
+</ul>
+<h5 id="例：-3"><a href="#例：-3" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名1 别名,字段名2 别名,... FROM 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="4-条件查询—使用WHERE子句限制查询结果"><a href="#4-条件查询—使用WHERE子句限制查询结果" class="headerlink" title="(4)条件查询—使用WHERE子句限制查询结果"></a>(4)条件查询—使用WHERE子句限制查询结果</h5><ul>
+<li><h5 id="单条件查询-查询表中21岁以上的学生"><a href="#单条件查询-查询表中21岁以上的学生" class="headerlink" title="单条件查询  (查询表中21岁以上的学生)"></a>单条件查询  (查询表中21岁以上的学生)</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age FROM StudentInfo WHERE Age&gt;21;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><h5 id="多条件查询-查询表中21岁以上的女生"><a href="#多条件查询-查询表中21岁以上的女生" class="headerlink" title="多条件查询  (查询表中21岁以上的女生)"></a>多条件查询  (查询表中21岁以上的女生)</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age FROM StudentInfo WHERE Age&gt;21 AND Gender=&apos;女&apos;;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h5 id="5-条件查询—使用DISTINCT消除重复行"><a href="#5-条件查询—使用DISTINCT消除重复行" class="headerlink" title="(5)条件查询—使用DISTINCT消除重复行"></a>(5)条件查询—使用DISTINCT消除重复行</h5><h5 id="例：-4"><a href="#例：-4" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select DISTINCT ClassID FROM StudentInfo;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="6-条件查询—使用LIMIT限定查询返回行"><a href="#6-条件查询—使用LIMIT限定查询返回行" class="headerlink" title="(6)条件查询—使用LIMIT限定查询返回行"></a>(6)条件查询—使用LIMIT限定查询返回行</h5><h5 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LIMIT [位置偏移量] 行数</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="位置偏移量：用于指示MySQL从哪一行开始显示，是一个可选参数，如果不指定该参数，将会从结果集的第一条记录开始（从零开始计数）。"><a href="#位置偏移量：用于指示MySQL从哪一行开始显示，是一个可选参数，如果不指定该参数，将会从结果集的第一条记录开始（从零开始计数）。" class="headerlink" title="位置偏移量：用于指示MySQL从哪一行开始显示，是一个可选参数，如果不指定该参数，将会从结果集的第一条记录开始（从零开始计数）。"></a>位置偏移量：用于指示MySQL从哪一行开始显示，是一个可选参数，如果不指定该参数，将会从结果集的第一条记录开始（从零开始计数）。</h5><h5 id="行数：指示返回的记录条数。"><a href="#行数：指示返回的记录条数。" class="headerlink" title="行数：指示返回的记录条数。"></a>行数：指示返回的记录条数。</h5><h5 id="例：-5"><a href="#例：-5" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age from StudentInfo LIMIT 4;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="7-条件查询—使用Order-By进行查询排列"><a href="#7-条件查询—使用Order-By进行查询排列" class="headerlink" title="(7)条件查询—使用Order By进行查询排列"></a>(7)条件查询—使用Order By进行查询排列</h5><ul>
+<li><h5 id="单列排序"><a href="#单列排序" class="headerlink" title="单列排序"></a>单列排序</h5><h5 id="例：（升序）"><a href="#例：（升序）" class="headerlink" title="例：（升序）"></a>例：（升序）</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age from StudentInfo Order By Age ASC;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="例：（降序）"><a href="#例：（降序）" class="headerlink" title="例：（降序）"></a>例：（降序）</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age from StudentInfo Order By Age DESC;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><h5 id="多列排序"><a href="#多列排序" class="headerlink" title="多列排序"></a>多列排序</h5><h5 id="例：-6"><a href="#例：-6" class="headerlink" title="例："></a>例：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select StudentID,StudentName,Gender,Age,Birthday from StudentInfo Order By Age DESC,Birthday ASC;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h4 id="4-MYSQL的内置应用"><a href="#4-MYSQL的内置应用" class="headerlink" title="4.MYSQL的内置应用"></a>4.MYSQL的内置应用</h4><h5 id="（1）字符串函数"><a href="#（1）字符串函数" class="headerlink" title="（1）字符串函数"></a>（1）字符串函数</h5><pre><code>#####                                                                     常用的字符串函数</code></pre><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>实例</th>
+<th>函数功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CONCAT</td>
+<td>SELECT CONCAT(‘今天’,’晴天’)返回：今天晴天</td>
+<td>连接字符串</td>
+</tr>
+<tr>
+<td>LENGTH</td>
+<td>LENGTH(‘hello world’)结果为11</td>
+<td>返回字符串的长度</td>
+</tr>
+<tr>
+<td>UPPER</td>
+<td>Upper(‘abcd’)返回ABCD</td>
+<td>将字符串转为大写</td>
+</tr>
+<tr>
+<td>LTRIM</td>
+<td>Ltrim(‘ abc’)返回为‘abc’</td>
+<td>去除字符串左边的空格</td>
+</tr>
+<tr>
+<td>RTRIM</td>
+<td>Rtrim(‘abc ‘)返回为‘abc’</td>
+<td>去除字符串右边的空格</td>
+</tr>
+<tr>
+<td>TRIM</td>
+<td>TRIM(‘ ABC ‘)返回‘ABC’</td>
+<td>去除字符串左右两边的空格</td>
+</tr>
+<tr>
+<td>REPLACE</td>
+<td>Replace(‘abcccd’,’c’,’x’)返回为‘abxxxd’</td>
+<td>将abcccd中c替换为x</td>
+</tr>
+<tr>
+<td>STRCMP</td>
+<td>STRCMP(S1,S2)</td>
+<td>比较字符串S1和S2</td>
+</tr>
+<tr>
+<td>SUBSTRING</td>
+<td>SUBSTRING(‘Johnson’,5,3)返回为‘son’</td>
+<td>从第5个位置开始截取长度为3的字符串</td>
+</tr>
+</tbody></table>
+<h5 id="（2）日期函数"><a href="#（2）日期函数" class="headerlink" title="（2）日期函数"></a>（2）日期函数</h5><h5 id="获取日期、时间指定部分的函数"><a href="#获取日期、时间指定部分的函数" class="headerlink" title="获取日期、时间指定部分的函数"></a>获取日期、时间指定部分的函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MONTH(DATE)</td>
+<td>返回日期对应的月份（数字类型）</td>
+</tr>
+<tr>
+<td>MONTHNAME(DATE)</td>
+<td>返回日期对应的月份（字符串）</td>
+</tr>
+<tr>
+<td>DAYNAME(DATE)</td>
+<td>返回日期对应的工作日的英文名称</td>
+</tr>
+<tr>
+<td>DAYOFWEEK(DATE)</td>
+<td>返回日期对应的一周中的索引。1 表示周日，2 表示周一……</td>
+</tr>
+<tr>
+<td>WEEKDAY(DATE)</td>
+<td>返回日期对应的工作日索引。0 表示周一，1 表示周二….6 表示周日</td>
+</tr>
+<tr>
+<td>WEEK(DATE)</td>
+<td>计算日期是一年中的第几周</td>
+</tr>
+<tr>
+<td>WEEKOFYEAR(DATE)</td>
+<td>计算日期是一年中的第几周</td>
+</tr>
+<tr>
+<td>DAYOFYEAR(DATE)</td>
+<td>计算日期是一年中的第几天</td>
+</tr>
+<tr>
+<td>DAYOFMONTH(DATE)</td>
+<td>计算日期是一个月中的第几天</td>
+</tr>
+<tr>
+<td>YEAR(DATE)</td>
+<td>返回日期中年份</td>
+</tr>
+<tr>
+<td>QUARTER(DATE)</td>
+<td>返回日期对应的一年中的季度值</td>
+</tr>
+<tr>
+<td>MINUTE(TIME)</td>
+<td>返回时间的分钟部分</td>
+</tr>
+<tr>
+<td>SECOND(TIME)</td>
+<td>返回时间的秒部分</td>
+</tr>
+</tbody></table>
+<h5 id="计算日期和时间的函数"><a href="#计算日期和时间的函数" class="headerlink" title="计算日期和时间的函数"></a>计算日期和时间的函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DATE_ADD()</td>
+<td>为日期增加一个时间间隔</td>
+</tr>
+<tr>
+<td>ADDDATE()</td>
+<td>可以用date_add()来代替，用法一致</td>
+</tr>
+<tr>
+<td>DATE_SUB()</td>
+<td>为日期减少一个时间间隔</td>
+</tr>
+<tr>
+<td>SUBDATE()</td>
+<td>可以用date_sub()来代替，用法一致</td>
+</tr>
+<tr>
+<td>ADDTIME()</td>
+<td>可以用date_add()来代替，用法一致</td>
+</tr>
+<tr>
+<td>DATEDIFF()</td>
+<td>日期时间相减函数</td>
+</tr>
+</tbody></table>
+<h5 id="（3）数学函数"><a href="#（3）数学函数" class="headerlink" title="（3）数学函数"></a>（3）数学函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>format(x,y)</td>
+<td>将一个数字x，保留y位小数，并且整数部分用逗号分隔千分位，小数部分进行四舍五入。</td>
+</tr>
+<tr>
+<td>abs()</td>
+<td>求一个数的绝对值；absolute</td>
+</tr>
+<tr>
+<td>sqrt()</td>
+<td>求一个数的平方根。sqrt是sqruar（平方，矩形），root（根）的缩写。</td>
+</tr>
+<tr>
+<td>mod(x,y)</td>
+<td>x 除数，y 被除数。结果是余数。</td>
+</tr>
+<tr>
+<td>ceil()</td>
+<td>向上取整</td>
+</tr>
+<tr>
+<td>floor()</td>
+<td>向下取整</td>
+</tr>
+<tr>
+<td>rand()</td>
+<td>是用来生成随机数用的</td>
+</tr>
+<tr>
+<td>truncate(x,y)</td>
+<td>不管四舍五入，直接把x的y位小数直接删除</td>
+</tr>
+<tr>
+<td>sign()</td>
+<td>返回当前结果的符号，如果是负数返回-1，如果是0返回0，如果是正数返回1。</td>
+</tr>
+<tr>
+<td>power()</td>
+<td>幂运算</td>
+</tr>
+<tr>
+<td>round()</td>
+<td>将数值表达式四舍五入为指定精度</td>
+</tr>
+</tbody></table>
+<h5 id="（4）系统函数"><a href="#（4）系统函数" class="headerlink" title="（4）系统函数"></a>（4）系统函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>函数功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DATABASE()</td>
+<td>返回当前数据库名</td>
+</tr>
+<tr>
+<td>BENCHMARK(count,expr)</td>
+<td>将表达式expr重复运行count次</td>
+</tr>
+<tr>
+<td>CONNECTION_ID()</td>
+<td>返回当前客户的连接ID</td>
+</tr>
+<tr>
+<td>FOUND_ROWS()</td>
+<td>返回最后一个SELECT查询进行检索的总行数</td>
+</tr>
+<tr>
+<td>VERSION()</td>
+<td>返回MySQL服务器的版本</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="第五章-模糊查询与分组查询"><a href="#第五章-模糊查询与分组查询" class="headerlink" title="第五章 模糊查询与分组查询"></a>第五章 模糊查询与分组查询</h3><h4 id="1-模糊查询"><a href="#1-模糊查询" class="headerlink" title="1.模糊查询"></a>1.模糊查询</h4><h5 id="模糊查询提取的数据不一定是确切的，它允许用户输入的查询条件也是模糊的、大概的、不特别明确的。"><a href="#模糊查询提取的数据不一定是确切的，它允许用户输入的查询条件也是模糊的、大概的、不特别明确的。" class="headerlink" title="模糊查询提取的数据不一定是确切的，它允许用户输入的查询条件也是模糊的、大概的、不特别明确的。"></a>模糊查询提取的数据不一定是确切的，它允许用户输入的查询条件也是模糊的、大概的、不特别明确的。</h5><h5 id="（1）LIKE运算符"><a href="#（1）LIKE运算符" class="headerlink" title="（1）LIKE运算符"></a>（1）LIKE运算符</h5><ul>
+<li><h5 id="用“-”通配多个字符"><a href="#用“-”通配多个字符" class="headerlink" title="用“%”通配多个字符"></a>用“%”通配多个字符</h5><h5 id="例：-查询StudentInfo表中所有姓刘的学生信息"><a href="#例：-查询StudentInfo表中所有姓刘的学生信息" class="headerlink" title="例：(查询StudentInfo表中所有姓刘的学生信息)"></a>例：(查询StudentInfo表中所有姓刘的学生信息)</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT StudentID,StudentName,Gender,Age FROM StudentInfo WHERE StudentName LIKE &apos;刘%&apos;;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><h5 id="用“-”通配单个字符"><a href="#用“-”通配单个字符" class="headerlink" title="用“_”通配单个字符"></a>用“_”通配单个字符</h5><h5 id="例：-查询StudentInfo表中姓刘的学生信息"><a href="#例：-查询StudentInfo表中姓刘的学生信息" class="headerlink" title="例：(查询StudentInfo表中姓刘的学生信息)"></a>例：(查询StudentInfo表中姓刘的学生信息)</h5></li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT StudentID,StudentName,Gender,Age FROM StudentInfo WHERE StudentName LIKE &apos;刘_&apos;;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><h5 id="“-”和“-”配合使用"><a href="#“-”和“-”配合使用" class="headerlink" title="“_”和“%”配合使用"></a>“_”和“%”配合使用</h5><h5 id="例：（查询所有Email的第二个字符为“u”的学生信息）"><a href="#例：（查询所有Email的第二个字符为“u”的学生信息）" class="headerlink" title="例：（查询所有Email的第二个字符为“u”的学生信息）"></a>例：（查询所有Email的第二个字符为“u”的学生信息）</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT StudentID,StudentName,Gender,Email FROM StudentInfo WHERE Email LIKE &apos;_u%&apos;;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h4 id="2-聚合函数"><a href="#2-聚合函数" class="headerlink" title="2.聚合函数"></a>2.聚合函数</h4><h5 id="聚合函数是一种特殊的函数，其参数是数据列，基本功能是基于列进行计算，并返回单个值。这个值是作为查询的一个列值出现在查询结果中。"><a href="#聚合函数是一种特殊的函数，其参数是数据列，基本功能是基于列进行计算，并返回单个值。这个值是作为查询的一个列值出现在查询结果中。" class="headerlink" title="聚合函数是一种特殊的函数，其参数是数据列，基本功能是基于列进行计算，并返回单个值。这个值是作为查询的一个列值出现在查询结果中。"></a>聚合函数是一种特殊的函数，其参数是数据列，基本功能是基于列进行计算，并返回单个值。这个值是作为查询的一个列值出现在查询结果中。</h5><h5 id="sum-函数用于对数据求总和；"><a href="#sum-函数用于对数据求总和；" class="headerlink" title="sum()函数用于对数据求总和；"></a>sum()函数用于对数据求总和；</h5><h5 id="avg-函数用于求平均数；"><a href="#avg-函数用于求平均数；" class="headerlink" title="avg()函数用于求平均数；"></a>avg()函数用于求平均数；</h5><h5 id="max-函数用于求最大值；"><a href="#max-函数用于求最大值；" class="headerlink" title="max()函数用于求最大值；"></a>max()函数用于求最大值；</h5><h5 id="min-函数用于求最小值；"><a href="#min-函数用于求最小值；" class="headerlink" title="min()函数用于求最小值；"></a>min()函数用于求最小值；</h5><h5 id="count-函数用于求个数；"><a href="#count-函数用于求个数；" class="headerlink" title="count()函数用于求个数；"></a>count()函数用于求个数；</h5><h5 id="count-字段-：计算查询结果中指定字段的总行数，在字段为null时，不会统计个数；"><a href="#count-字段-：计算查询结果中指定字段的总行数，在字段为null时，不会统计个数；" class="headerlink" title="count(字段)：计算查询结果中指定字段的总行数，在字段为null时，不会统计个数；"></a>count(字段)：计算查询结果中指定字段的总行数，在字段为null时，不会统计个数；</h5><h5 id="count-：计算数据表或查询结果集的总行数，不管某一列或多列是否为空值；"><a href="#count-：计算数据表或查询结果集的总行数，不管某一列或多列是否为空值；" class="headerlink" title="count(*)：计算数据表或查询结果集的总行数，不管某一列或多列是否为空值；"></a>count(*)：计算数据表或查询结果集的总行数，不管某一列或多列是否为空值；</h5><h5 id="例：-7"><a href="#例：-7" class="headerlink" title="例："></a>例：</h5><h5 id="如果查询结果有20条，但A字段有3个空值，那么count-A-的结果就是17；count-的结果就是20"><a href="#如果查询结果有20条，但A字段有3个空值，那么count-A-的结果就是17；count-的结果就是20" class="headerlink" title="如果查询结果有20条，但A字段有3个空值，那么count(A)的结果就是17；count(*)的结果就是20;"></a>如果查询结果有20条，但A字段有3个空值，那么count(A)的结果就是17；count(*)的结果就是20;</h5><h4 id="3-分组查询"><a href="#3-分组查询" class="headerlink" title="3.分组查询"></a>3.分组查询</h4><h5 id="1-使用Group-By进行数据分组查询；"><a href="#1-使用Group-By进行数据分组查询；" class="headerlink" title="1.使用Group By进行数据分组查询；"></a>1.使用Group By进行数据分组查询；</h5><h5 id="按班级进行分组"><a href="#按班级进行分组" class="headerlink" title="按班级进行分组"></a>按班级进行分组</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student group by class;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="在分组结果，只有聚合函数和被分组的列有意义；"><a href="#在分组结果，只有聚合函数和被分组的列有意义；" class="headerlink" title="在分组结果，只有聚合函数和被分组的列有意义；"></a>在分组结果，只有聚合函数和被分组的列有意义；</h5><h5 id="2-多列分组查询"><a href="#2-多列分组查询" class="headerlink" title="2.多列分组查询"></a>2.多列分组查询</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student group by class,id;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="3-使用Having字句分组查询的条件筛选；"><a href="#3-使用Having字句分组查询的条件筛选；" class="headerlink" title="3.使用Having字句分组查询的条件筛选；"></a>3.使用Having字句分组查询的条件筛选；</h5><h5 id="例：班级人数大于3的班级。"><a href="#例：班级人数大于3的班级。" class="headerlink" title="例：班级人数大于3的班级。"></a>例：班级人数大于3的班级。</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*),class from student group by class having count(*)&gt;3;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h3 id="第六章多表连接查询"><a href="#第六章多表连接查询" class="headerlink" title="第六章多表连接查询"></a>第六章多表连接查询</h3><h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><h5 id="常用的连接查询有：内连接，外连接，交叉连接；"><a href="#常用的连接查询有：内连接，外连接，交叉连接；" class="headerlink" title="常用的连接查询有：内连接，外连接，交叉连接；"></a>常用的连接查询有：内连接，外连接，交叉连接；</h5><h5 id="（1）交叉连接是将多张表中的数据一一对应连接在一起，形成结果集的数据相当于多张表的数据行数“相乘”之后的结果。"><a href="#（1）交叉连接是将多张表中的数据一一对应连接在一起，形成结果集的数据相当于多张表的数据行数“相乘”之后的结果。" class="headerlink" title="（1）交叉连接是将多张表中的数据一一对应连接在一起，形成结果集的数据相当于多张表的数据行数“相乘”之后的结果。"></a>（1）交叉连接是将多张表中的数据一一对应连接在一起，形成结果集的数据相当于多张表的数据行数“相乘”之后的结果。</h5><h5 id="交叉表中没有where字句；"><a href="#交叉表中没有where字句；" class="headerlink" title="交叉表中没有where字句；"></a>交叉表中没有where字句；</h5><h5 id="例：将T-A表名改成A表，把T-B表名改成B表，并查询两个表中的所有信息；"><a href="#例：将T-A表名改成A表，把T-B表名改成B表，并查询两个表中的所有信息；" class="headerlink" title="例：将T_A表名改成A表，把T_B表名改成B表，并查询两个表中的所有信息；"></a>例：将T_A表名改成A表，把T_B表名改成B表，并查询两个表中的所有信息；</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select A.*,B.* from T_A AS A,T_B AS B;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="实际上，select语句中可以实现两张表以上的表的连接查询，其创建规则与两个表连接相同，只需要在where条件中增加一个AND复合条件；"><a href="#实际上，select语句中可以实现两张表以上的表的连接查询，其创建规则与两个表连接相同，只需要在where条件中增加一个AND复合条件；" class="headerlink" title="实际上，select语句中可以实现两张表以上的表的连接查询，其创建规则与两个表连接相同，只需要在where条件中增加一个AND复合条件；"></a>实际上，select语句中可以实现两张表以上的表的连接查询，其创建规则与两个表连接相同，只需要在where条件中增加一个AND复合条件；</h5><h5 id="例：三张表，学生姓名存放于studentinfo表中，科目名称存放于subject表中，考试成绩存放于exam表中"><a href="#例：三张表，学生姓名存放于studentinfo表中，科目名称存放于subject表中，考试成绩存放于exam表中" class="headerlink" title="例：三张表，学生姓名存放于studentinfo表中，科目名称存放于subject表中，考试成绩存放于exam表中"></a>例：三张表，学生姓名存放于studentinfo表中，科目名称存放于subject表中，考试成绩存放于exam表中</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select s.studentname,sub.subjectname,e.exam from studentinfo as s,subject as sub,exam as e </span><br><span class="line">where s.studentid=e.studentid and sub.subjectid=e.subjectid;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="（2）内连接分为三种：等值连接，自然连接，不等连接；"><a href="#（2）内连接分为三种：等值连接，自然连接，不等连接；" class="headerlink" title="（2）内连接分为三种：等值连接，自然连接，不等连接；"></a>（2）内连接分为三种：等值连接，自然连接，不等连接；</h5><h5 id="语法：-1"><a href="#语法：-1" class="headerlink" title="语法："></a>语法：</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段 from 表1 inner join 表2 on&lt;表达式&gt;;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="例：查询每个学生的姓名，年龄，性别和所在班级名称"><a href="#例：查询每个学生的姓名，年龄，性别和所在班级名称" class="headerlink" title="例：查询每个学生的姓名，年龄，性别和所在班级名称"></a>例：查询每个学生的姓名，年龄，性别和所在班级名称</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select s.name,s.age,s.gender,c.classname from student as s inner join classinfo as c on s.classid=c.classid;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="（3-外连接：分为左外链接，右外连接和全外连接三种；"><a href="#（3-外连接：分为左外链接，右外连接和全外连接三种；" class="headerlink" title="（3)外连接：分为左外链接，右外连接和全外连接三种；"></a>（3)外连接：分为左外链接，右外连接和全外连接三种；</h5><h5 id="左外链接"><a href="#左外链接" class="headerlink" title="左外链接"></a>左外链接</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段 from 表1 left outer join 表2 on&lt;表达式&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="右外连接"><a href="#右外连接" class="headerlink" title="右外连接"></a>右外连接</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段 from 表1 right outer join 表2 on&lt;表达式&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="全外连接"><a href="#全外连接" class="headerlink" title="全外连接"></a>全外连接</h5><h5 id="注意：MySQL是不支持全外连接的。"><a href="#注意：MySQL是不支持全外连接的。" class="headerlink" title="注意：MySQL是不支持全外连接的。"></a>注意：MySQL是不支持全外连接的。</h5>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-Java面对对象总结" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -378,7 +708,7 @@
   <div class="widget-box">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
     </div>
   </div>
 
@@ -388,6 +718,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/">MySQL数据库总结4-6</a>
+          </li>
         
           <li>
             <a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">Java面对对象总结</a>
