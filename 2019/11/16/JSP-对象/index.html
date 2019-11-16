@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      JSP前三章总结 | Hexo
+      JSP-对象 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《JSP前三章总结》
+			Current post&nbsp;:&nbsp;《JSP-对象》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		JSP前三章总结
+	<a href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" itemprop="url">
+		JSP-对象
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-11-10T09:07:32.293Z" itemprop="datePublished">
-	  		2019-11-10
+	<a href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" itemprop="url">
+		<time datetime="2019-11-16T06:39:18.000Z" itemprop="datePublished">
+	  		2019-11-16
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-11-10T09:07:32.293Z" itemprop="dateUpdated">
-	  		2019-11-10
+	<a href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" itemprop="url">
+		<time datetime="2019-11-16T06:39:18.000Z" itemprop="dateUpdated">
+	  		2019-11-16
 	  </time>
 	</a> 
 
@@ -330,127 +330,56 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="JSP前三章总结"><a href="#JSP前三章总结" class="headerlink" title="JSP前三章总结"></a>JSP前三章总结</h1><h3 id="第一章-项目准备"><a href="#第一章-项目准备" class="headerlink" title="第一章 项目准备"></a>第一章 项目准备</h3><h4 id="1-URL"><a href="#1-URL" class="headerlink" title="1.URL"></a>1.URL</h4><h5 id="1-什么是URL"><a href="#1-什么是URL" class="headerlink" title="(1)什么是URL"></a>(1)什么是URL</h5><p>URL是统一资源定位符，用于完整地描述Internet上网页和其他资源的地址的一种标识方法。简单来说，URL就是”网址”。</p>
-<h5 id="2-URL的组成"><a href="#2-URL的组成" class="headerlink" title="(2)URL的组成"></a>(2)URL的组成</h5><p>协议，服务器域名或IP地址，端口号。</p>
-<h4 id="2-Tomcat的获取与安装"><a href="#2-Tomcat的获取与安装" class="headerlink" title="2.Tomcat的获取与安装"></a>2.Tomcat的获取与安装</h4><h5 id="1-Tomcat的获取"><a href="#1-Tomcat的获取" class="headerlink" title="(1)Tomcat的获取"></a>(1)Tomcat的获取</h5><p>从Apache官方网站获取Tomcat的最新版本，进行免费下载。</p>
-<p>安装Tomcat前必须确保在系统中已经正确安装了Java运行环境，然后再安装Tomcat。</p>
-<h5 id="2-Tomcat的安装"><a href="#2-Tomcat的安装" class="headerlink" title="(2)Tomcat的安装"></a>(2)Tomcat的安装</h5><p>1)添加系统变量，名称为CATALINA_HOME;</p>
-<p>2)设置值为Tomcat的安装目录。</p>
-<p>3)Tomcat的启动和停止</p>
-<p>*1.通过服务实现启动或停止Tomcat服务</p>
-<p>通过执行”控制面板”——&gt;”管理工具”——&gt;”服务”命令，然后右击”Apache Tomcat 7.0”图标，选择”启动”和”停止”操作。</p>
-<p>*2.通过Tomcat菜单中Monitor Tomcat工具启动或停止Tomcat服务</p>
-<p>通过执行”所有程序”——&gt;”Apache Tomcat 7.0”——&gt;”Monitor Tomcat”——&gt;”General”命令，选择”start”和”stop”操作。</p>
-<h4 id="3-Tomcat的目录结构"><a href="#3-Tomcat的目录结构" class="headerlink" title="3.Tomcat的目录结构"></a>3.Tomcat的目录结构</h4><table>
-<thead>
-<tr>
-<th align="left">目录</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">/bin</td>
-<td align="left">存放各种平台下用于启动和停止Tomcat的脚本文件</td>
-</tr>
-<tr>
-<td align="left">/conf</td>
-<td align="left">存放Tomcat服务器的各种配置文件</td>
-</tr>
-<tr>
-<td align="left">/lib</td>
-<td align="left">存放Tomcat服务器所需的各种JAR文件</td>
-</tr>
-<tr>
-<td align="left">/logs</td>
-<td align="left">存放Tomcat的日志文件</td>
-</tr>
-<tr>
-<td align="left">/temp</td>
-<td align="left">Tomcat运行时用于存放临时文件</td>
-</tr>
-<tr>
-<td align="left">/webapps</td>
-<td align="left">Web应用的发布目录</td>
-</tr>
-<tr>
-<td align="left">/work</td>
-<td align="left">Tomcat把由JSP生成的Servlet存放于此目录下</td>
-</tr>
-</tbody></table>
-<h3 id="第二章-进入项目"><a href="#第二章-进入项目" class="headerlink" title="第二章 进入项目"></a>第二章 进入项目</h3><h4 id="1-JSP页面组成"><a href="#1-JSP页面组成" class="headerlink" title="1.JSP页面组成"></a>1.JSP页面组成</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*,java.text.*&quot;</span><br><span class="line">   contentType=&quot;text/html;charset=UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;输出当前日期&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;!--这是HTML注释--&gt;</span><br><span class="line">    &lt;%-- 这是JPS注释 --%&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">   现在的时间是:</span><br><span class="line">        &lt;%//使用预定格式将日期转化为字符串%&gt;</span><br><span class="line">        &lt;%</span><br><span class="line">          SimpleDateFormat formater=</span><br><span class="line">        new SimpleDateFormat(&quot;yyyy年MM月dd日a&quot;);</span><br><span class="line">        String strCurrentTime=formater.format(new Date());</span><br><span class="line">        %&gt;</span><br><span class="line">        &lt;%=strCurrentTime%&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-JPS中的注释"><a href="#2-JPS中的注释" class="headerlink" title="2.JPS中的注释"></a>2.JPS中的注释</h4><p>(1)HTML注释方法:</p>
-<p>格式这种注释方法是不安全的，而且会加大网络传输的负担。</p>
-<p>(2)JPS注释标记：</p>
-<p>格式&lt;%–JSP 注释–%&gt;安全性比较高。</p>
-<p>(3)在JPS脚本中使用注释：</p>
-<p>格式&lt;%//单行注释%&gt;，&lt;%/<em>多行注释术</em>/%&gt;</p>
-<h4 id="3-JSP指令元素"><a href="#3-JSP指令元素" class="headerlink" title="3.JSP指令元素"></a>3.JSP指令元素</h4><p>JSP指令元素的作用是通过设置指令中的属性，控制JSP页面的某些特性。JSP指令一般以”&lt;%@”开始，以”%&gt;”结束。</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*,java.text.*&quot;contentType=&quot;text/html; charset=UTF-8&quot; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(1)什么是page指令？</p>
-<p>page指令是针对当前页面进行设置的一种指令，通常位于JSP页面的顶端。需要注意的是page指令只对当前JSP页面有效，但是在一个JSP页面中可以包含多个指令。</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page属性1=&quot;属性值&quot;属性2=&quot;属性值1，属性值2&quot;......属性n=&quot;属性值&quot;%&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(2)page指令常用属性</p>
+		<h1 id="jsp对象"><a href="#jsp对象" class="headerlink" title="jsp对象"></a>jsp对象</h1><h3 id="1-request对象"><a href="#1-request对象" class="headerlink" title="1.request对象"></a>1.request对象</h3><p>(1)request对象是http请求的代表</p>
+<p>requset对象是ServletRequset的一个实例。当客户端请求一个JPS网页时，JPS引擎会将客户的请求信息包装在这个request对象中。</p>
+<p>(2)request对象的方法</p>
+<p>request内置对象代表了客户端的请求信息，他的各个功能都封装在其他方法中。</p>
+<p>request对象方法：</p>
 <table>
 <thead>
 <tr>
-<th align="left">属性</th>
-<th align="left">描述</th>
+<th>getHeader(String name)</th>
+<th>获得http协议定义的传送文件头信息。</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">language</td>
-<td align="left">制定JSP页面使用的脚本语言，默认为”java”</td>
+<td>getHeaderNames()</td>
+<td>返回所有request header的名字，结果集是一个Enumeration(枚举)类的实例。</td>
 </tr>
 <tr>
-<td align="left">import</td>
-<td align="left">通过该属性引用脚本语言中使用到的类文件</td>
+<td>getRemoteAddr()</td>
+<td>获得客户端的IP地址。</td>
 </tr>
 <tr>
-<td align="left">contentType</td>
-<td align="left">用于指定MIME类型和JSP页面回应时所采用的字符编码方式，默认为”text/html;charset=ISO-8859-1”</td>
+<td>isSecure()</td>
+<td>如果客户机是通过一个安全的访问方式访问的，就返回true，反之，返回false。</td>
+</tr>
+<tr>
+<td>getCookies()</td>
+<td>返回客户端的cookie对象，结果是一个cookie数组。</td>
+</tr>
+<tr>
+<td>getMethod()</td>
+<td>返回客户端向服务器端传送数据的方法，一般方法有get，post等类型。</td>
+</tr>
+<tr>
+<td>getParameter(String name)</td>
+<td>以字符串的形式返回客户端传来的某一个请求参数的值，该参数名由name指定。当传递给此方法的参数名没有实际参数与之对应时，返回null。</td>
+</tr>
+<tr>
+<td>getParameterNames()</td>
+<td>返回客户端传送给服务器端的所有参数名，结果集是Enumeration(枚举)类的实例。</td>
 </tr>
 </tbody></table>
-<p>1)language属性：page指令中的language属性用于指定当前JSP页面所采用的脚本语言，当前JSP版本只能使用Java作为脚本语言。该属性不可以设置，因为JSP默认就是采用Java作为脚本。</p>
-<p>language属性的设置方法是&lt;%@page language=”java”%&gt;</p>
-<p>2)import属性：page指令中的import属性在实际开发中的使用比较频繁。通过import属性可以在JSP文件的脚本片段中引用类。</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import=&quot;java.util.*, java.text.*&quot;%&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-response对象"><a href="#2-response对象" class="headerlink" title="2.response对象"></a>2.response对象</h3><p>实例：</p>
+<p>用户登录页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;title&gt;用户登录&lt;/title&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;body&gt;</span><br><span class="line">		&lt;form name=&quot;form1&quot; method=post action=&quot;control.jsp&quot;&gt;</span><br><span class="line">			用户名：&lt;input type=&quot;text&quot; name=&quot;userName&quot;&gt;</span><br><span class="line">			密码：&lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;</span><br><span class="line">			&lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;</span><br><span class="line">		&lt;/form&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import=&quot;java.util.*&quot;%&gt;</span><br><span class="line">&lt;%@ page import=&quot;java.text.*&quot;%&gt;</span><br></pre></td></tr></table></figure>
+<p>登录处理页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot;  pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;登录处理页面&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br><span class="line">		//request.getParameter(&quot;username&quot;)可以接受到表单传递的username参数，对应jsp表单的input的name是username的表单。</span><br><span class="line">		String name = request.getParameter(&quot;userName&quot;);</span><br><span class="line">		//request.getParameter(&quot;password&quot;)可以接受到表单传递的password参数，对应jsp表单的input的name是password的表单。</span><br><span class="line">		String pwd = request.getParameter(&quot;pwd&quot;);</span><br><span class="line">        </span><br><span class="line">		if(&quot;sa&quot;.equals(name)&amp;&amp;&quot;sa&quot;.equals(pwd))&#123;</span><br><span class="line">	 		response.sendRedirect(&quot;welcome.jsp&quot;);</span><br><span class="line">		&#125; </span><br><span class="line">	%&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p>3)contentType属性：这个设置告诉Web容器在客户端浏览器上以何种格式以及使用何种编码方式显示响应的内容。</p>
-<p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot;%&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-JSP脚本元素"><a href="#4-JSP脚本元素" class="headerlink" title="4.JSP脚本元素"></a>4.JSP脚本元素</h4><p>在JSP页面中，将表达式，小脚本，声明统称为JSP脚本元素，用于在JSP页面中嵌入Java代码，实现页面的动态请求。</p>
-<p>(1)什么是小脚本</p>
-<p>小脚本可以包含任意的Java片段，形式比较灵活，通过JSP页面中编写小脚本可以执行复杂的操作和业务处理。</p>
-<p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;%//显示年龄%&gt;</span><br><span class="line">&lt;%</span><br><span class="line">  int age=18;</span><br><span class="line">  if(age&gt;=18)&#123;</span><br><span class="line">     out.println(&quot;成年人&quot;);</span><br><span class="line">  &#125;esle&#123;</span><br><span class="line">     out.println(&quot;未成年人&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
-
-<p>(2)什么是表达式</p>
-<p>表达式是对数据的表示，系统将其作为一个值进行计算和显示。当需要在页面中获取一个Java变量或者表达式值时，使用表达式是非常方便的。语法是&lt;%=Java表达式%&gt;。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html;charset=UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;输出数组中的元素&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;%</span><br><span class="line">        int[] value=&#123;60,70,80&#125;;</span><br><span class="line">        for(int i:value)&#123;</span><br><span class="line">        %&gt; </span><br><span class="line">        &lt;%=i%&gt;&lt;br/&gt;</span><br><span class="line">        &lt;%&#125;%&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-Web项目部署运行中常见错误"><a href="#5-Web项目部署运行中常见错误" class="headerlink" title="5.Web项目部署运行中常见错误"></a>5.Web项目部署运行中常见错误</h4><p>(1)未启动Tomcat服务，或者没有在预期的端口中启动Tomcat服务。</p>
-<p>(2)未部署Web应用，就是运行Web程序。</p>
-<p>(3)运行时，URL输入错误。</p>
-<p>(4)目录不能被引用。</p>
-<h3 id="第三章-项目展示"><a href="#第三章-项目展示" class="headerlink" title="第三章 项目展示"></a>第三章 项目展示</h3><h4 id="1-JSP中JDBC访问数据库显示用户列表"><a href="#1-JSP中JDBC访问数据库显示用户列表" class="headerlink" title="1.JSP中JDBC访问数据库显示用户列表"></a>1.JSP中JDBC访问数据库显示用户列表</h4><p>示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import=&quot;java.sql.*&quot;%&gt;        //导入数据库</span><br><span class="line">&lt;%</span><br><span class="line">	try&#123;</span><br><span class="line">        Class.forName(JDBC驱动类);     //加载数据库驱动</span><br><span class="line">        //创建连接</span><br><span class="line">        Connection con=DriverManager.getConnection(JDBC URL,数据库用户名，密码);</span><br><span class="line">        //创建Statement对象</span><br><span class="line">        Statement stmt=con.createStatement();</span><br><span class="line">        //获得结果集</span><br><span class="line">        ResultSet rs=stmt.executeQuery(&quot;SELECT uname,upwd FROM users&quot;);</span><br><span class="line">        while(rs.next())&#123;</span><br><span class="line">            String x=rs.getString(&quot;uname&quot;);</span><br><span class="line">        String s=rs.getstring(&quot;upwd&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;catch(Exception e)&#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">   ......</span><br><span class="line">%&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这段代码与在Java中介绍过的数据库连接的实现是一致的。这里将业务逻辑与页面展示进行分离，也就是软件开发中所说的分层实现。这里分为两层，JSP使用户直接访问的，主要用户获取用户的数据和显示数据，作为表示层，对数据库的保存和读取是数据访问层，采用DAO模式实现。</p>
-<h4 id="2-DAO模式的主要组成部分"><a href="#2-DAO模式的主要组成部分" class="headerlink" title="2.DAO模式的主要组成部分"></a>2.DAO模式的主要组成部分</h4><p>DAO接口：把对数据库的所有操作定义成抽象方法。</p>
-<p>DAO实现类：给出DAO接口中定义方法的具体实现。</p>
-<p>实体类：用于存放，传输对象数据。</p>
-<p>数据库连接和关闭工具类：避免了数据库连接和关闭代码的重复使用，方便修改。</p>
-	
+<p>欢迎页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;title&gt;欢迎页面&lt;/title&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		欢迎进入本页面！</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -468,12 +397,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL数据库总结4-6" rel="next">
+			<a href="/2019/11/16/cookie%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E6%A1%88%E4%BE%8B/" title="Cookie记住密码案例" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -491,31 +416,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" title="JSP-对象">
-								JSP-对象			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 16日, 2019				
-							</p>
-							<p class="relate-post-content">
-								jsp对象1.request对象(1)request对象是http请求的代表
-requset对象是ServletRequset的一个实例。当客户端请求一个JPS网页时，JPS引擎会将客户的请求信息包装在这个request对象中。
-(2...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" title="JSP-对象">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="JSP-对象"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -607,6 +507,30 @@ requset对象是ServletRequset的一个实例。当客户端请求一个JPS网�
 							<a href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="会话跟踪技术Cookie"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="JSP前三章总结">
+								JSP前三章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 10日, 2019				
+							</p>
+							<p class="relate-post-content">
+								JSP前三章总结第一章 项目准备1.URL(1)什么是URLURL是统一资源定位符，用于完整地描述Internet上网页和其他资源的地址的一种标识方法。简单来说，URL就是”网址”。
+(2)URL的组成协议，服务器域名或IP地址，端口...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="JSP前三章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="JSP前三章总结"/>
 							</a>
 						</div>
 					</li>											
