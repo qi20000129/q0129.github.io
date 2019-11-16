@@ -1,0 +1,880 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      MYSQL第二章总结 | Hexo
+    
+  </title>
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/Annie.css">
+  
+  <!-- jquery -->
+	<script src="/js/jquery.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+</head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/1.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<!-- Logo and navigation -->
+		<div class="h-header">
+			<div id="logo">
+				<a href="/">
+						
+						<img src="/img/logo.png" alt="Logo">
+					
+				</a>
+			</div>
+			
+			<div id="navigation-show">
+				<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">Home</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">Archive</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">Category</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">Tag</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">About</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">Gallery</a>
+		</li>
+	
+
+	
+</ul>
+			</div>				
+		</div>
+
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<p class="motto"></p>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down" aria-hidden="true"></i>
+			</a>
+
+			
+				<!-- 
+	This is only a demo, please go to "https://time.is" to set your city time! 
+-->
+<style type="text/css">
+	.header-date {
+		font-size: 1.6rem;
+		color: #fff;
+		position: absolute;
+		bottom: 5px;
+		right: 1rem;
+		writing-mode: tb-rl;
+	}	
+	
+	.header-date a {
+		border-bottom: none;
+	}
+
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			font-size: 1rem;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" target="_blank" id="time_is_link" rel="nofollow noopener" ></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+			
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><h1>0.0%</h1></div>
+
+	<div class="toc-switch"><span class="switch-button">Catalog</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			Current post&nbsp;:&nbsp;《MYSQL第二章总结》
+		
+	</p>
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home">Home</a>
+		</li>
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive">Archive</a>
+		</li>
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories">Category</a>
+		</li>
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags">Tag</a>
+		</li>
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about">About</a>
+		</li>
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery">Gallery</a>
+		</li>
+	
+
+	
+</ul>
+	</div>
+	<div class="nav-footer">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+	<div class="article-title">
+		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+		
+	<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
+		MYSQL第二章总结
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			<i class="fa fa-calendar"></i>
+			
+
+
+	Posted on
+
+	<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
+		<time datetime="2019-10-22T03:27:09.000Z" itemprop="datePublished">
+	  		2019-10-22
+	  </time>
+	</a>
+	&nbsp;
+
+
+
+
+
+			
+
+
+
+
+	Updated on
+
+	<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
+		<time datetime="2019-10-22T03:27:09.000Z" itemprop="dateUpdated">
+	  		2019-10-30
+	  </time>
+	</a> 
+
+
+
+		</span>
+		<span>
+			<i class="fa fa-tags"></i>
+					
+		</span>
+		
+		
+
+
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h2 id="第二章数据库和表的设计"><a href="#第二章数据库和表的设计" class="headerlink" title="第二章数据库和表的设计"></a>第二章数据库和表的设计</h2><h3 id="1，为什么需要数据完整性？"><a href="#1，为什么需要数据完整性？" class="headerlink" title="1，为什么需要数据完整性？"></a>1，为什么需要数据完整性？</h3><h4 id="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："><a href="#数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：" class="headerlink" title="数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种："></a>数据的完整性是指数据的精准性和可靠性。数据完整性类型一般分四种：</h4><h4 id="1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。"><a href="#1-实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY-KEY（主键约束）、UNIQUE-唯一值约束。" class="headerlink" title="1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。"></a>1.实体完整性：通过唯一约束，主键约束或标识列属性来实现，如：PRIMARY KEY（主键约束）、UNIQUE 唯一值约束。</h4><h4 id="2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。"><a href="#2-域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束-NOT-NULL-、默认值定义（DEFAULT）、CHECK检查-MySQL不支持check约束-来实现。" class="headerlink" title="2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。"></a>2.域完整性：通过数据类型（如数值类型、日期类型、字符串类型等限制类型）、非空约束(NOT NULL)、默认值定义（DEFAULT）、CHECK检查(MySQL不支持check约束)来实现。</h4><h4 id="3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"><a href="#3-引用完整性：又叫做参照完整性，通过外键约束（FOREIGN-KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。" class="headerlink" title="3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。"></a>3.引用完整性：又叫做参照完整性，通过外键约束（FOREIGN KEY）来实现。引用完整性保证键值在所有表中一致，不能引用不存在的值。</h4><h4 id="4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"><a href="#4-自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。" class="headerlink" title="4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。"></a>4.自定义完整性：是指针对某一具体关系型数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。</h4><h3 id="2，数据完整性在MySQL中的体现"><a href="#2，数据完整性在MySQL中的体现" class="headerlink" title="2，数据完整性在MySQL中的体现"></a>2，数据完整性在MySQL中的体现</h3><h4 id="数据约束：主键，主键自增，外键，非空，默认，唯一。"><a href="#数据约束：主键，主键自增，外键，非空，默认，唯一。" class="headerlink" title="数据约束：主键，主键自增，外键，非空，默认，唯一。"></a>数据约束：主键，主键自增，外键，非空，默认，唯一。</h4><h4 id="1，主键：primary-key-特性：非空且唯一，写在字段类型后面。"><a href="#1，主键：primary-key-特性：非空且唯一，写在字段类型后面。" class="headerlink" title="1，主键：primary  key  特性：非空且唯一，写在字段类型后面。"></a>1，主键：primary  key  特性：非空且唯一，写在字段类型后面。</h4><h5 id="在MySQL中设置字段做主键时，分两种情况。"><a href="#在MySQL中设置字段做主键时，分两种情况。" class="headerlink" title="在MySQL中设置字段做主键时，分两种情况。"></a>在MySQL中设置字段做主键时，分两种情况。</h5><h6 id="（1）定义列的同时设置主键"><a href="#（1）定义列的同时设置主键" class="headerlink" title="（1）定义列的同时设置主键"></a>（1）定义列的同时设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h6 id="（2）完成所有列之后设置主键"><a href="#（2）完成所有列之后设置主键" class="headerlink" title="（2）完成所有列之后设置主键"></a>（2）完成所有列之后设置主键</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[constraint 约束名] primary  key （列名）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2，主键自增：auto-increment-写在字段类型后面，主键前面。"><a href="#2，主键自增：auto-increment-写在字段类型后面，主键前面。" class="headerlink" title="2，主键自增：auto_increment   写在字段类型后面，主键前面。"></a>2，主键自增：auto_increment   写在字段类型后面，主键前面。</h4><h5 id="在设置auto-increment-时需要遵守以下几点规则："><a href="#在设置auto-increment-时需要遵守以下几点规则：" class="headerlink" title="在设置auto_increment 时需要遵守以下几点规则："></a>在设置auto_increment 时需要遵守以下几点规则：</h5><h6 id="（1）一个表中只能有一个字段使用auto-increment。"><a href="#（1）一个表中只能有一个字段使用auto-increment。" class="headerlink" title="（1）一个表中只能有一个字段使用auto_increment。"></a>（1）一个表中只能有一个字段使用auto_increment。</h6><h6 id="（2）auto-increment-必须作为主键的一个部分，不得单独使用。"><a href="#（2）auto-increment-必须作为主键的一个部分，不得单独使用。" class="headerlink" title="（2）auto_increment 必须作为主键的一个部分，不得单独使用。"></a>（2）auto_increment 必须作为主键的一个部分，不得单独使用。</h6><h6 id="（3）-auto-increment-字段的数据类必须为整数类型。"><a href="#（3）-auto-increment-字段的数据类必须为整数类型。" class="headerlink" title="（3） auto_increment 字段的数据类必须为整数类型。"></a>（3） auto_increment 字段的数据类必须为整数类型。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">列名  数据类型 auto_increment primary key</span><br></pre></td></tr></table></figure>
+
+<h4 id="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"><a href="#3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。" class="headerlink" title="3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。"></a>3，外键：从表的外键，必须在主表的主键中出现，写在创建语句的最后面。</h4><h5 id="外键约束中有两个名词，需要注意："><a href="#外键约束中有两个名词，需要注意：" class="headerlink" title="外键约束中有两个名词，需要注意："></a>外键约束中有两个名词，需要注意：</h5><h6 id="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"><a href="#主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。" class="headerlink" title="主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。"></a>主表：对于两个具有关系的表而言，相关联的字段中主键所在的表即为主表。</h6><h6 id="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"><a href="#从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。" class="headerlink" title="从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。"></a>从表：对于两个具有关系的表而言，相关联的字段中外键所在的表即为从表。</h6><h5 id="在从表中创建外键的语法如下："><a href="#在从表中创建外键的语法如下：" class="headerlink" title="在从表中创建外键的语法如下："></a>在从表中创建外键的语法如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[constraint 外键名] foreign  字段名1[,字段名2,......]</span><br><span class="line">refereces 主表名 主键列1[,主键列2,......]</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，非空：not-null-写在字段类型的后面。"><a href="#4，非空：not-null-写在字段类型的后面。" class="headerlink" title="4，非空：not  null  写在字段类型的后面。"></a>4，非空：not  null  写在字段类型的后面。</h4><h5 id="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"><a href="#非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。" class="headerlink" title="非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。"></a>非空约束指字段的值不能为空，如果用户在添加数据时没有指定值，数据库系统将会报错。</h5><h6 id="建表时设置非空约束的语法："><a href="#建表时设置非空约束的语法：" class="headerlink" title="建表时设置非空约束的语法："></a>建表时设置非空约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型 not null</span><br></pre></td></tr></table></figure>
+
+<h4 id="5，默认：default-默认值-如果默认值为字符，则将字符加单引号。"><a href="#5，默认：default-默认值-如果默认值为字符，则将字符加单引号。" class="headerlink" title="5，默认：default  默认值     如果默认值为字符，则将字符加单引号。"></a>5，默认：default  默认值     如果默认值为字符，则将字符加单引号。</h4><h5 id="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"><a href="#默认约束指定某列的默认值下，系统会自动为这个字段赋值。" class="headerlink" title="默认约束指定某列的默认值下，系统会自动为这个字段赋值。"></a>默认约束指定某列的默认值下，系统会自动为这个字段赋值。</h5><h6 id="建表时设置默认约束的语法："><a href="#建表时设置默认约束的语法：" class="headerlink" title="建表时设置默认约束的语法："></a>建表时设置默认约束的语法：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型  default 默认值</span><br></pre></td></tr></table></figure>
+
+<h4 id="6，唯一：unique-写在字段类型后面。"><a href="#6，唯一：unique-写在字段类型后面。" class="headerlink" title="6，唯一：unique 写在字段类型后面。"></a>6，唯一：unique 写在字段类型后面。</h4><h5 id="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"><a href="#唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。" class="headerlink" title="唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。"></a>唯一约束：要求该列的字段值唯一，允许为空，但只能有一个空值，唯一约束可以确保一列或多列不出现重复。</h5><h6 id="唯一约束的语法规则如下："><a href="#唯一约束的语法规则如下：" class="headerlink" title="唯一约束的语法规则如下："></a>唯一约束的语法规则如下：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名  数据类型  unique</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-数据库设计规范"><a href="#3-数据库设计规范" class="headerlink" title="3,数据库设计规范"></a>3,数据库设计规范</h3><h4 id="1NF-一范式-数据字段要具有原子性，不可再分。"><a href="#1NF-一范式-数据字段要具有原子性，不可再分。" class="headerlink" title="1NF  一范式  数据字段要具有原子性，不可再分。"></a>1NF  一范式  数据字段要具有原子性，不可再分。</h4><h4 id="2NF-二范式-所有字段要和主键相关。（要有主键）"><a href="#2NF-二范式-所有字段要和主键相关。（要有主键）" class="headerlink" title="2NF  二范式  所有字段要和主键相关。（要有主键）"></a>2NF  二范式  所有字段要和主键相关。（要有主键）</h4><h4 id="3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）"><a href="#3NF-三范式-所有字段要和主键直接相关。（要有外键，分表）" class="headerlink" title="3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）"></a>3NF  三范式  所有字段要和主键直接相关。（要有外键，分表）</h4>	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">Related post</div>
+				<div>Comment</div>
+				<div>Share</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
+		
+			<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结" rel="prev">
+				&laquo;Pre post
+			</a>
+		
+		
+			<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结" rel="next">
+				Next post&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">
+								配置数据库连接池			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								eslipse配置数据库连接池Tomcat6的服务器配置文件放在 ${tomcat6}/conf 目录底下。我们可以在这里找到 server.xml 和 context.xml。此外，还有其他一些资源文件。但是在在本文中我们只用得上这...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="配置数据库连接池"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie">
+								会话跟踪技术Cookie			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 10日, 2019				
+							</p>
+							<p class="relate-post-content">
+								会话跟踪技术会话跟踪技术1.概念：在JavaWeb中，客户向某一服务器发出第一个请求开始，会话就开始了，直到客户关闭了浏览器会话结束。
+在一个会话的多个请求中共享数据，这就是会话跟踪技术。
+2.会话跟踪技术的使用在HTTP协议中可以使...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="会话跟踪技术Cookie"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="JSP前三章总结">
+								JSP前三章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 10日, 2019				
+							</p>
+							<p class="relate-post-content">
+								JSP前三章总结第一章 项目准备1.URL(1)什么是URLURL是统一资源定位符，用于完整地描述Internet上网页和其他资源的地址的一种标识方法。简单来说，URL就是”网址”。
+(2)URL的组成协议，服务器域名或IP地址，端口...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/10/jsp%E5%89%8D%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="JSP前三章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="JSP前三章总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL数据库总结4-6">
+								MySQL数据库总结4-6			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 4日, 2019				
+							</p>
+							<p class="relate-post-content">
+								
+第四章数据查询入门1.什么是数据查询数据库的查询是对数据表中现有的数据进行逐行筛选的工作，它按照要求从符合查询条件的记录中把指定的字段值提取出来，形成一个结果呈现给用户。2.基本语法select_list:用户要查询的字段列表，”*...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/04/MySQL%E7%AC%AC%E5%9B%9B%E8%87%B3%E5%85%AD%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL数据库总结4-6">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MySQL数据库总结4-6"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="Java面对对象总结">
+								Java面对对象总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 30日, 2019				
+							</p>
+							<p class="relate-post-content">
+								java面向对象程序设计总结第二章 类和对象1、面向对象的概念：面向对象是把一个项目，一件事情，从头到尾一步一步执行，直到结束。2、类的创建1public class 类名&#123;&#125;
+
+FILE——&gt;NEW –&g...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="Java面对对象总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Java面对对象总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结">
+								MySQL第三章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 23日, 2019				
+							</p>
+							<p class="relate-post-content">
+								第三章，操作表中数据1，SQL命令中的表达式和逻辑运算符1.1表达式在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。SQL语言中包括三种表达反式：第一种：&lt;表名&gt; 后跟&lt...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MySQL第三章总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结">
+								MySQL第1章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 20日, 2019				
+							</p>
+							<p class="relate-post-content">
+								第一章MySQL基础1，MySQL的特点？①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MySQL第1章总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+		</ul>
+	
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- I don't know !!!-->
+			<div>Please check the comment setting in config.yml of hexo-theme-Annie!</div>
+			
+		
+		
+	
+
+</div>
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+			</div>
+		</div>	
+	</div>
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+	
+
+
+<!-- show math formula -->
+
+
+
+	 
+	<script src="/plugin/clipboard/clipboard.js"></script>
+	<script>
+		// Copy code !
+	    function codePreprocessing() {
+	        $("#article-content .highlight").each(function() {
+
+	            $(this).wrap('<div id="post-code"></div>');
+
+	        })
+
+	        $("#article-content #post-code").each(function() {
+
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            var temp = $(this).next().attr('class'),
+	                language = ((temp.length > 9) && (temp != null)) ? temp.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+
+	            $(this).append('<span class="copy-btn"><i class="fa fa-copy" aria-hidden="true"></i></span>');
+
+	        });
+	    }
+
+		function codeCopy() {
+		    $('#article-content #post-code').each(function(i) {
+		        var codeCopyId = 'codeCopy-' + i;
+
+		        var codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+
+		    
+			var clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn copy-status');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');
+			    
+			});
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		
+
+		}
+
+		if ($('.layout-post').length) {
+		    codePreprocessing();
+		    codeCopy();
+		} 
+	</script>
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+	var titleID = $('.article-title a'),
+		imageID = $('.article-content img'),
+		videoID = $('.article-content video');
+
+	var postTitle = titleID.text() ? titleID.text() : "No post title!";
+
+	imageID.each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox="gallery" data-caption=" 《 ' + postTitle + ' 》 ' + imgTitle + ' "  href=" ' + imgPath + ' "> </a>');
+	});
+
+	videoID.each(function() {
+		var videoPath = $(this).attr('src');
+
+		//给每个匹配的<img>元素打包, 即添加父元素<a>
+		$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+	});
+	//TODO：支持html5 video
+
+	if($('#layout-post').length) {
+		$('[data-fancybox="gallery"]').fancybox({
+			loop: true,
+			buttons: [
+				"zoom",
+				"share",
+				"slideShow",
+				"fullScreen",
+				//"download",
+				"thumbs",
+				"close"
+			],
+			protect: false
+		});
+	}
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-github"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-weibo"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-instagram"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<i class="fa fa-twitter"></i>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<i class="fa fa-rss"></i>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2017 - 2019, content by John Doe. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- set '1' to show motto in all pages! -->
+
+	<script src="/plugin/motto/motto.js"></script>
+	
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+
+<!-- love effect -->
+
+	<script src="/plugin/love/love.js"></script>
+
+
+<!-- back to top -->
+
+	
+	<div id="totop">
+  		<a href="javascript:;"  name="TOTOP" class="fa fa-arrow-up" ></a>
+	</div>
+
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+
+	
+	
+	
+	
+ 
+
+<script src="/plugin/vibrant/vibrant.js"></script>
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imgLazyLoader/yall.min.js"></script>
+<script src="/plugin/imgResize/jquery.resizeimagetoparent.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/js/resizediv.js"></script>
+<script src="/js/main.js"></script>
+	</body>	
+</html>

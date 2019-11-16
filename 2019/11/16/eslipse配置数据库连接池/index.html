@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      MySQL第1章总结 | Hexo
+      配置数据库连接池 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《MySQL第1章总结》
+			Current post&nbsp;:&nbsp;《配置数据库连接池》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		MySQL第1章总结
+	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
+		配置数据库连接池
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-10-20T07:17:33.000Z" itemprop="datePublished">
-	  		2019-10-20
+	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
+		<time datetime="2019-11-16T03:27:46.000Z" itemprop="datePublished">
+	  		2019-11-16
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-10-20T07:17:33.000Z" itemprop="dateUpdated">
-	  		2019-10-30
+	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
+		<time datetime="2019-11-16T03:27:46.000Z" itemprop="dateUpdated">
+	  		2019-11-16
 	  </time>
 	</a> 
 
@@ -330,33 +330,15 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h2 id="第一章MySQL基础"><a href="#第一章MySQL基础" class="headerlink" title="第一章MySQL基础"></a>第一章MySQL基础</h2><h3 id="1，MySQL的特点？"><a href="#1，MySQL的特点？" class="headerlink" title="1，MySQL的特点？"></a>1，MySQL的特点？</h3><h5 id="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"><a href="#①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。" class="headerlink" title="①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。"></a>①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。</h5><h5 id="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。"><a href="#②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相-比，它的设置和管理要简单的多。" class="headerlink" title="②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。"></a>②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。</h5><h5 id="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"><a href="#③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。" class="headerlink" title="③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。"></a>③SQL支持：它支持结构化查询语言，是目前所有现代数据库系统都选用的标准语言。</h5><h5 id="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。"><a href="#④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可-以使用多个数据库。" class="headerlink" title="④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。"></a>④功能性：MySQL服务器支持多线程，因此允许多个客户端同时与它链接。每个客户端可        以使用多个数据库。</h5><h5 id="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"><a href="#⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它-还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。" class="headerlink" title="⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。"></a>⑤连接性和安全性：MySQL完全支持网络化，用户可以从因特网任何地点访问数据库，它         还拥有访问控制功能，可以保证链接的一方完全无法看到另一方的数据。</h5><h5 id="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。"><a href="#⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，-能在小型设备上运行也可以在高端服务器上运行。" class="headerlink" title="⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。"></a>⑥可移植性：MySQL除了可以在Windows上运行外，还可以运行在Unix和Linux系统上，        能在小型设备上运行也可以在高端服务器上运行。</h5><h5 id="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"><a href="#⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。" class="headerlink" title="⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。"></a>⑦可用性和成本：MySQL是一个开源项目，有许多条款可供选择。</h5><h5 id="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"><a href="#⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。" class="headerlink" title="⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。"></a>⑧公开发行和源代码：获取MySQL的方法很简单，只要使用浏览器即可。</h5><h3 id="2，使用命令创建MySQL数据库"><a href="#2，使用命令创建MySQL数据库" class="headerlink" title="2，使用命令创建MySQL数据库"></a>2，使用命令创建MySQL数据库</h3><h4 id="1，创建数据库"><a href="#1，创建数据库" class="headerlink" title="1，创建数据库"></a>1，创建数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+		<h1 id="eslipse配置数据库连接池"><a href="#eslipse配置数据库连接池" class="headerlink" title="eslipse配置数据库连接池"></a>eslipse配置数据库连接池</h1><p>Tomcat6的服务器配置文件放在 ${tomcat6}/conf 目录底下。我们可以在这里找到 server.xml 和 context.xml。此外，还有其他一些资源文件。但是在在本文中我们只用得上这两个。</p>
+<h2 id="1-添加jar包"><a href="#1-添加jar包" class="headerlink" title="1.添加jar包"></a>1.添加jar包</h2><p>首先，将数据库的驱动程序copy到tomcat8.0\lib下，这一部是关键，如果没有copy 当运行程序的时候后报-找不到驱动-的异常。</p>
+<h2 id="2-在context文件中添加"><a href="#2-在context文件中添加" class="headerlink" title="2.在context文件中添加"></a>2.在context文件中添加</h2><p>将下面的代码放到Tomcat 8.0\conf\context.xml中间，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Context reloadable=&quot;true&quot;&gt;&lt;Resource name=&quot;jdbc/数据库名&quot;type=&quot;javax.sql.DataSource&quot;maxActive=&quot;100&quot;maxIdle=&quot;30&quot; maxWait=&quot;5000&quot;username=&quot;用户名&quot;password=&quot;密码&quot;driverClassName=&quot;数据库的驱动&quot;url=&quot;数据库的连接地址&quot; /&gt;&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
 
-<h4 id="2，删除数据库"><a href="#2，删除数据库" class="headerlink" title="2，删除数据库"></a>2，删除数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+<p>也可以在项目root下的WEB-INF下新建context.xml进行配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Context&gt;/////直连 &lt;Resource name=&quot;jdbc/book&quot; type=&quot;javax.sql.DataSource&quot; password=&quot;&quot;driverClassName=&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;maxIdle=&quot;5&quot; maxWait=&quot;5000&quot;username=&quot;sa&quot; url=&quot;jdbc:microsoft:sqlserver://localhost:1433;databaseName=book&quot;////直连数据源 maxActive=&quot;10&quot;/&gt; &lt;/Context&gt;</span><br></pre></td></tr></table></figure>
 
-<h4 id="3，进入数据库"><a href="#3，进入数据库" class="headerlink" title="3，进入数据库"></a>3，进入数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名;</span><br></pre></td></tr></table></figure>
-
-<h4 id="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"><a href="#注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。" class="headerlink" title="注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。"></a>注：数据库代码不区分大小写，通常数据库内置的关键字大写，自定义的小写。所有的符号要在英文状态下输入。</h4><h3 id="3，创建数据表"><a href="#3，创建数据表" class="headerlink" title="3，创建数据表"></a>3，创建数据表</h3><h4 id="1，创建数据表"><a href="#1，创建数据表" class="headerlink" title="1，创建数据表"></a>1，创建数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表名(字段1 类型,字段2 类型,····);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2，查询表的结构信息"><a href="#2，查询表的结构信息" class="headerlink" title="2，查询表的结构信息"></a>2，查询表的结构信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DESC 表名；</span><br></pre></td></tr></table></figure>
-
-<h4 id="3，查询表的创建信息"><a href="#3，查询表的创建信息" class="headerlink" title="3，查询表的创建信息"></a>3，查询表的创建信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SHOW CREATE TABLE 表名；</span><br></pre></td></tr></table></figure>
-
-<h4 id="4，删除数据表"><a href="#4，删除数据表" class="headerlink" title="4，删除数据表"></a>4，删除数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE 表名；</span><br></pre></td></tr></table></figure>
-
-<h4 id="5，常用的数据类型"><a href="#5，常用的数据类型" class="headerlink" title="5，常用的数据类型"></a>5，常用的数据类型</h4><h6 id="binary-取值1，0"><a href="#binary-取值1，0" class="headerlink" title="binary     取值1，0"></a>binary     取值1，0</h6><h6 id="int-6万"><a href="#int-6万" class="headerlink" title="int      6万"></a>int      6万</h6><h6 id="bigint-4亿"><a href="#bigint-4亿" class="headerlink" title="bigint      4亿"></a>bigint      4亿</h6><h6 id="char-定长字符串，最大长度255，优点：效率高"><a href="#char-定长字符串，最大长度255，优点：效率高" class="headerlink" title="char     定长字符串，最大长度255，优点：效率高"></a>char     定长字符串，最大长度255，优点：效率高</h6><h6 id="varchar-变长字符串，最大长度255，优点：省空间"><a href="#varchar-变长字符串，最大长度255，优点：省空间" class="headerlink" title="varchar     变长字符串，最大长度255，优点：省空间"></a>varchar     变长字符串，最大长度255，优点：省空间</h6><h6 id="text-64k"><a href="#text-64k" class="headerlink" title="text    64k"></a>text    64k</h6><h6 id="longtext-4GB"><a href="#longtext-4GB" class="headerlink" title="longtext      4GB"></a>longtext      4GB</h6><h6 id="float-同int"><a href="#float-同int" class="headerlink" title="float      同int"></a>float      同int</h6><h6 id="double-同bigint"><a href="#double-同bigint" class="headerlink" title="double    同bigint"></a>double    同bigint</h6><h4 id="6-专有名词"><a href="#6-专有名词" class="headerlink" title="6,专有名词"></a>6,专有名词</h4><h5 id="数据库，数据表，记录（一行数据-record），字段（一列-field）"><a href="#数据库，数据表，记录（一行数据-record），字段（一列-field）" class="headerlink" title="数据库，数据表，记录（一行数据 record），字段（一列 field）"></a>数据库，数据表，记录（一行数据 record），字段（一列 field）</h5><h4 id="7，修改表结构"><a href="#7，修改表结构" class="headerlink" title="7，修改表结构"></a>7，修改表结构</h4><h5 id="alter-table-表名-动作"><a href="#alter-table-表名-动作" class="headerlink" title="alter  table  表名+动作"></a>alter  table  表名+动作</h5><h6 id="①-动作—-修改表名：rename-新表名"><a href="#①-动作—-修改表名：rename-新表名" class="headerlink" title="① 动作—-修改表名：rename  新表名"></a>① 动作—-修改表名：rename  新表名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
-
-<h6 id="②动作—-修改字段类型：modify-字段名-新类型"><a href="#②动作—-修改字段类型：modify-字段名-新类型" class="headerlink" title="②动作—-修改字段类型：modify   字段名    新类型"></a>②动作—-修改字段类型：modify   字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  RENAME  新表名</span><br></pre></td></tr></table></figure>
-
-<h6 id="③动作—-修改字段名字：change-老字段名-，新字段名-新类型"><a href="#③动作—-修改字段名字：change-老字段名-，新字段名-新类型" class="headerlink" title="③动作—-修改字段名字：change  老字段名 ，新字段名    新类型"></a>③动作—-修改字段名字：change  老字段名 ，新字段名    新类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  change  老字段名 ，新字段名    新类型</span><br></pre></td></tr></table></figure>
-
-<h6 id="④动作—-添加字段：add-新字段名-新字段类型"><a href="#④动作—-添加字段：add-新字段名-新字段类型" class="headerlink" title="④动作—-添加字段：add   新字段名   新字段类型"></a>④动作—-添加字段：add   新字段名   新字段类型</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  add   新字段名   新字段类型</span><br></pre></td></tr></table></figure>
-
-<h6 id="⑤动作—-删除字段：drop-字段名"><a href="#⑤动作—-删除字段：drop-字段名" class="headerlink" title="⑤动作—-删除字段：drop   字段名"></a>⑤动作—-删除字段：drop   字段名</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  drop   字段名</span><br></pre></td></tr></table></figure>
-
-
-
-
+<h2 id="3-通过JNDI资源链接"><a href="#3-通过JNDI资源链接" class="headerlink" title="3.通过JNDI资源链接"></a>3.通过JNDI资源链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InitialContext initCtx = new InitialContext();DataSource ds = (DataSource)initCtx.lookup(&quot;java:comp/env/jdbc/数据库名&quot;);Connection conn = ds.getConnection();</span><br></pre></td></tr></table></figure>
 
 	
 	</div>
@@ -376,10 +358,10 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MYSQL第二章总结" rel="prev">
-				&laquo;Pre post
-			</a>
 		
+			<a href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie" rel="next">
+				Next post&raquo;
+			</a>
 			
 	</span>
 
@@ -395,29 +377,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">
-								配置数据库连接池			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 16日, 2019				
-							</p>
-							<p class="relate-post-content">
-								eslipse配置数据库连接池Tomcat6的服务器配置文件放在 ${tomcat6}/conf 目录底下。我们可以在这里找到 server.xml 和 context.xml。此外，还有其他一些资源文件。但是在在本文中我们只用得上这...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="配置数据库连接池"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -558,6 +517,29 @@ FILE——&gt;NEW –&g...
 							<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MYSQL第二章总结">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MYSQL第二章总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结">
+								MySQL第1章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 20日, 2019				
+							</p>
+							<p class="relate-post-content">
+								第一章MySQL基础1，MySQL的特点？①运行速度：mysql的运行速度相当快，是目前最快的数据库系统之一。②易用性：MySQL是一个相对简单的，高性能的数据库系统，与其他大型数据库系统相       比，它的设置和管理要简单的多。...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/20/MySQL%E7%AC%AC%E4%B8%80%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第1章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MySQL第1章总结"/>
 							</a>
 						</div>
 					</li>											
