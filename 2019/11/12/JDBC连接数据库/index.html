@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      配置数据库连接池 | Hexo
+      JDBC连接数据库 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《配置数据库连接池》
+			Current post&nbsp;:&nbsp;《JDBC连接数据库》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
-		配置数据库连接池
+	<a href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">
+		JDBC连接数据库
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
-		<time datetime="2019-11-16T01:27:46.000Z" itemprop="datePublished">
-	  		2019-11-16
+	<a href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">
+		<time datetime="2019-11-12T06:48:39.000Z" itemprop="datePublished">
+	  		2019-11-12
 	  </time>
 	</a>
 	&nbsp;
@@ -309,8 +309,8 @@
 
 	Updated on
 
-	<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" itemprop="url">
-		<time datetime="2019-11-16T01:27:46.000Z" itemprop="dateUpdated">
+	<a href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">
+		<time datetime="2019-11-12T06:48:39.000Z" itemprop="dateUpdated">
 	  		2019-11-16
 	  </time>
 	</a> 
@@ -330,17 +330,19 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="eslipse配置数据库连接池"><a href="#eslipse配置数据库连接池" class="headerlink" title="eslipse配置数据库连接池"></a>eslipse配置数据库连接池</h1><p>Tomcat6的服务器配置文件放在 ${tomcat6}/conf 目录底下。我们可以在这里找到 server.xml 和 context.xml。此外，还有其他一些资源文件。但是在在本文中我们只用得上这两个。</p>
-<h2 id="1-添加jar包"><a href="#1-添加jar包" class="headerlink" title="1.添加jar包"></a>1.添加jar包</h2><p>首先，将数据库的驱动程序copy到tomcat8.0\lib下，这一部是关键，如果没有copy 当运行程序的时候后报-找不到驱动-的异常。</p>
-<h2 id="2-在context文件中添加"><a href="#2-在context文件中添加" class="headerlink" title="2.在context文件中添加"></a>2.在context文件中添加</h2><p>将下面的代码放到Tomcat 8.0\conf\context.xml中间，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Context reloadable=&quot;true&quot;&gt;</span><br><span class="line">&lt;Resource </span><br><span class="line">name=&quot;jdbc/数据库名&quot;</span><br><span class="line">type=&quot;javax.sql.DataSource&quot;</span><br><span class="line">maxActive=&quot;100&quot;</span><br><span class="line">maxIdle=&quot;30&quot; </span><br><span class="line">maxWait=&quot;5000&quot;</span><br><span class="line">username=&quot;用户名&quot;</span><br><span class="line">password=&quot;密码&quot;</span><br><span class="line">driverClassName=&quot;数据库的驱动&quot;</span><br><span class="line">url=&quot;数据库的连接地址&quot; /&gt;</span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
+		<h1 id="JDBC连接数据库的步骤"><a href="#JDBC连接数据库的步骤" class="headerlink" title="JDBC连接数据库的步骤"></a>JDBC连接数据库的步骤</h1><h4 id="1-jar包的引入"><a href="#1-jar包的引入" class="headerlink" title="1.jar包的引入"></a>1.jar包的引入</h4><h5 id="（1）首先要百度下载一个JAR包"><a href="#（1）首先要百度下载一个JAR包" class="headerlink" title="（1）首先要百度下载一个JAR包"></a>（1）首先要百度下载一个JAR包</h5><h5 id="（2）在LIB中导入JAR包"><a href="#（2）在LIB中导入JAR包" class="headerlink" title="（2）在LIB中导入JAR包"></a>（2）在LIB中导入JAR包</h5><h5 id="3-在MYSQL的JAR包上右键选择-BUILD-PATH-—-gt-ADD-TO-BUILD-PATH"><a href="#3-在MYSQL的JAR包上右键选择-BUILD-PATH-—-gt-ADD-TO-BUILD-PATH" class="headerlink" title="(3)在MYSQL的JAR包上右键选择 BUILD PATH —&gt; ADD TO BUILD PATH"></a>(3)在MYSQL的JAR包上右键选择 BUILD PATH —&gt; ADD TO BUILD PATH</h5><h4 id="2-注册驱动"><a href="#2-注册驱动" class="headerlink" title="2.注册驱动"></a>2.注册驱动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
 
-<p>也可以在项目root下的WEB-INF下新建context.xml进行配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line"></span><br><span class="line">&lt;Context&gt;/////直连 </span><br><span class="line">&lt;Resource </span><br><span class="line">name=&quot;jdbc/book&quot; </span><br><span class="line">type=&quot;javax.sql.DataSource&quot; </span><br><span class="line">password=&quot;&quot;</span><br><span class="line">driverClassName=&quot;com.microsoft.jdbc.sqlserver.SQLServerDriver&quot;</span><br><span class="line">maxIdle=&quot;5&quot; </span><br><span class="line">maxWait=&quot;5000&quot;</span><br><span class="line">username=&quot;sa&quot; </span><br><span class="line">url=&quot;jdbc:microsoft:sqlserver://localhost:1433;databaseName=book&quot;////直连数据源 maxActive=&quot;10&quot;/&gt; </span><br><span class="line">&lt;/Context&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="显示的加载到JVM中"><a href="#显示的加载到JVM中" class="headerlink" title="显示的加载到JVM中"></a>显示的加载到JVM中</h5><h4 id="3-获取连接"><a href="#3-获取连接" class="headerlink" title="3.获取连接"></a>3.获取连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String url = &quot;jdbc:mysql://127.0.0.1:3306/Schooldb&quot;;</span><br><span class="line">String userName = &quot;root&quot;;//MySQL配置时的用户名</span><br><span class="line">String password = &quot;111111&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-通过JNDI资源链接"><a href="#3-通过JNDI资源链接" class="headerlink" title="3.通过JNDI资源链接"></a>3.通过JNDI资源链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">InitialContext initCtx = new InitialContext();</span><br><span class="line">DataSource ds = (DataSource)initCtx.lookup(&quot;java:comp/env/jdbc/数据库名&quot;);</span><br><span class="line">Connection conn = ds.getConnection();</span><br></pre></td></tr></table></figure>
+<h4 id="4-连接数据库"><a href="#4-连接数据库" class="headerlink" title="4.连接数据库"></a>4.连接数据库</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection conn = DriverManager.getConnection(url, userName, password);</span><br></pre></td></tr></table></figure>
 
-	
+<h4 id="5-执行SQL语句"><a href="#5-执行SQL语句" class="headerlink" title="5.执行SQL语句"></a>5.执行SQL语句</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Statement statement = conn.createStatement();</span><br><span class="line">String sql = &quot;select * from StudentInfo&quot;;</span><br><span class="line">ResultSet rs = statement.executeQuery(sql);</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-遍历结果集"><a href="#6-遍历结果集" class="headerlink" title="6.遍历结果集"></a>6.遍历结果集</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while (rs.next()) &#123;</span><br><span class="line">	name = rs.getString(&quot;StudentName&quot;);    </span><br><span class="line">	age = rs.getString(&quot;Age&quot;);    </span><br><span class="line">	out.println(name + &quot;\t&quot; + age);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-关闭对象"><a href="#7-关闭对象" class="headerlink" title="7.关闭对象"></a>7.关闭对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rs.close();</span><br><span class="line">conn.close();</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体代码如下："><a href="#具体代码如下：" class="headerlink" title="具体代码如下："></a>具体代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot;%&gt;</span><br><span class="line">&lt;%@ page import=&quot;java.sql.*&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;ISO-8859-1&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		String driver = &quot;com.mysql.jdbc.Driver&quot;;</span><br><span class="line">    </span><br><span class="line">		String url = &quot;jdbc:mysql://127.0.0.1:3306/Schooldb&quot;;//url指向要访问的数据库名Schooldb(是你自己的数据库名)</span><br><span class="line">    </span><br><span class="line">		String userName = &quot;root&quot;;//MySQL配置时的用户名</span><br><span class="line">    </span><br><span class="line">		String password = &quot;111111&quot;;//Java连接MySQL配置时的密码</span><br><span class="line"></span><br><span class="line">		try &#123;</span><br><span class="line"></span><br><span class="line">			//1 加载驱动程序</span><br><span class="line"></span><br><span class="line">			Class.forName(driver);</span><br><span class="line"></span><br><span class="line">			//2 连接数据库</span><br><span class="line"></span><br><span class="line">			Connection conn = DriverManager.getConnection(url, userName, password);</span><br><span class="line"></span><br><span class="line">			//3 用来执行SQL语句</span><br><span class="line"></span><br><span class="line">			Statement statement = conn.createStatement();</span><br><span class="line"></span><br><span class="line">			//要执行的SQL语句 StudentInfo（自己要查询的数据表）</span><br><span class="line"></span><br><span class="line">			String sql = &quot;select * from StudentInfo&quot;;</span><br><span class="line"></span><br><span class="line">			ResultSet rs = statement.executeQuery(sql);</span><br><span class="line">            </span><br><span class="line">			String name = null;</span><br><span class="line">			String age = null;</span><br><span class="line">			while (rs.next()) &#123;</span><br><span class="line">                //StudentName、Age是自己数据表中的数据</span><br><span class="line">				name = rs.getString(&quot;StudentName&quot;);</span><br><span class="line">				age = rs.getString(&quot;Age&quot;);</span><br><span class="line">				out.println(name + &quot;\t&quot; + age);</span><br><span class="line">			&#125;</span><br><span class="line">			rs.close();</span><br><span class="line">			conn.close();</span><br><span class="line">		&#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">			System.out.println(&quot;Sorry,can`t find the Driver!&quot;);</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; catch (SQLException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	%&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -358,12 +360,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局" rel="prev">
+			<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池" rel="prev">
 				&laquo;Pre post
 			</a>
 		
 		
-			<a href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" title="JDBC连接数据库" rel="next">
+			<a href="/2019/11/10/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF/" title="会话跟踪技术Cookie" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -456,22 +458,22 @@ requset对象是ServletRequset的一个实例。当客户端请求一个JPS网�
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" title="JDBC连接数据库">
-								JDBC连接数据库			
+							<a class="relate-post-title" href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">
+								配置数据库连接池			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十一月 12日, 2019				
+								十一月 16日, 2019				
 							</p>
 							<p class="relate-post-content">
-								JDBC连接数据库的步骤1.jar包的引入（1）首先要百度下载一个JAR包（2）在LIB中导入JAR包(3)在MYSQL的JAR包上右键选择 BUILD PATH —&gt; ADD TO BUILD PATH2.注册驱动1Class...
+								eslipse配置数据库连接池Tomcat6的服务器配置文件放在 ${tomcat6}/conf 目录底下。我们可以在这里找到 server.xml 和 context.xml。此外，还有其他一些资源文件。但是在在本文中我们只用得上这...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/11/12/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/" title="JDBC连接数据库">				
+							<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="JDBC连接数据库"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="配置数据库连接池"/>
 							</a>
 						</div>
 					</li>											
