@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      MySQL第三章总结 | Hexo
+      Android基本布局 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《MySQL第三章总结》
+			Current post&nbsp;:&nbsp;《Android基本布局》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		MySQL第三章总结
+	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
+		Android基本布局
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-10-23T02:08:52.000Z" itemprop="datePublished">
-	  		2019-10-23
+	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
+		<time datetime="2019-11-16T03:33:54.000Z" itemprop="datePublished">
+	  		2019-11-16
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" itemprop="url">
-		<time datetime="2019-10-23T02:08:52.000Z" itemprop="dateUpdated">
-	  		2019-10-30
+	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
+		<time datetime="2019-11-16T03:33:54.000Z" itemprop="dateUpdated">
+	  		2019-11-16
 	  </time>
 	</a> 
 
@@ -330,81 +330,19 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h2 id="第三章，操作表中数据"><a href="#第三章，操作表中数据" class="headerlink" title="第三章，操作表中数据"></a>第三章，操作表中数据</h2><h3 id="1，SQL命令中的表达式和逻辑运算符"><a href="#1，SQL命令中的表达式和逻辑运算符" class="headerlink" title="1，SQL命令中的表达式和逻辑运算符"></a>1，SQL命令中的表达式和逻辑运算符</h3><h4 id="1-1表达式"><a href="#1-1表达式" class="headerlink" title="1.1表达式"></a>1.1表达式</h4><h5 id="在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。"><a href="#在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。" class="headerlink" title="在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。"></a>在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。</h5><h5 id="SQL语言中包括三种表达反式："><a href="#SQL语言中包括三种表达反式：" class="headerlink" title="SQL语言中包括三种表达反式："></a>SQL语言中包括三种表达反式：</h5><h6 id="第一种：-lt-表名-gt-后跟-lt-字段名表达式-gt"><a href="#第一种：-lt-表名-gt-后跟-lt-字段名表达式-gt" class="headerlink" title="第一种：&lt;表名&gt; 后跟&lt;字段名表达式&gt;"></a>第一种：&lt;表名&gt; 后跟&lt;字段名表达式&gt;</h6><h6 id="第二种：select语句后的-lt-目标表达式-gt"><a href="#第二种：select语句后的-lt-目标表达式-gt" class="headerlink" title="第二种：select语句后的&lt;目标表达式&gt;"></a>第二种：select语句后的&lt;目标表达式&gt;</h6><h6 id="第三种：where语句后的-lt-条件表达式-gt"><a href="#第三种：where语句后的-lt-条件表达式-gt" class="headerlink" title="第三种：where语句后的&lt;条件表达式&gt;"></a>第三种：where语句后的&lt;条件表达式&gt;</h6><h4 id="1-2比较运算符"><a href="#1-2比较运算符" class="headerlink" title="1.2比较运算符"></a>1.2比较运算符</h4><h5 id="比较运算符用来比较两个数的大小，其结果是1，0或者null。"><a href="#比较运算符用来比较两个数的大小，其结果是1，0或者null。" class="headerlink" title="比较运算符用来比较两个数的大小，其结果是1，0或者null。"></a>比较运算符用来比较两个数的大小，其结果是1，0或者null。</h5><table>
-<thead>
-<tr>
-<th align="center">运算符</th>
-<th align="center">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&gt;</td>
-<td align="center">大于</td>
-</tr>
-<tr>
-<td align="center">&gt;=</td>
-<td align="center">大于等于</td>
-</tr>
-<tr>
-<td align="center">&lt;</td>
-<td align="center">小于</td>
-</tr>
-<tr>
-<td align="center">&lt;=</td>
-<td align="center">小于等于</td>
-</tr>
-<tr>
-<td align="center">=</td>
-<td align="center">等于</td>
-</tr>
-<tr>
-<td align="center">!=或&lt;&gt;</td>
-<td align="center">不等于</td>
-</tr>
-<tr>
-<td align="center">is  null</td>
-<td align="center">是否为空</td>
-</tr>
-<tr>
-<td align="center">is  not  null</td>
-<td align="center">是否不为空</td>
-</tr>
-<tr>
-<td align="center">in</td>
-<td align="center">判断一个值是in列表中的任意一个值</td>
-</tr>
-<tr>
-<td align="center">not  in</td>
-<td align="center">判断一个值不是in列表中的任意一个值</td>
-</tr>
-<tr>
-<td align="center">like</td>
-<td align="center">通配符匹配</td>
-</tr>
-<tr>
-<td align="center">between  and</td>
-<td align="center">判断一个值是否在两个值之间</td>
-</tr>
-</tbody></table>
-<h4 id="1-3逻辑运算符"><a href="#1-3逻辑运算符" class="headerlink" title="1.3逻辑运算符"></a>1.3逻辑运算符</h4><h5 id="SQL命令支持的运算符有And-或者-amp-amp-，Or-或者-，Not-或者-。-逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回-1。如果表达式是假，结果返回-0。"><a href="#SQL命令支持的运算符有And-或者-amp-amp-，Or-或者-，Not-或者-。-逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回-1。如果表达式是假，结果返回-0。" class="headerlink" title="SQL命令支持的运算符有And(或者&amp;&amp;)，Or(或者||)，Not(或者!)。 逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回 1。如果表达式是假，结果返回 0。"></a>SQL命令支持的运算符有And(或者&amp;&amp;)，Or(或者||)，Not(或者!)。 逻辑运算符用来判断表达式的真假。如果表达式是真，结果返回 1。如果表达式是假，结果返回 0。</h5><h5 id="And-和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。"><a href="#And-和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。" class="headerlink" title="And 和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。"></a>And 和Or运算符连接条件，Not否定条件。And连接条件，并且仅有当了两个条件都为真时才返回1，Or也连接两个条件，但只要任何一个为真就返回1。</h5><h5 id="当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。"><a href="#当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。" class="headerlink" title="当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。"></a>当一个语句中使用了多个逻辑运算符时，运算先求Not的值，然后求And的值，最后求Or的值。</h5><h3 id="2，插入数据"><a href="#2，插入数据" class="headerlink" title="2，插入数据"></a>2，插入数据</h3><h4 id="2-1一次插入一行"><a href="#2-1一次插入一行" class="headerlink" title="2.1一次插入一行"></a>2.1一次插入一行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名1，字段名2，.....) values (值1，值2，.....);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2一次插入多行"><a href="#2-2一次插入多行" class="headerlink" title="2.2一次插入多行"></a>2.2一次插入多行</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名1，字段名2，.....) values (值1，值2，.....)，(值1，值2，.....)，......;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-修改表中的数据"><a href="#3-修改表中的数据" class="headerlink" title="3,修改表中的数据"></a>3,修改表中的数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update  表名</span><br><span class="line">set </span><br><span class="line">字段名=值，字段名=值，.....，字段名=值</span><br><span class="line">[where &lt;表达式&gt;]；</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-1修改表中的全部数据"><a href="#3-1修改表中的全部数据" class="headerlink" title="3.1修改表中的全部数据"></a>3.1修改表中的全部数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set  字段名=字段值变化（例age=age+1）;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-2根据条件修改表中的数据"><a href="#3-2根据条件修改表中的数据" class="headerlink" title="3.2根据条件修改表中的数据"></a>3.2根据条件修改表中的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update  表名</span><br><span class="line">set </span><br><span class="line">字段名=值，字段名=值，.....，字段名=值</span><br><span class="line">where &lt;表达式&gt;；</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4，删除数据记录"><a href="#4，删除数据记录" class="headerlink" title="4，删除数据记录"></a>4，删除数据记录</h3><h4 id="4-1使用delete"><a href="#4-1使用delete" class="headerlink" title="4.1使用delete"></a>4.1使用delete</h4><h5 id="可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。"><a href="#可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。" class="headerlink" title="可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。"></a>可以根据条件删除，要被记录在日志上，大量删除速度会受影响，且表所占空间并没有被收回。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 [where 条件]；</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-2使用truncate"><a href="#4-2使用truncate" class="headerlink" title="4.2使用truncate"></a>4.2使用truncate</h4><h5 id="全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。"><a href="#全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。" class="headerlink" title="全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。"></a>全部删除，只留下一个表的结构定义，使用它删除的数据无法还原。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名 ；</span><br></pre></td></tr></table></figure>
-
-<h4 id="注意：truncate-table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。"><a href="#注意：truncate-table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。" class="headerlink" title="注意：truncate table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。"></a>注意：truncate table命令不能用于有外键约束的表，如果表中存在外键约束，则必须使用delete命令来删除数据。</h4>	
+		<h1 id="Android-基本布局"><a href="#Android-基本布局" class="headerlink" title="Android 基本布局"></a>Android 基本布局</h1><h3 id="基本理论"><a href="#基本理论" class="headerlink" title="基本理论"></a>基本理论</h3><p>Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、<br>层布局FrameLayout、绝对布局AbsoluteLayout、网格布局GridLayout。<br>其中，表格布局是线性布局的子类。网格布局是android 4.0后新增的布局。<br>在手机程序设计中，绝对布局基本上不用，用得相对较多的是线性布局和相对布局。</p>
+<p>这篇文章主要讲线性布局和相对布局</p>
+<h4 id="1-线性布局"><a href="#1-线性布局" class="headerlink" title="1.线性布局"></a>1.线性布局</h4><p>线性布局在开发中使用最多，具有垂直方向与水平方向的布局方式，通过设置属性“android:orientation”控制方向，属性值垂直（vertical）和水平(horizontal)，默认水平方向。</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>android:gravity：内部控件对齐方式，常用属性值有center、center_vertical、center_horizontal、top、bottom、left、right等。</p>
+<p>这个属性在布局组件RelativeLayout、TableLayout中也有使用，FrameLayout、AbsoluteLayout则没有这个属性。</p>
+<p>center：居中显示，这里并不是表示显示在LinearLayout的中心，当LinearLayout线性方向为垂直方向时，center表示水平居中，但是并不能垂直居中，此时等同于center_horizontal的作用；同样当线性方向为水平方向时，center表示垂直居中，等同于center_vertical。</p>
+<p>top、bottom、left、right顾名思义为内部控件居顶、低、左、右布局。<br>这里要与android:layout_gravity区分开，layout_gravity是用来设置自身相对于父元素的布局。</p>
+<p>android:layout_weight：权重，用来分配当前控件在剩余空间的大小。使用权重一般要把分配该权重方向的长度设置为零，比如在水平方向分配权重，就把width设置为零。</p>
+<h3 id="2-相对布局"><a href="#2-相对布局" class="headerlink" title="2.相对布局"></a>2.相对布局</h3><p>相对布局可以让子控件相对于兄弟控件或父控件进行布局，可以设置子控件相对于兄弟控件或父控件进行上下左右对齐。<br>RelativeLayout能替换一些嵌套视图，当我们用LinearLayout来实现一个简单的布局但又使用了过多的嵌套时，就可以考虑使用RelativeLayout重新布局。<br>相对布局就是一定要加Id才能管理。</p>
+<h4 id="RelativeLayout中子控件常用属性："><a href="#RelativeLayout中子控件常用属性：" class="headerlink" title="RelativeLayout中子控件常用属性："></a>RelativeLayout中子控件常用属性：</h4><p>1、相对于父控件，例如：android:layout_alignParentTop=“true”<br>android:layout_alignParentTop 控件的顶部与父控件的顶部对齐;<br>android:layout_alignParentBottom 控件的底部与父控件的底部对齐;<br>android:layout_alignParentLeft 控件的左部与父控件的左部对齐;<br>android:layout_alignParentRight 控件的右部与父控件的右部对齐;</p>
+<p>2、相对给定Id控件，例如：android:layout_above=“@id/**”<br>android:layout_above 控件的底部置于给定ID的控件之上;<br>android:layout_below 控件的底部置于给定ID的控件之下;<br>android:layout_toLeftOf 控件的右边缘与给定ID的控件左边缘对齐;<br>android:layout_toRightOf 控件的左边缘与给定ID的控件右边缘对齐;<br>android:layout_alignBaseline 控件的baseline与给定ID的baseline对齐;<br>android:layout_alignTop 控件的顶部边缘与给定ID的顶部边缘对齐;<br>android:layout_alignBottom 控件的底部边缘与给定ID的底部边缘对齐;<br>android:layout_alignLeft 控件的左边缘与给定ID的左边缘对齐;<br>android:layout_alignRight 控件的右边缘与给定ID的右边缘对齐;</p>
+<p>3、居中，例如：android:layout_centerInParent=“true”<br>android:layout_centerHorizontal 水平居中;<br>android:layout_centerVertical 垂直居中;<br>android:layout_centerInParent 父控件的中央;</p>
+	
 	</div>
 	
 	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -422,12 +360,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="Java面对对象总结" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/10/22/MySQL%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MYSQL第二章总结" rel="next">
+			<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -445,29 +379,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">
-								Android基本布局			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 16日, 2019				
-							</p>
-							<p class="relate-post-content">
-								Android 基本布局基本理论Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、层布局FrameLayout、绝对布局AbsoluteLayou...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Android基本布局"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -585,6 +496,29 @@ FILE——&gt;NEW –&g...
 							<a href="/2019/10/30/Java%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/" title="Java面对对象总结">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Java面对对象总结"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结">
+								MySQL第三章总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 23日, 2019				
+							</p>
+							<p class="relate-post-content">
+								第三章，操作表中数据1，SQL命令中的表达式和逻辑运算符1.1表达式在数据库中的表达式一般由常量，变量，函数和运算符组成。注意：单个常量，变量或函数亦可称做表达式。SQL语言中包括三种表达反式：第一种：&lt;表名&gt; 后跟&lt...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/23/MySQL%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%80%BB%E7%BB%93/" title="MySQL第三章总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="MySQL第三章总结"/>
 							</a>
 						</div>
 					</li>											
