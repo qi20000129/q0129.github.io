@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Android基本布局 | Hexo
+      EL表达式 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《Android基本布局》
+			Current post&nbsp;:&nbsp;《EL表达式》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		Android基本布局
+	<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">
+		EL表达式
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		<time datetime="2019-11-16T03:33:54.000Z" itemprop="datePublished">
-	  		2019-11-16
+	<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">
+		<time datetime="2019-12-01T09:38:57.741Z" itemprop="datePublished">
+	  		2019-12-01
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		<time datetime="2019-11-16T03:33:54.000Z" itemprop="dateUpdated">
-	  		2019-11-16
+	<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">
+		<time datetime="2019-12-01T09:38:57.741Z" itemprop="dateUpdated">
+	  		2019-12-01
 	  </time>
 	</a> 
 
@@ -330,18 +330,19 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="Android-基本布局"><a href="#Android-基本布局" class="headerlink" title="Android 基本布局"></a>Android 基本布局</h1><h3 id="基本理论"><a href="#基本理论" class="headerlink" title="基本理论"></a>基本理论</h3><p>Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、<br>层布局FrameLayout、绝对布局AbsoluteLayout、网格布局GridLayout。<br>其中，表格布局是线性布局的子类。网格布局是android 4.0后新增的布局。<br>在手机程序设计中，绝对布局基本上不用，用得相对较多的是线性布局和相对布局。</p>
-<p>这篇文章主要讲线性布局和相对布局</p>
-<h4 id="1-线性布局"><a href="#1-线性布局" class="headerlink" title="1.线性布局"></a>1.线性布局</h4><p>线性布局在开发中使用最多，具有垂直方向与水平方向的布局方式，通过设置属性“android:orientation”控制方向，属性值垂直（vertical）和水平(horizontal)，默认水平方向。</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>android:gravity：内部控件对齐方式，常用属性值有center、center_vertical、center_horizontal、top、bottom、left、right等。</p>
-<p>这个属性在布局组件RelativeLayout、TableLayout中也有使用，FrameLayout、AbsoluteLayout则没有这个属性。</p>
-<p>center：居中显示，这里并不是表示显示在LinearLayout的中心，当LinearLayout线性方向为垂直方向时，center表示水平居中，但是并不能垂直居中，此时等同于center_horizontal的作用；同样当线性方向为水平方向时，center表示垂直居中，等同于center_vertical。</p>
-<p>top、bottom、left、right顾名思义为内部控件居顶、低、左、右布局。<br>这里要与android:layout_gravity区分开，layout_gravity是用来设置自身相对于父元素的布局。</p>
-<p>android:layout_weight：权重，用来分配当前控件在剩余空间的大小。使用权重一般要把分配该权重方向的长度设置为零，比如在水平方向分配权重，就把width设置为零。</p>
-<h3 id="2-相对布局"><a href="#2-相对布局" class="headerlink" title="2.相对布局"></a>2.相对布局</h3><p>相对布局可以让子控件相对于兄弟控件或父控件进行布局，可以设置子控件相对于兄弟控件或父控件进行上下左右对齐。<br>RelativeLayout能替换一些嵌套视图，当我们用LinearLayout来实现一个简单的布局但又使用了过多的嵌套时，就可以考虑使用RelativeLayout重新布局。<br>相对布局就是一定要加Id才能管理。</p>
-<h4 id="RelativeLayout中子控件常用属性："><a href="#RelativeLayout中子控件常用属性：" class="headerlink" title="RelativeLayout中子控件常用属性："></a>RelativeLayout中子控件常用属性：</h4><p>1、相对于父控件，例如：android:layout_alignParentTop=“true”<br>android:layout_alignParentTop 控件的顶部与父控件的顶部对齐;<br>android:layout_alignParentBottom 控件的底部与父控件的底部对齐;<br>android:layout_alignParentLeft 控件的左部与父控件的左部对齐;<br>android:layout_alignParentRight 控件的右部与父控件的右部对齐;</p>
-<p>2、相对给定Id控件，例如：android:layout_above=“@id/**”<br>android:layout_above 控件的底部置于给定ID的控件之上;<br>android:layout_below 控件的底部置于给定ID的控件之下;<br>android:layout_toLeftOf 控件的右边缘与给定ID的控件左边缘对齐;<br>android:layout_toRightOf 控件的左边缘与给定ID的控件右边缘对齐;<br>android:layout_alignBaseline 控件的baseline与给定ID的baseline对齐;<br>android:layout_alignTop 控件的顶部边缘与给定ID的顶部边缘对齐;<br>android:layout_alignBottom 控件的底部边缘与给定ID的底部边缘对齐;<br>android:layout_alignLeft 控件的左边缘与给定ID的左边缘对齐;<br>android:layout_alignRight 控件的右边缘与给定ID的右边缘对齐;</p>
-<p>3、居中，例如：android:layout_centerInParent=“true”<br>android:layout_centerHorizontal 水平居中;<br>android:layout_centerVertical 垂直居中;<br>android:layout_centerInParent 父控件的中央;</p>
+		<h5 id="1-el表达式-Expression-Language）"><a href="#1-el表达式-Expression-Language）" class="headerlink" title="1.el表达式(Expression Language）"></a>1.el表达式(Expression Language）</h5><p>   el表达式：是为了使JSP写起来更加简单;</p>
+<p>以MVC模式设计程序,JSP只是<a href="https://baike.baidu.com/item/%E8%A7%86%E5%9B%BE/1302820" target="_blank" rel="noopener">视图</a>，视图的任务就是显示响应，而不是在JSP中做任何关于程序控制和业务逻辑的事情。所以在JSP页面中应该尽可能少的、或者是完全不出现Java代码。</p>
+<h5 id="2-EL语法"><a href="#2-EL语法" class="headerlink" title="2.EL语法"></a>2.EL语法</h5><p>在JSP中访问模型对象是通过EL表达式的语法来表达。所有EL表达式的格式都是以“${}”表示。</p>
+<h5 id="3-与-运算符"><a href="#3-与-运算符" class="headerlink" title="3.[ ]与.运算符"></a>3.[ ]与.运算符</h5><p>EL 提供“.“和“[ ]“两种运算符来存取数据。</p>
+<p>当要存取的属性名称中包含一些特殊字符，如 . 或 - 等并非字母或数字的符号，就一定要使用“[ ]“。例如：</p>
+<p>${ user. My-Name}应当改为${user[“My-Name”]}</p>
+<p>如果要动态取值时，就可以用“[ ]“来做，而“.“无法做到动态取值。例如：</p>
+<p>${sessionScope.user[data]}中data 是一个变量</p>
+<h5 id="4-变量"><a href="#4-变量" class="headerlink" title="4.变量"></a>4.变量</h5><p>EL存取变量数据的方法很简单，例如：${username}。它的意思是取出某一范围中名称为username的变量。</p>
+<p>因为我们并没有指定哪一个范围的username，所以它会依序从Page、Request、Session、Application范围查找。</p>
+<p>代码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> <span class="keyword">import</span>=<span class="string">"java.util.HashMap"</span>%&gt;</span><br><span class="line">&lt;%<span class="meta">@page</span> <span class="keyword">import</span>=<span class="string">"java.util.ArrayList"</span>%&gt;</span><br><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">    pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;%--用el表达式完成运算 --%&gt;</span><br><span class="line">    $&#123;<span class="number">123</span>+<span class="number">124</span>&#125;</span><br><span class="line">    $&#123;<span class="number">123</span>*<span class="number">124</span>&#125;</span><br><span class="line">    $&#123;<span class="number">5</span>&gt;<span class="number">18</span>&#125;</span><br><span class="line">    $&#123;<span class="number">5</span>&gt;<span class="number">3</span>&amp;&amp;<span class="number">3</span>&gt;<span class="number">5</span>&#125;</span><br><span class="line">    $&#123;<span class="number">15</span>&gt;<span class="number">12</span> and <span class="number">13</span>&lt;<span class="number">14</span>&#125;</span><br><span class="line">    $&#123;<span class="number">12</span>&lt;<span class="number">11</span> or <span class="number">11</span>&gt;<span class="number">8</span>&#125;</span><br><span class="line">    $&#123;<span class="number">5</span>!=<span class="number">3</span>&#125;</span><br><span class="line">    &lt;%--empty运算符的使用 --%&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">       String str=<span class="keyword">null</span>;</span><br><span class="line">    %&gt;</span><br><span class="line">    $&#123;empty str&#125;</span><br><span class="line">    $&#123;not empty str&#125;</span><br><span class="line">    &lt;%--用el表达式获取域对象的数据--%&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">      request.setAttribute(<span class="string">"ell"</span>, <span class="string">"good night"</span>);</span><br><span class="line">      String ell=(String)request.getAttribute(<span class="string">"ell"</span>);</span><br><span class="line">      out.write(ell);</span><br><span class="line">    %&gt; </span><br><span class="line">    $&#123;ell&#125;</span><br><span class="line">    &lt;%--会从四个域对象中，一个一个找ell属性</span><br><span class="line">          先找 pageContext是否有ell属性，如果有就停止查找</span><br><span class="line">    直接输出ell属性对应的内容。如果没有继续查找request</span><br><span class="line">    对象中是否有ell属性，以此类推，直到查找到为止--%&gt;</span><br><span class="line">    $&#123;requestScope.ell&#125;</span><br><span class="line">    &lt;%--以上是只查找request对象的属性 --%&gt; </span><br><span class="line">    $&#123;sessionScope.ell&#125;</span><br><span class="line">    $&#123;applicationScope.ell&#125;</span><br><span class="line">    &lt;%--el表达式获取集合数组中的数据--%&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">      ArrayList&lt;String&gt; list=<span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">      list.add(<span class="string">"abc"</span>);</span><br><span class="line">      list.add(<span class="string">"bbb"</span>);</span><br><span class="line">      list.add(<span class="string">"ccc"</span>);</span><br><span class="line">      HashMap&lt;String,String&gt; map=<span class="keyword">new</span> HashMap&lt;String,String&gt;();</span><br><span class="line">      map.put(<span class="string">"aa"</span>, <span class="string">"moring"</span>);</span><br><span class="line">      map.put(<span class="string">"bb"</span>,<span class="string">"afternoon"</span>);</span><br><span class="line">      map.put(<span class="string">"cc"</span>,<span class="string">"night"</span>);</span><br><span class="line">      request.setAttribute(<span class="string">"list1"</span>, list);</span><br><span class="line">      request.setAttribute(<span class="string">"map1"</span>, map);</span><br><span class="line">    %&gt;</span><br><span class="line">    $&#123;requestScope.list1[<span class="number">1</span>]&#125;</span><br><span class="line">    $&#123;map1.bb&#125;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
 	
 	</div>
 	
@@ -360,12 +361,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/11/16/cookie%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E6%A1%88%E4%BE%8B/" title="Cookie记住密码案例" rel="prev">
-				&laquo;Pre post
-			</a>
 		
-		
-			<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池" rel="next">
+			<a href="/2019/11/29/JSTL/" title="JSTL" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -383,30 +380,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="EL表达式">
-								EL表达式			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 1日, 2019				
-							</p>
-							<p class="relate-post-content">
-								1.el表达式(Expression Language）   el表达式：是为了使JSP写起来更加简单;
-以MVC模式设计程序,JSP只是视图，视图的任务就是显示响应，而不是在JSP中做任何关于程序控制和业务逻辑的事情。所以在JSP页...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="EL表达式">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="EL表达式"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -475,6 +448,29 @@ requset对象是ServletRequset的一个实例。当客户端请求一个JPS网�
 							<a href="/2019/11/16/cookie%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E6%A1%88%E4%BE%8B/" title="Cookie记住密码案例">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Cookie记住密码案例"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">
+								Android基本布局			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								Android 基本布局基本理论Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、层布局FrameLayout、绝对布局AbsoluteLayou...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Android基本布局"/>
 							</a>
 						</div>
 					</li>											

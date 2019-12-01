@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Android基本布局 | Hexo
+      JSTL | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			Current post&nbsp;:&nbsp;《Android基本布局》
+			Current post&nbsp;:&nbsp;《JSTL》
 		
 	</p>
 
@@ -277,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		Android基本布局
+	<a href="/2019/11/29/JSTL/" itemprop="url">
+		JSTL
 	</a>
 
 	</div>
@@ -291,9 +291,9 @@
 
 	Posted on
 
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		<time datetime="2019-11-16T03:33:54.000Z" itemprop="datePublished">
-	  		2019-11-16
+	<a href="/2019/11/29/JSTL/" itemprop="url">
+		<time datetime="2019-11-29T09:41:26.000Z" itemprop="datePublished">
+	  		2019-11-29
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +309,9 @@
 
 	Updated on
 
-	<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" itemprop="url">
-		<time datetime="2019-11-16T03:33:54.000Z" itemprop="dateUpdated">
-	  		2019-11-16
+	<a href="/2019/11/29/JSTL/" itemprop="url">
+		<time datetime="2019-11-29T09:41:26.000Z" itemprop="dateUpdated">
+	  		2019-12-01
 	  </time>
 	</a> 
 
@@ -330,18 +330,107 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h1 id="Android-基本布局"><a href="#Android-基本布局" class="headerlink" title="Android 基本布局"></a>Android 基本布局</h1><h3 id="基本理论"><a href="#基本理论" class="headerlink" title="基本理论"></a>基本理论</h3><p>Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、<br>层布局FrameLayout、绝对布局AbsoluteLayout、网格布局GridLayout。<br>其中，表格布局是线性布局的子类。网格布局是android 4.0后新增的布局。<br>在手机程序设计中，绝对布局基本上不用，用得相对较多的是线性布局和相对布局。</p>
-<p>这篇文章主要讲线性布局和相对布局</p>
-<h4 id="1-线性布局"><a href="#1-线性布局" class="headerlink" title="1.线性布局"></a>1.线性布局</h4><p>线性布局在开发中使用最多，具有垂直方向与水平方向的布局方式，通过设置属性“android:orientation”控制方向，属性值垂直（vertical）和水平(horizontal)，默认水平方向。</p>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>android:gravity：内部控件对齐方式，常用属性值有center、center_vertical、center_horizontal、top、bottom、left、right等。</p>
-<p>这个属性在布局组件RelativeLayout、TableLayout中也有使用，FrameLayout、AbsoluteLayout则没有这个属性。</p>
-<p>center：居中显示，这里并不是表示显示在LinearLayout的中心，当LinearLayout线性方向为垂直方向时，center表示水平居中，但是并不能垂直居中，此时等同于center_horizontal的作用；同样当线性方向为水平方向时，center表示垂直居中，等同于center_vertical。</p>
-<p>top、bottom、left、right顾名思义为内部控件居顶、低、左、右布局。<br>这里要与android:layout_gravity区分开，layout_gravity是用来设置自身相对于父元素的布局。</p>
-<p>android:layout_weight：权重，用来分配当前控件在剩余空间的大小。使用权重一般要把分配该权重方向的长度设置为零，比如在水平方向分配权重，就把width设置为零。</p>
-<h3 id="2-相对布局"><a href="#2-相对布局" class="headerlink" title="2.相对布局"></a>2.相对布局</h3><p>相对布局可以让子控件相对于兄弟控件或父控件进行布局，可以设置子控件相对于兄弟控件或父控件进行上下左右对齐。<br>RelativeLayout能替换一些嵌套视图，当我们用LinearLayout来实现一个简单的布局但又使用了过多的嵌套时，就可以考虑使用RelativeLayout重新布局。<br>相对布局就是一定要加Id才能管理。</p>
-<h4 id="RelativeLayout中子控件常用属性："><a href="#RelativeLayout中子控件常用属性：" class="headerlink" title="RelativeLayout中子控件常用属性："></a>RelativeLayout中子控件常用属性：</h4><p>1、相对于父控件，例如：android:layout_alignParentTop=“true”<br>android:layout_alignParentTop 控件的顶部与父控件的顶部对齐;<br>android:layout_alignParentBottom 控件的底部与父控件的底部对齐;<br>android:layout_alignParentLeft 控件的左部与父控件的左部对齐;<br>android:layout_alignParentRight 控件的右部与父控件的右部对齐;</p>
-<p>2、相对给定Id控件，例如：android:layout_above=“@id/**”<br>android:layout_above 控件的底部置于给定ID的控件之上;<br>android:layout_below 控件的底部置于给定ID的控件之下;<br>android:layout_toLeftOf 控件的右边缘与给定ID的控件左边缘对齐;<br>android:layout_toRightOf 控件的左边缘与给定ID的控件右边缘对齐;<br>android:layout_alignBaseline 控件的baseline与给定ID的baseline对齐;<br>android:layout_alignTop 控件的顶部边缘与给定ID的顶部边缘对齐;<br>android:layout_alignBottom 控件的底部边缘与给定ID的底部边缘对齐;<br>android:layout_alignLeft 控件的左边缘与给定ID的左边缘对齐;<br>android:layout_alignRight 控件的右边缘与给定ID的右边缘对齐;</p>
-<p>3、居中，例如：android:layout_centerInParent=“true”<br>android:layout_centerHorizontal 水平居中;<br>android:layout_centerVertical 垂直居中;<br>android:layout_centerInParent 父控件的中央;</p>
+		<h4 id="JSTL标签"><a href="#JSTL标签" class="headerlink" title="JSTL标签"></a>JSTL标签</h4><h5 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h5><p>JSP标准标签库<strong>（</strong>JSP Standard Tag Library）是Java EE网络应用程序开发平台的组成部分。它在JSP规范的基础上，扩充了一个JSP的标签库来完成一些通用任务，比如XML数据处理、条件执行、数据库访问、循环和国际化。</p>
+<ul>
+<li>需要导入此jar包</li>
+<li>jsp页面导入&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> prefix=”c” %&gt;</li>
+</ul>
+<h5 id="2-JSTL的使用及分类"><a href="#2-JSTL的使用及分类" class="headerlink" title="2.JSTL的使用及分类"></a>2.JSTL的使用及分类</h5><p>要使用JSTL，首先要先下载好jar包，点击这里进行下载，下载好后，导入项目的WEN-INF的lib目录下即可，当然，要在jsp中使用JSTL，还得使用@taglib标签，不过不同的分类情况不一样，下面我们来看看JSTL标签的分类。</p>
+<p>可以分为4大类和JSTL函数</p>
+<p>核心标签<br>格式化标签<br>SQL标签<br>XML标签<br>JSTL函数</p>
+<h5 id="3-标签介绍"><a href="#3-标签介绍" class="headerlink" title="3.标签介绍"></a>3.标签介绍</h5><p>c:if    </p>
+<p>c:foreach    </p>
+<p>c:choose</p>
+<p>(1)c:if标签属性<br>   test 必须属性，接受boolean表达式<br>   如果表达式为true，则显示if标签体内容，如果为false，则不显示<br>   标签体内容<br>    一般情况下，test属性值会结合el表达式一起使用</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>是否必要</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>test</td>
+<td>条件</td>
+<td>是</td>
+<td>无</td>
+</tr>
+<tr>
+<td>var</td>
+<td>用于存储条件结果的变量</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>var属性的作用域</td>
+<td>否</td>
+<td>page</td>
+</tr>
+</tbody></table>
+<p>代码案例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;c:<span class="keyword">if</span> test=<span class="string">"true"</span>&gt;</span><br><span class="line">      &lt;%</span><br><span class="line">        out.write(<span class="string">"条件为真"</span>);</span><br><span class="line">      %&gt;</span><br><span class="line">   &lt;/c:if&gt;</span><br><span class="line">   &lt;c:<span class="keyword">if</span> test=<span class="string">"$&#123;15&gt;12&#125;"</span>&gt;</span><br><span class="line">      &lt;%</span><br><span class="line">        out.write(<span class="string">"条件为真1"</span>);</span><br><span class="line">      %&gt;</span><br><span class="line">   &lt;/c:if&gt;</span><br><span class="line">   &lt;%</span><br><span class="line">      String str=<span class="keyword">null</span>;</span><br><span class="line">   %&gt;</span><br><span class="line">   &lt;c:<span class="keyword">if</span> test=<span class="string">"$&#123;empty str&#125;"</span>&gt;</span><br><span class="line">      &lt;%</span><br><span class="line">         out.write(<span class="string">"天气变冷"</span>);</span><br><span class="line">      %&gt;</span><br><span class="line">   &lt;/c:if&gt;</span><br></pre></td></tr></table></figure>
+
+<p>(2)foreach标签属性</p>
+<p> 属性:<br>        items:获取被遍历的集合或数组<br>        var:临时变量,从集合中取出来的值，会赋值给此变量<br>        varStatus:循环状态对象</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>是否必要</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>items</td>
+<td>要被循环的信息</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>begin</td>
+<td>开始的元素(0=第一个元素,1=第二个元素)</td>
+<td>否</td>
+<td>0</td>
+</tr>
+<tr>
+<td>end</td>
+<td>最后一个元素(0=第一个元素,1=第二个元素)</td>
+<td>否</td>
+<td>Last element</td>
+</tr>
+<tr>
+<td>step</td>
+<td>每一次迭代的步长</td>
+<td>否</td>
+<td>1</td>
+</tr>
+<tr>
+<td>var</td>
+<td>代表当前条目的变量名称</td>
+<td>否</td>
+<td>无</td>
+</tr>
+<tr>
+<td>varStatus</td>
+<td>代表循环状态的变量名称</td>
+<td>否</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>代码案例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">     ArrayList&lt;String&gt; list=<span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">     list.add(<span class="string">"abc"</span>);</span><br><span class="line">     list.add(<span class="string">"bbb"</span>);</span><br><span class="line">     list.add(<span class="string">"ccc"</span>);</span><br><span class="line">     ArrayList&lt;User&gt; listu=<span class="keyword">new</span> ArrayList&lt;User&gt;();</span><br><span class="line">     User u=<span class="keyword">new</span> User(<span class="string">"张三"</span>,<span class="number">17</span>,<span class="string">"男"</span>);</span><br><span class="line">     User u1=<span class="keyword">new</span> User(<span class="string">"李四"</span>,<span class="number">18</span>,<span class="string">"女"</span>);</span><br><span class="line">     User u2=<span class="keyword">new</span> User(<span class="string">"王五"</span>,<span class="number">19</span>,<span class="string">"男"</span>);</span><br><span class="line">     listu.add(u);</span><br><span class="line">     listu.add(u1);</span><br><span class="line">     listu.add(u2);</span><br><span class="line">     request.setAttribute(<span class="string">"list1"</span>, list);</span><br><span class="line">     request.setAttribute(<span class="string">"list2"</span>, listu);</span><br><span class="line"></span><br><span class="line">  %&gt;</span><br><span class="line">  &lt;c:forEach items=<span class="string">"$&#123;list1&#125;"</span> <span class="keyword">var</span>=<span class="string">"i"</span> varStatus=<span class="string">"ls"</span>&gt;</span><br><span class="line">        $&#123;i&#125;</span><br><span class="line">  &lt;/c:forEach&gt;</span><br><span class="line">  &lt;table border=<span class="string">"1"</span>&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">      &lt;th&gt;姓名&lt;/th&gt; </span><br><span class="line">      &lt;th&gt;年龄&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;性别&lt;/th&gt; </span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;c:forEach items=<span class="string">"$&#123;list2&#125;"</span> <span class="keyword">var</span>=<span class="string">"i"</span> varStatus=<span class="string">"u"</span>&gt;</span><br><span class="line">       &lt;%--把取出来的值放到表格中 --%&gt;</span><br><span class="line">       &lt;tr&gt;</span><br><span class="line">           &lt;td&gt;$&#123;i.name&#125;&lt;/td&gt;</span><br><span class="line">           &lt;td&gt;$&#123;i.age&#125;&lt;/td&gt;</span><br><span class="line">           &lt;td&gt;$&#123;i.sex&#125;&lt;/td&gt;</span><br><span class="line">       &lt;/tr&gt;</span><br><span class="line">  &lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>(3)c:choose标签</p>
+<p>  完成数字编号对应星期几案例<br>        1.域中存储一数字<br>        2.使用choose标签取出数字         相当于switch声明<br>        3.使用when标签做数字判断         相当于case<br>        4.otherwise标签做其他情况的声明  相当于default</p>
+<p>代码案例：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">    request.setAttribute(<span class="string">"a"</span>, <span class="number">7</span>);</span><br><span class="line"> %&gt;</span><br><span class="line"> &lt;c:choose&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==1&#125;"&gt;星期一&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==2&#125;"&gt;星期二&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==3&#125;"&gt;星期三&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==4&#125;"&gt;星期四&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==5&#125;"&gt;星期五&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==6&#125;"&gt;星期六&lt;/c:when&gt;</span><br><span class="line">  &lt;c:when test="$&#123;a==7&#125;"&gt;星期日&lt;/c:when&gt;</span><br><span class="line">  &lt;c:otherwise&gt;输入错误&lt;/c:otherwise&gt;</span><br><span class="line"> &lt;/c:choose&gt;</span><br></pre></td></tr></table></figure>
+
 	
 	</div>
 	
@@ -360,12 +449,12 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">To Top</a>
 		
-			<a href="/2019/11/16/cookie%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E6%A1%88%E4%BE%8B/" title="Cookie记住密码案例" rel="prev">
+			<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="EL表达式" rel="prev">
 				&laquo;Pre post
 			</a>
 		
 		
-			<a href="/2019/11/16/eslipse%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/" title="配置数据库连接池" rel="next">
+			<a href="/2019/11/16/JSP-%E5%AF%B9%E8%B1%A1/" title="JSP-对象" rel="next">
 				Next post&raquo;
 			</a>
 			
@@ -403,29 +492,6 @@
 							<a href="/2019/12/01/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="EL表达式">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="EL表达式"/>
-							</a>
-						</div>
-					</li>											
-			
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/29/JSTL/" title="JSTL">
-								JSTL			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 29日, 2019				
-							</p>
-							<p class="relate-post-content">
-								JSTL标签1.简介JSP标准标签库（JSP Standard Tag Library）是Java EE网络应用程序开发平台的组成部分。它在JSP规范的基础上，扩充了一个JSP的标签库来完成一些通用任务，比如XML数据处理、条件执行、...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/29/JSTL/" title="JSTL">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="JSTL"/>
 							</a>
 						</div>
 					</li>											
@@ -475,6 +541,29 @@ requset对象是ServletRequset的一个实例。当客户端请求一个JPS网�
 							<a href="/2019/11/16/cookie%E8%AE%B0%E4%BD%8F%E5%AF%86%E7%A0%81%E6%A1%88%E4%BE%8B/" title="Cookie记住密码案例">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Cookie记住密码案例"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">
+								Android基本布局			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 16日, 2019				
+							</p>
+							<p class="relate-post-content">
+								Android 基本布局基本理论Android六大基本布局分别是：线性布局LinearLayout、表格布局TableLayout、相对布局RelativeLayout、层布局FrameLayout、绝对布局AbsoluteLayou...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/16/%E5%AE%89%E5%8D%93%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80/" title="Android基本布局">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover.jpg" alt="Android基本布局"/>
 							</a>
 						</div>
 					</li>											
